@@ -1,3 +1,15 @@
 tile.zingpower.copperOre.name=Copper Ore
+tile.zingpower.leadOre.name=Lead Ore
+tile.zingpower.nickelOre.name=Nickel Ore
+tile.zingpower.osmiumOre.name=Osmium Ore
+tile.zingpower.silverOre.name=Silver Ore
+tile.zingpower.tinOre.name=Tin Ore
+tile.zingpower.tungstenOre.name=Tungsten Ore
 
 tile.zingpower.copperIngot.name=Copper Ingot
+tile.zingpower.leadIngot.name=Lead Ingot
+tile.zingpower.nickelIngot.name=Nickel Ingot
+tile.zingpower.osmiumIngot.name=Osmium Ingot
+tile.zingpower.silverIngot.name=Silver Ingot
+tile.zingpower.tinIngot.name=Tin Ingot
+tile.zingpower.tungstenIngot.name=Tungsten Ingot
