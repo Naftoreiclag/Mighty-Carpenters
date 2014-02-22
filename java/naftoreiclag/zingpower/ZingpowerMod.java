@@ -14,15 +14,15 @@ import naftoreiclag.zingpower.util.MyStaticStrings;
 @Mod(modid = MyStaticStrings.MOD_ID, version = MyStaticStrings.MOD_VER)
 public class ZingpowerMod
 {
-	public static Block tutorialBlock;
+	public static Block block_copperOre;
 	
 	WorldGenManager ev = new WorldGenManager();
 	
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-		tutorialBlock = new BlockOreCopper();
-		GameRegistry.registerBlock(tutorialBlock, tutorialBlock.getUnlocalizedName());
+		block_copperOre = new BlockCopperOre();
+		GameRegistry.registerBlock(block_copperOre, block_copperOre.getUnlocalizedName());
     
 		GameRegistry.registerWorldGenerator(ev, 1);
     }

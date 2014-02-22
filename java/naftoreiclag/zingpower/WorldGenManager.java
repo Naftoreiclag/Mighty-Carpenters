@@ -38,7 +38,7 @@ public class WorldGenManager implements IWorldGenerator
 
 	private void generateOverworld(World world, Random random, int x, int z)
 	{
-		addOreSpawn(ZingpowerMod.tutorialBlock, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
+		addOreSpawn(ZingpowerMod.block_copperOre, world, random, x, z, 16, 16, 4 + random.nextInt(3), 5, 15, 50);
 	}
 
 	private void generateNether(World world, Random random, int x, int z)

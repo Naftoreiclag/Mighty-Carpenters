@@ -8,17 +8,18 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 
-public class BlockOreCopper extends Block
+public class BlockCopperOre extends Block
 {
-	public BlockOreCopper()
+	public BlockCopperOre()
 	{
 		super(Material.rock);
-		this.setBlockName(MyStaticStrings.COPPER_ORE_UNLOCALIZED);
+		this.setBlockName(MyStaticStrings.UNLOCALIZED_COPPER_ORE);
+		this.setHardness(3);
+		this.setResistance(15);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@SideOnly(Side.CLIENT)
-	@Override
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
         this.blockIcon = p_149651_1_.registerIcon(MyStaticStrings.MOD_ID + ":copper_ore");
