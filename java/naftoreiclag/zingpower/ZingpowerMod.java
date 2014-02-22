@@ -2,6 +2,7 @@ package naftoreiclag.zingpower;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -25,6 +26,7 @@ public class ZingpowerMod
     {
 		block_copperOre = new BlockCopperOre();
 		GameRegistry.registerBlock(block_copperOre, block_copperOre.getUnlocalizedName());
+		OreDictionary.registerOre("oreCopper", block_copperOre);
     
 		GameRegistry.registerWorldGenerator(ev, 1);
     }
