@@ -3,6 +3,7 @@ package naftoreiclag.zingpower;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -37,6 +38,8 @@ public class ZingpowerMod
 		OreDictionary.registerOre("ingotCopper", item_copperIngot);
     
 		GameRegistry.registerWorldGenerator(ev, 1);
+		
+		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
     }
 	@EventHandler
 	public void init(FMLInitializationEvent event)
