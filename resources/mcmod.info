@@ -1,0 +1,16 @@
+[
+{
+"modid": "zingpower",
+"name": "Zing Power",
+"description": "Description",
+"version": "${version}",
+"mcversion": "${mcversion}",
+"url": "",
+"updateUrl": "",
+"authors": ["Naftoreiclag"],
+"credits": "Credits",
+"logoFile": "",
+"screenshots": [],
+"dependencies": []
+}
+]
