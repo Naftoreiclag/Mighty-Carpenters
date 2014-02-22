@@ -1,7 +1,8 @@
-package naftoreiclag.zingpower;
+package naftoreiclag.zingpower.world;
 
 import java.util.Random;
 
+import naftoreiclag.zingpower.ZingpowerMod;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;

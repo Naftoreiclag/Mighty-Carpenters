@@ -9,7 +9,9 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
+import naftoreiclag.zingpower.block.BlockCopperOre;
 import naftoreiclag.zingpower.util.MyStaticStrings;
+import naftoreiclag.zingpower.world.WorldGenManager;
 
 @Mod(modid = MyStaticStrings.MOD_ID, version = MyStaticStrings.MOD_VER)
 public class ZingpowerMod
