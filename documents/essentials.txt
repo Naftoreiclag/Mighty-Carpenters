@@ -1,0 +1,99 @@
+Essential stuff to set the standard:
+===
+
+Energy Unit: Zing
+Definition: 1 Zing = Amount of energy to smelt 1 object in a vanilla furnace
+(e.g. 1 bucket of lava = 100 Zing)
+
+Metals:
+- Copper
+- Tin
+- Bronze
+- Silver
+- Lead
+- Nickel
+- Steel
+- Osmium
+- Tungsten
+
+Every metal needs an ore*, ingot, dust, quarter-dust, and nugget form.
+
+Metal -> Dust
+1 ore -> 2 dust max
+
+Other raw minerals:
+- Stone dust (macerated stone/gravel)
+- Sawdust (macerated wood)
+- Silicon (sand cooked in super-hot furnace)
+- Power Ingot (redstone dust in super-hot furnace)
+- Bronze (3 copper, 1 tin) gives 4 or (dust alternative) gives 4
+- Steel (1 iron, 1 coal/charcoal in super-hot furnace)
+
+Wires:
+- Poor Man's Wire = (3 vertical copper ingots) gives 9
+  - Transmits up to 0.1 Zing/sec
+- Hobbyist's Wire = (3 Poor Man's Wire) gives 1 (this means that 3 copper gives 3 wire)
+  - Transmits up to 1 Zing/sec
+- Professional Wire = (3 vertical silver ingots, 3 vertical power ingots) gives 3
+  - Transmits up to 10 Zing/sec
+- Industrial Wire = (3 Professional Wire, 3 gold) gives 3
+  - Transmits up to 100 Zing/sec
+- Futuristic Wire = (3 Industrial Wire, 3 Osmium, 1 Circuit) gives 3
+  - Transmits up to 1000 Zing/sec
+
+Circuits:
+- Basic Circuit = (3 Redstone Dust, 3 Paper, 3 Hobbyist's Wire or better)
+- Better Circuit = (1 Basic Circuit or 3 Hobbyist's Wire or better, 3 Power Ingot, 3 Silicon)
+- Best Circuit = (1 Better Circuit, 3 Professional Wire or better, 1 Diamond)
+Downgrading through the teirs will give you 2 for 1
+
+"Tech Parts"
+- Pile o' Screws = (1 tin, 1 copper, 1 bronze)
+- Pile o' Gears = (1 pile o' screws, 1 iron, 1 lead, 1 nickel)
+- Pile o' Springs = (1 pile o' gears, 1 gold, 1 silver, 1 tungsten)
+- Big Pile o' Screws = 2 Pile o' Screws
+- Big Pile o' Gears = 2 Pile o' Gears
+- Big Pile o' Springs = 2 Pile o' Springs
+Downgrading through the teirs will give you 2 for 1
+
+Other stuff:
+- Light Bulb = (1 tungsten ingot + 1 glass block)
+
+Machines
+- Burning Generator = (1 furnace or 1 iron ingot, 1 iron block, 1 basic circuit)
+- Super-hot Furnace = (8 brick blocks, 1 Pile o' Gears)
+  - Uses gunpowder and blaze powder (at once) as fuel
+  - Used to make alternate cooking recipies
+- Rock Tumbler = (1 cauldron, 2 Pile o' Gears, 4 Pile o' Screws)
+  - Combines Flint and an Ore to make 1 1/4 pile of dust
+- Macerator = (1 Rock Tumbler, 1 Basic Circuit, 1 Pile o' Gears, 3 Hobbyist's Wire or better)
+  - Uses 2 Zing to make 1 1/2 dust per ore
+- Macerator II = (1 Macerator, 3 Professional Wire)
+  - Uses 2 Zing to make 2 dust per ore
+- Zing Furnace = (1 Furnace, 1 Basic Circuit, 1 Pile o' Gears, 3 Hobbyist's Wire or better)
+- Super-hot Zing Furnace = (1 Super-hot Furnace or 1 iron block, 3 Industrial Wire)
+  - Uses 4 Zing to make 1 next-grade item
+
+Tiers:
+Pre-nether/diamond:
+- Copper
+- Tin
+- Bronze
+- Silver
+- Lead
+- Nickel
+- Poor Man's Wire
+- Hobbyist's Wire
+- Pile o' Screws
+- Pile o' Gears
+- Basic Circuit
+- Rock Tumbler
+- Macerator
+- Zing Furnace
+- Burning Generator
+
+After-nether/diamond:
+- Super-hot furnace
+- Steel
+- Osmium
+- Tungsten
