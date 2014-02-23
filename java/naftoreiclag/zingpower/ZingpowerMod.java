@@ -13,6 +13,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import naftoreiclag.zingpower.block.BlockCopperOre;
+import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
 import naftoreiclag.zingpower.item.ItemCopperIngot;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import naftoreiclag.zingpower.world.WorldGenManager;
@@ -23,6 +24,8 @@ public class ZingpowerMod
 	public static Block block_copperOre;
 	
 	public static Item item_copperIngot;
+	
+	public static Block block_shf;
 	
 	WorldGenManager ev = new WorldGenManager();
 	
@@ -38,6 +41,9 @@ public class ZingpowerMod
 		OreDictionary.registerOre("ingotCopper", item_copperIngot);
     
 		GameRegistry.registerWorldGenerator(ev, 1);
+		
+		block_shf = new BlockShf();
+		GameRegistry.registerBlock(block_shf, block_shf.getUnlocalizedName());
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
     }
