@@ -9,6 +9,7 @@ public class MyStaticStrings
 	
 	// Debug
 	// ===
+	public static final String TEXTURE_DEBUG_0 = MOD_ID + ":debug_0";
 	public static final String TEXTURE_DEBUG_1 = MOD_ID + ":debug_1";
 	public static final String TEXTURE_DEBUG_2 = MOD_ID + ":debug_2";
 	public static final String TEXTURE_DEBUG_3 = MOD_ID + ":debug_3";
