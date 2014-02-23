@@ -36,15 +36,15 @@ public class ShfGuiHandler implements IGuiHandler
 			return null;
 		}
 		
-		switch(id)
+		switch(ID)
 		{
-		case MyStaticStrings.GUIID_SHF:
-		{
-			if(entity instanceof ShfTentity)
+			case MyStaticStrings.GUIID_SHF:
 			{
-				return new ShfContainer(player.inventory, (ShfTentity) entity);
+				if(entity instanceof ShfTentity)
+				{
+					return new ShfContainer(player.inventory, (ShfTentity) entity);
+				}
 			}
-		}
 		}
 		
 		return null;

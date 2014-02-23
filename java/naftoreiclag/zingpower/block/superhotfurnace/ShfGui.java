@@ -14,7 +14,7 @@ public class ShfGui extends GuiContainer
 	
 	public ShfGui(InventoryPlayer inventoryPlayer, ShfTentity entity)
 	{
-		super(new ShfContainer(inventoryPlayer, entity));
+		super(null);//new ShfContainer(inventoryPlayer, entity));
 		
 		this.entity = entity;
 		
