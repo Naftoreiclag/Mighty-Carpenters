@@ -7,6 +7,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -14,6 +15,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import naftoreiclag.zingpower.block.BlockCopperOre;
 import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
+import naftoreiclag.zingpower.block.superhotfurnace.ShfGuiHandler;
 import naftoreiclag.zingpower.block.superhotfurnace.ShfTentity;
 import naftoreiclag.zingpower.item.ItemCopperIngot;
 import naftoreiclag.zingpower.util.MyStaticStrings;
@@ -22,6 +24,9 @@ import naftoreiclag.zingpower.world.WorldGenManager;
 @Mod(modid = MyStaticStrings.MOD_ID, version = MyStaticStrings.MOD_VER)
 public class ZingpowerMod
 {
+	@Instance(MyStaticStrings.MOD_ID)
+	public static ZingpowerMod instance;
+	
 	public static Block block_copperOre;
 	
 	public static Item item_copperIngot;
@@ -48,6 +53,8 @@ public class ZingpowerMod
 		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
+		
+		new ShfGuiHandler();
     }
 	@EventHandler
 	public void init(FMLInitializationEvent event)

@@ -66,6 +66,7 @@ public class MyStaticStrings
 	public static final String TEXTURE_SHF_SIDE = MOD_ID + ":shf_side";
 	public static final String TEXTURE_SHF_FRONT_ON = MOD_ID + ":shf_front_on";
 	public static final String TEXTURE_SHF_FRONT_OFF = MOD_ID + ":shf_front_off";
+	public static final int GUIID_SHF = 0;
 	
 	// Burning Generator
 }
