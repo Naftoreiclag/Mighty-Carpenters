@@ -14,8 +14,8 @@ public class BlockCopperOre extends Block
 	{
 		super(Material.rock);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_COPPER_ORE);
-		this.setHardness(3);
-		this.setResistance(15);
+		this.setHardness(3f);
+		this.setResistance(15f);
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 	

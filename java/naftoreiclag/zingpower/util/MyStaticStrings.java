@@ -8,6 +8,7 @@ public class MyStaticStrings
 	public static final String UNLOCALIZATION_PREFIX = MOD_ID + ".";
 	
 	// Ores
+	// ===
 	
 	public static final String UNLOCALIZED_COPPER_ORE = UNLOCALIZATION_PREFIX + "copperOre";
 	public static final String UNLOCALIZED_LEAD_ORE = UNLOCALIZATION_PREFIX + "leadOre";
@@ -25,6 +26,7 @@ public class MyStaticStrings
 	public static final String TEXTURE_TUNGSTEN_ORE = MOD_ID + ":tungsten_ore";
 
 	// Ingots
+	// ===
 	
 	public static final String UNLOCALIZED_COPPER_INGOT = UNLOCALIZATION_PREFIX + "copperIngot";
 	public static final String UNLOCALIZED_LEAD_INGOT = UNLOCALIZATION_PREFIX + "leadIngot";
@@ -42,6 +44,7 @@ public class MyStaticStrings
 	public static final String TEXTURE_TUNGSTEN_INGOT = MOD_ID + ":tungsten_ingot";
 	
 	// Machines
+	// ===
 	
 	// Super-hot Furnace
 	public static final String UNLOCALIZED_SHF = UNLOCALIZATION_PREFIX + "shf";
@@ -50,4 +53,6 @@ public class MyStaticStrings
 	public static final String TEXTURE_SHF_SIDE = MOD_ID + ":shf_side";
 	public static final String TEXTURE_SHF_FRONT_ON = MOD_ID + ":shf_front_on";
 	public static final String TEXTURE_SHF_FRONT_OFF = MOD_ID + ":shf_front_off";
+	
+	// Burning Generator
 }
