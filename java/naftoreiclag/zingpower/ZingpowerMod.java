@@ -14,6 +14,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import naftoreiclag.zingpower.block.BlockCopperOre;
 import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
+import naftoreiclag.zingpower.block.superhotfurnace.ShfTentity;
 import naftoreiclag.zingpower.item.ItemCopperIngot;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import naftoreiclag.zingpower.world.WorldGenManager;
@@ -44,6 +45,7 @@ public class ZingpowerMod
 		
 		block_shf = new BlockShf();
 		GameRegistry.registerBlock(block_shf, block_shf.getUnlocalizedName());
+		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
     }

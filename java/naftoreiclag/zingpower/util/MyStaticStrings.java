@@ -6,6 +6,7 @@ public class MyStaticStrings
 	public static final String MOD_VER = "0.1.0";
 	
 	public static final String UNLOCALIZATION_PREFIX = MOD_ID + ".";
+	public static final String TILEENTITYID_PREFIX = "tileEntity." + MOD_ID + ".";
 	
 	// Debug
 	// ===
@@ -58,6 +59,7 @@ public class MyStaticStrings
 	// ===
 	
 	// Super-hot Furnace
+	public static final String TEID_SHF = TILEENTITYID_PREFIX + "shf";
 	public static final String UNLOCALIZED_SHF = UNLOCALIZATION_PREFIX + "shf";
 	public static final String TEXTURE_SHF_TOP = MOD_ID + ":shf_top";
 	public static final String TEXTURE_SHF_BOTTOM = MOD_ID + ":shf_bottom";
