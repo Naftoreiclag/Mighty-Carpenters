@@ -7,6 +7,16 @@ public class MyStaticStrings
 	
 	public static final String UNLOCALIZATION_PREFIX = MOD_ID + ".";
 	
+	// Debug
+	// ===
+	public static final String TEXTURE_DEBUG_1 = MOD_ID + ":debug_1";
+	public static final String TEXTURE_DEBUG_2 = MOD_ID + ":debug_2";
+	public static final String TEXTURE_DEBUG_3 = MOD_ID + ":debug_3";
+	public static final String TEXTURE_DEBUG_4 = MOD_ID + ":debug_4";
+	public static final String TEXTURE_DEBUG_5 = MOD_ID + ":debug_5";
+	public static final String TEXTURE_DEBUG_6 = MOD_ID + ":debug_6";
+	
+	
 	// Ores
 	// ===
 	
