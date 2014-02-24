@@ -24,6 +24,12 @@ public class EntityFlyingNail extends EntityThrowable
 	}
 
 	@Override
+	protected float getGravityVelocity()
+	{
+		return 0.001F;
+	}
+
+	@Override
 	protected void onImpact(MovingObjectPosition movingobjectposition)
 	{
 		this.worldObj.createExplosion(this, this.posX, this.posY, this.posZ, 5.0f, true);
