@@ -18,6 +18,8 @@ import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
 import naftoreiclag.zingpower.block.superhotfurnace.ShfGuiHandler;
 import naftoreiclag.zingpower.block.superhotfurnace.ShfTentity;
 import naftoreiclag.zingpower.item.ItemCopperIngot;
+import naftoreiclag.zingpower.item.monkeywrench.ItemMonkeyWrench;
+import naftoreiclag.zingpower.item.nailgun.ItemNailgun;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import naftoreiclag.zingpower.world.WorldGenManager;
 
@@ -30,6 +32,9 @@ public class ZingpowerMod
 	public static Block block_copperOre;
 	
 	public static Item item_copperIngot;
+	
+	public static Item item_monkeywrench;
+	public static Item item_nailgun;
 	
 	public static Block block_shf;
 	
@@ -53,6 +58,13 @@ public class ZingpowerMod
 		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
+		
+		item_monkeywrench = new ItemMonkeyWrench();
+		GameRegistry.registerItem(item_monkeywrench, item_monkeywrench.getUnlocalizedName());
+		
+		item_nailgun = new ItemNailgun();
+		GameRegistry.registerItem(item_nailgun, item_nailgun.getUnlocalizedName());
+		
 		
 		new ShfGuiHandler();
     }
