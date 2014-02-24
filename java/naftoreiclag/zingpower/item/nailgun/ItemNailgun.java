@@ -1,8 +1,12 @@
 package naftoreiclag.zingpower.item.nailgun;
 
+import naftoreiclag.zingpower.entity.EntityFlyingNail;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.item.Item;
@@ -52,7 +56,7 @@ public class ItemNailgun extends Item
 		world.playSoundAtEntity(player, MyStaticStrings.SOUND_NAILGUN_FIRE, 1.0F, 1.0F);
 		if (!world.isRemote)
 		{
-			world.spawnEntityInWorld(new EntitySnowball(world, player));
+			world.spawnEntityInWorld(new EntityFlyingNail(world, (EntityLivingBase) player));
 		}
 		
 		return itemStack;
