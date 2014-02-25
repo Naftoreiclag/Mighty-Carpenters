@@ -1,6 +1,5 @@
-package naftoreiclag.zingpower.item.nailgun;
+package naftoreiclag.zingpower.things.nailgun;
 
-import naftoreiclag.zingpower.entity.EntityFlyingNail;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;

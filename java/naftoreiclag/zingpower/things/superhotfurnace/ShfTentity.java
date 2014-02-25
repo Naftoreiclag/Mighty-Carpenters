@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.block.superhotfurnace;
+package naftoreiclag.zingpower.things.superhotfurnace;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.entity.player.EntityPlayer;

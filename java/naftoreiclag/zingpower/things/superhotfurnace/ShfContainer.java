@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.block.superhotfurnace;
+package naftoreiclag.zingpower.things.superhotfurnace;
 
 import net.minecraft.entity.player.InventoryPlayer;
 

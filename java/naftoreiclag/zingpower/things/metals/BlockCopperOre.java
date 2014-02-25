@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.block;
+package naftoreiclag.zingpower.things.metals;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

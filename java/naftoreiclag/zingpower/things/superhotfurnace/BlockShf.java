@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.block.superhotfurnace;
+package naftoreiclag.zingpower.things.superhotfurnace;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import cpw.mods.fml.relauncher.Side;

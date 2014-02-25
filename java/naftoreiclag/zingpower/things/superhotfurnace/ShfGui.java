@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.block.superhotfurnace;
+package naftoreiclag.zingpower.things.superhotfurnace;
 
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import net.minecraft.client.gui.inventory.GuiContainer;

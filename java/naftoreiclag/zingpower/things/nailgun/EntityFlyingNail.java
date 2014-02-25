@@ -1,4 +1,4 @@
-package naftoreiclag.zingpower.entity;
+package naftoreiclag.zingpower.things.nailgun;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;

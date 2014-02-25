@@ -13,14 +13,14 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-import naftoreiclag.zingpower.block.BlockCopperOre;
-import naftoreiclag.zingpower.block.BlockSteelScaffold;
-import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
-import naftoreiclag.zingpower.block.superhotfurnace.ShfGuiHandler;
-import naftoreiclag.zingpower.block.superhotfurnace.ShfTentity;
-import naftoreiclag.zingpower.item.ItemCopperIngot;
-import naftoreiclag.zingpower.item.monkeywrench.ItemMonkeyWrench;
-import naftoreiclag.zingpower.item.nailgun.ItemNailgun;
+import naftoreiclag.zingpower.things.metals.BlockCopperOre;
+import naftoreiclag.zingpower.things.metals.ItemCopperIngot;
+import naftoreiclag.zingpower.things.monkeywrench.ItemMonkeyWrench;
+import naftoreiclag.zingpower.things.nailgun.ItemNailgun;
+import naftoreiclag.zingpower.things.steelscaffold.BlockSteelScaffold;
+import naftoreiclag.zingpower.things.superhotfurnace.BlockShf;
+import naftoreiclag.zingpower.things.superhotfurnace.ShfGuiHandler;
+import naftoreiclag.zingpower.things.superhotfurnace.ShfTentity;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import naftoreiclag.zingpower.world.WorldGenManager;
 
