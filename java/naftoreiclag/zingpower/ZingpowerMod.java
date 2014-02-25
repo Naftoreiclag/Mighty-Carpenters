@@ -2,20 +2,26 @@ package naftoreiclag.zingpower;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.entity.RenderArrow;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
+import cpw.mods.fml.relauncher.Side;
 
 import naftoreiclag.zingpower.things.metals.BlockCopperOre;
 import naftoreiclag.zingpower.things.metals.ItemCopperIngot;
 import naftoreiclag.zingpower.things.monkeywrench.ItemMonkeyWrench;
+import naftoreiclag.zingpower.things.nailgun.EntityFlyingNail;
 import naftoreiclag.zingpower.things.nailgun.ItemNailgun;
 import naftoreiclag.zingpower.things.steelscaffold.BlockSteelScaffold;
 import naftoreiclag.zingpower.things.superhotfurnace.BlockShf;
@@ -65,16 +71,22 @@ public class ZingpowerMod
 		item_monkeywrench = new ItemMonkeyWrench();
 		GameRegistry.registerItem(item_monkeywrench, item_monkeywrench.getUnlocalizedName());
 		
+
+		EntityRegistry.registerModEntity(EntityFlyingNail.class, "emeraldArrow", 0, instance, 120, 3, true);
+		
 		item_nailgun = new ItemNailgun();
 		GameRegistry.registerItem(item_nailgun, item_nailgun.getUnlocalizedName());
-
+		
 		block_steel_scaffold = new BlockSteelScaffold();
 		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());
+		
+
 		
 		new ShfGuiHandler();
     }
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
 	}
 }
