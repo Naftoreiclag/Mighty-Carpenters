@@ -59,9 +59,15 @@ public class MyStaticStrings
 	// ===
 	public static final String UNLOCALIZED_MONKEY_WRENCH = UNLOCALIZATION_PREFIX + "monkeyWrench";
 	public static final String TEXTURE_MONKEY_WRENCH = MOD_ID + ":monkeywrench_yellow_32";
+	
 	public static final String UNLOCALIZED_NAILGUN = UNLOCALIZATION_PREFIX + "nailgun";
 	public static final String TEXTURE_NAILGUN = MOD_ID + ":nailgun_32";
 	public static final String SOUND_NAILGUN_FIRE = MOD_ID + ":nailgun_fire";
+	
+	// Misc
+	// ===
+	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
+	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":steel_scaffold";
 	
 	// Machines
 	// ===

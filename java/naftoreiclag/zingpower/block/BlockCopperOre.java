@@ -14,14 +14,17 @@ public class BlockCopperOre extends Block
 	{
 		super(Material.rock);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_COPPER_ORE);
+		
 		this.setHardness(3f);
 		this.setResistance(15f);
+		this.setStepSound(soundTypeStone);
+		
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
 	
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.blockIcon = p_149651_1_.registerIcon(MyStaticStrings.MOD_ID + ":copper_ore");
+        this.blockIcon = p_149651_1_.registerIcon(MyStaticStrings.TEXTURE_COPPER_ORE);
     }
 }
