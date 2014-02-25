@@ -7,10 +7,13 @@ import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockScaffold extends BlockGlass
+public class BlockSteelScaffold extends BlockGlass
 {
-	public BlockScaffold()
+	public BlockSteelScaffold()
 	{
 		super(Material.iron, false);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_SCAFFOLD);
@@ -18,6 +21,8 @@ public class BlockScaffold extends BlockGlass
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
 		this.setStepSound(soundTypeMetal);
+		
+		this.lightOpacity = 5;
 		
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
@@ -27,4 +32,10 @@ public class BlockScaffold extends BlockGlass
 	{
 	    this.blockIcon = ir.registerIcon(MyStaticStrings.TEXTURE_SCAFFOLD);
 	}
+	
+	@Override
+	public boolean isSideSolid(IBlockAccess world, int x, int y, int z, ForgeDirection side)
+    {
+		return true;
+    }
 }

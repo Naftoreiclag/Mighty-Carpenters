@@ -14,7 +14,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 import naftoreiclag.zingpower.block.BlockCopperOre;
-import naftoreiclag.zingpower.block.BlockScaffold;
+import naftoreiclag.zingpower.block.BlockSteelScaffold;
 import naftoreiclag.zingpower.block.superhotfurnace.BlockShf;
 import naftoreiclag.zingpower.block.superhotfurnace.ShfGuiHandler;
 import naftoreiclag.zingpower.block.superhotfurnace.ShfTentity;
@@ -68,7 +68,7 @@ public class ZingpowerMod
 		item_nailgun = new ItemNailgun();
 		GameRegistry.registerItem(item_nailgun, item_nailgun.getUnlocalizedName());
 
-		block_steel_scaffold = new BlockScaffold();
+		block_steel_scaffold = new BlockSteelScaffold();
 		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());
 		
 		new ShfGuiHandler();
