@@ -76,10 +76,17 @@ public class MyStaticStrings
 	public static final String TEXTURE_SKETCH_STATION_BACK_RIGHT = MOD_ID + ":sketch_station_back_right";
 	public static final String TEXTURE_SKETCH_STATION_SIDE = MOD_ID + ":sketch_station_side";
 	public static final String TEXTURE_SKETCH_STATION_DEFAULT = MOD_ID + ":sketch_station_default";
-	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT = MOD_ID + ":sketch_station_top_empty_left";
-	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT = MOD_ID + ":sketch_station_top_empty_right";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT_0 = MOD_ID + ":sketch_station_top_empty_left_0";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT_1 = MOD_ID + ":sketch_station_top_empty_left_1";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT_2 = MOD_ID + ":sketch_station_top_empty_left_2";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT_3 = MOD_ID + ":sketch_station_top_empty_left_3";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT_0 = MOD_ID + ":sketch_station_top_empty_right_0";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT_1 = MOD_ID + ":sketch_station_top_empty_right_1";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT_2 = MOD_ID + ":sketch_station_top_empty_right_2";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT_3 = MOD_ID + ":sketch_station_top_empty_right_3";
 	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_LEFT = MOD_ID + ":sketch_station_top_filled_left";
 	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_RIGHT = MOD_ID + ":sketch_station_top_filled_right";
+	public static final String TEID_SKETCH_STATION = TILEENTITYID_PREFIX + "sketch_station";
 	
 	// Machines
 	// ===

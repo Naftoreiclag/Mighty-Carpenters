@@ -23,6 +23,8 @@ import naftoreiclag.zingpower.things.metals.ItemCopperIngot;
 import naftoreiclag.zingpower.things.monkeywrench.ItemMonkeyWrench;
 import naftoreiclag.zingpower.things.nailgun.EntityFlyingNail;
 import naftoreiclag.zingpower.things.nailgun.ItemNailgun;
+import naftoreiclag.zingpower.things.sketchstation.BlockSketchStation;
+import naftoreiclag.zingpower.things.sketchstation.SketchStationTentity;
 import naftoreiclag.zingpower.things.steelscaffold.BlockSteelScaffold;
 import naftoreiclag.zingpower.things.superhotfurnace.BlockShf;
 import naftoreiclag.zingpower.things.superhotfurnace.ShfGuiHandler;
@@ -46,6 +48,8 @@ public class ZingpowerMod
 	public static Block block_shf;
 	
 	public static Block block_steel_scaffold;
+	
+	public static Block block_sketch_station;
 	
 	WorldGenManager ev = new WorldGenManager();
 	
@@ -80,7 +84,9 @@ public class ZingpowerMod
 		block_steel_scaffold = new BlockSteelScaffold();
 		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());
 		
-
+		block_sketch_station = new BlockSketchStation();
+		GameRegistry.registerBlock(block_sketch_station, block_sketch_station.getUnlocalizedName());
+		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
 		
 		new ShfGuiHandler();
     }
