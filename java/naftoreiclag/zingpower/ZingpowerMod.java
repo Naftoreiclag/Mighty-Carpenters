@@ -87,6 +87,7 @@ public class ZingpowerMod
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		//RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
 	}
 }
