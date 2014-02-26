@@ -69,6 +69,18 @@ public class MyStaticStrings
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
 	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":steel_scaffold";
 	
+	public static final String UNLOCALIZED_SKETCH_STATION = UNLOCALIZATION_PREFIX + "sketchStation";
+	public static final String TEXTURE_SKETCH_STATION_FRONT_LEFT = MOD_ID + ":sketch_station_front_left";
+	public static final String TEXTURE_SKETCH_STATION_FRONT_RIGHT = MOD_ID + ":sketch_station_front_right";
+	public static final String TEXTURE_SKETCH_STATION_BACK_LEFT = MOD_ID + ":sketch_station_back_left";
+	public static final String TEXTURE_SKETCH_STATION_BACK_RIGHT = MOD_ID + ":sketch_station_back_right";
+	public static final String TEXTURE_SKETCH_STATION_SIDE = MOD_ID + ":sketch_station_side";
+	public static final String TEXTURE_SKETCH_STATION_DEFAULT = MOD_ID + ":sketch_station_default";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_LEFT = MOD_ID + ":sketch_station_top_empty_left";
+	public static final String TEXTURE_SKETCH_STATION_TOP_EMPTY_RIGHT = MOD_ID + ":sketch_station_top_empty_right";
+	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_LEFT = MOD_ID + ":sketch_station_top_filled_left";
+	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_RIGHT = MOD_ID + ":sketch_station_top_filled_right";
+	
 	// Machines
 	// ===
 	
