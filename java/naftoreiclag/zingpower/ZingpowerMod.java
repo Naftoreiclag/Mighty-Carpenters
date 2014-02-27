@@ -18,6 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
+import naftoreiclag.zingpower.things.blueprint.ItemBlueprint;
 import naftoreiclag.zingpower.things.metals.BlockCopperOre;
 import naftoreiclag.zingpower.things.metals.ItemCopperIngot;
 import naftoreiclag.zingpower.things.monkeywrench.ItemMonkeyWrench;
@@ -50,6 +51,8 @@ public class ZingpowerMod
 	public static Block block_steel_scaffold;
 	
 	public static Block block_sketch_station;
+	
+	public static Item item_blueprint;
 	
 	WorldGenManager ev = new WorldGenManager();
 	
@@ -87,6 +90,11 @@ public class ZingpowerMod
 		block_sketch_station = new BlockSketchStation();
 		GameRegistry.registerBlock(block_sketch_station, block_sketch_station.getUnlocalizedName());
 		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
+		
+		item_blueprint = new ItemBlueprint();
+		GameRegistry.registerItem(item_blueprint, item_blueprint.getUnlocalizedName());
+		
+		GameRegistry.addShapelessRecipe(new ItemStack(this.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
 		
 		new ShfGuiHandler();
     }
