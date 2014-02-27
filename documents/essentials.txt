@@ -99,22 +99,45 @@ After-nether/diamond:
 - Tungsten
 
 Tools:
+===
 Building:
     Cardboard: Glue
     Wood: Hammer
     Metals: Wrench
     Universal: Nailgun
+    Futuristic: Blaser
 Destroying:
     Cardboard: Scissors
     Wood: Saw
     Metals: Blowtorch
     Universal: Chainsaw
+    Futuristic: Draser
 Modifying:
     Cardboard: Tape
     Wood: Mallet
     Metals: Screwdriver
     Universal: Drill
+    Futuristic: Maaser
 
+Redundant Adjectives:
+===
+// I use these to allow users to differentiate between my tools and the tools of other mods in a funny way.
 
+Sticky Glue
+Hand-held Hammer
+Monkey Wrench
+Dangrous Nailgun
+Safety Scissors
+Cutting Saw
+Firey Blowtorch
+Static Chainsaw
+Sticky Tape
+Manual Mallet
+Flathead Screwdriver
+Drilling Drill
+
+Futuristic Blaser
+Futuristic Draser
+Futuristic Maaser
 
 
