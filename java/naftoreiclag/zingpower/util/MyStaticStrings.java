@@ -20,8 +20,6 @@ public class MyStaticStrings
 	
 	
 	// Ores
-	// ===
-	
 	public static final String UNLOCALIZED_COPPER_ORE = UNLOCALIZATION_PREFIX + "copperOre";
 	public static final String UNLOCALIZED_LEAD_ORE = UNLOCALIZATION_PREFIX + "leadOre";
 	public static final String UNLOCALIZED_NICKEL_ORE = UNLOCALIZATION_PREFIX + "nickelOre";
@@ -38,8 +36,6 @@ public class MyStaticStrings
 	public static final String TEXTURE_TUNGSTEN_ORE = MOD_ID + ":tungsten_ore";
 
 	// Ingots
-	// ===
-	
 	public static final String UNLOCALIZED_COPPER_INGOT = UNLOCALIZATION_PREFIX + "copperIngot";
 	public static final String UNLOCALIZED_LEAD_INGOT = UNLOCALIZATION_PREFIX + "leadIngot";
 	public static final String UNLOCALIZED_NICKEL_INGOT = UNLOCALIZATION_PREFIX + "nickelIngot";
@@ -55,20 +51,25 @@ public class MyStaticStrings
 	public static final String TEXTURE_TIN_INGOT = MOD_ID + ":tin_ingot";
 	public static final String TEXTURE_TUNGSTEN_INGOT = MOD_ID + ":tungsten_ingot";
 	
-	// Toolz
-	// ===
+	// Monkey Wrench
 	public static final String UNLOCALIZED_MONKEY_WRENCH = UNLOCALIZATION_PREFIX + "monkeyWrench";
 	public static final String TEXTURE_MONKEY_WRENCH = MOD_ID + ":monkeywrench_yellow_32";
 	
+	// Nailgun
 	public static final String UNLOCALIZED_NAILGUN = UNLOCALIZATION_PREFIX + "nailgun";
 	public static final String TEXTURE_NAILGUN = MOD_ID + ":nailgun_32";
 	public static final String SOUND_NAILGUN_FIRE = MOD_ID + ":nailgun_fire";
 	
-	// Misc
-	// ===
+	// Steel Scaffold
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
 	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":steel_scaffold";
 	
+	// Blueprint
+	public static final String UNLOCALIZED_BLUEPRINT = UNLOCALIZATION_PREFIX + "blueprint";
+	public static final String TEXTURE_BLUEPRINT_BLANK = MOD_ID + ":blueprint_blank";
+	public static final String TEXTURE_BLUEPRINT_WRITTEN = MOD_ID + ":blueprint_written";
+	
+	// Sketch Station
 	public static final String UNLOCALIZED_SKETCH_STATION = UNLOCALIZATION_PREFIX + "sketchStation";
 	public static final String TEXTURE_SKETCH_STATION_FRONT_LEFT = MOD_ID + ":sketch_station_front_left";
 	public static final String TEXTURE_SKETCH_STATION_FRONT_RIGHT = MOD_ID + ":sketch_station_front_right";
@@ -87,9 +88,6 @@ public class MyStaticStrings
 	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_LEFT = MOD_ID + ":sketch_station_top_filled_left";
 	public static final String TEXTURE_SKETCH_STATION_TOP_FILLED_RIGHT = MOD_ID + ":sketch_station_top_filled_right";
 	public static final String TEID_SKETCH_STATION = TILEENTITYID_PREFIX + "sketch_station";
-	
-	// Machines
-	// ===
 	
 	// Super-hot Furnace
 	public static final String TEID_SHF = TILEENTITYID_PREFIX + "shf";
