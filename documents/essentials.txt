@@ -97,3 +97,24 @@ After-nether/diamond:
 - Steel
 - Osmium
 - Tungsten
+
+Tools:
+Building:
+    Cardboard: Glue
+    Wood: Hammer
+    Metals: Wrench
+    Universal: Nailgun
+Destroying:
+    Cardboard: Scissors
+    Wood: Saw
+    Metals: Blowtorch
+    Universal: Chainsaw
+Modifying:
+    Cardboard: Tape
+    Wood: Mallet
+    Metals: Screwdriver
+    Universal: Drill
+
+
+
+
