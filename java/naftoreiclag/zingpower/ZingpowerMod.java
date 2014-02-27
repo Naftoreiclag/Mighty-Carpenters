@@ -4,8 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.entity.RenderArrow;
 import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
@@ -30,6 +33,8 @@ import naftoreiclag.zingpower.things.steelscaffold.BlockSteelScaffold;
 import naftoreiclag.zingpower.things.superhotfurnace.BlockShf;
 import naftoreiclag.zingpower.things.superhotfurnace.ShfGuiHandler;
 import naftoreiclag.zingpower.things.superhotfurnace.ShfTentity;
+import naftoreiclag.zingpower.things.undeadengineer.EntityUndeadEngineer;
+import naftoreiclag.zingpower.things.undeadengineer.RenderUndeadEngineer;
 import naftoreiclag.zingpower.util.MyStaticStrings;
 import naftoreiclag.zingpower.world.WorldGenManager;
 
@@ -53,6 +58,8 @@ public class ZingpowerMod
 	public static Block block_sketch_station;
 	
 	public static Item item_blueprint;
+	
+	private static int first_available_entity_id = 300;
 	
 	WorldGenManager ev = new WorldGenManager();
 	
@@ -101,7 +108,39 @@ public class ZingpowerMod
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		BiomeGenBase[] biomeList = BiomeGenBase.getBiomeGenArray();
+
+		EntityRegistry.registerModEntity(EntityUndeadEngineer.class, "eddy", 1, this, 80, 3, true);
+
+		for(int i = 0; i < biomeList.length; i++)
+		{
+			if(biomeList[i] != null)
+			{
+				EntityRegistry.addSpawn(EntityUndeadEngineer.class, 10, 1, 3, EnumCreatureType.monster, biomeList[i]);
+			}
+		}
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityUndeadEngineer.class, new RenderUndeadEngineer());
+
+		registerEntityEgg(EntityUndeadEngineer.class, 22967, 4825967);
+		
 		//RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
+	}
+
+	public static int getUniqueEntityId()
+	{
+		while(EntityList.getClassFromID(first_available_entity_id) == null)
+		{
+			++ first_available_entity_id;
+		}
+		return first_available_entity_id;
+	}
+
+	public static void registerEntityEgg(Class entity, int primaryColor,
+			int secondaryColor)
+	{
+		int id = getUniqueEntityId();
+		EntityList.addMapping(entity, "eddy", Integer.valueOf(id), primaryColor, secondaryColor);
 	}
 }

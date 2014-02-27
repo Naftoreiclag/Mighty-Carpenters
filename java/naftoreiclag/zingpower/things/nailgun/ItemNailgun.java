@@ -53,7 +53,9 @@ public class ItemNailgun extends Item
 	public ItemStack onItemRightClick(ItemStack itemStack, World world, EntityPlayer player)
 	{
 		world.playSoundAtEntity(player, MyStaticStrings.SOUND_NAILGUN_FIRE, 1.0F, 1.0F);
-		if(world.isRemote)
+		
+		// Only in server
+		if(!world.isRemote)
 		{
 			world.spawnEntityInWorld(new EntityFlyingNail(world, (EntityLivingBase) player));
 		}

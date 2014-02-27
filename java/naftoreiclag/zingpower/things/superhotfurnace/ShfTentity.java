@@ -39,7 +39,7 @@ public class ShfTentity extends TileEntity implements ISidedInventory
 		}
 		
 		// If client
-		if(!this.worldObj.isRemote)
+		if(this.worldObj.isRemote)
 		{
 			if(this.burnTime == 0 && this.canSmelt())
 			{

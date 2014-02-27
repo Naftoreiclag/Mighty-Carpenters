@@ -110,7 +110,7 @@ public class BlockShf extends Block
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ)
 	{
 		// Exit if on server-side
-		if(world.isRemote) { return true;}
+		if(!world.isRemote) { return true;}
 		
 		FMLNetworkHandler.openGui(player, ZingpowerMod.instance, MyStaticStrings.GUIID_SHF, world, x, y, z);
 		
