@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.engineerhandtools.scissors;
+package naftoreiclag.mightycarpenters.things.engineerhandtools.drill;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,16 +8,16 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.ItemEHT;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-public class ItemScissors extends ItemEHT
+public class ItemDrill extends ItemEHT
 {
-	public ItemScissors()
+	public ItemDrill()
 	{
-		super(MyStaticStrings.UNLOCALIZED_SCISSORS, EHTTier.CARDBOARD, EHTType.MODIFY);
+		super(MyStaticStrings.UNLOCALIZED_CHAINSAW, EHTTier.MULTI, EHTType.DESTROY);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon = ir.registerIcon(MyStaticStrings.TEXTURE_SCISSORS);
+		this.itemIcon = ir.registerIcon(MyStaticStrings.TEXTURE_CHAINSAW);
 	}
 }

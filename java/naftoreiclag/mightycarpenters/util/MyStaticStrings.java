@@ -102,8 +102,11 @@ public class MyStaticStrings
 	public static final String TEXTURE_TAPE = MOD_ID + ":tape";
 	
 	// Monkey Wrench
-	public static final String UNLOCALIZED_WRENCH = UNLOCALIZATION_PREFIX + "monkeyWrench";
-	public static final String TEXTURE_WRENCH = MOD_ID + ":monkeywrench_yellow_32";
+	public static final String UNLOCALIZED_WRENCH = UNLOCALIZATION_PREFIX + "wrench";
+	public static final String TEXTURE_WRENCH = MOD_ID + ":wrench_32";
+	
+	// ???
+	// ===
 	
 	// Steel Scaffold
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";

@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.engineerhandtools.scissors;
+package naftoreiclag.mightycarpenters.things.engineerhandtools.wrench;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,16 +8,16 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.ItemEHT;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-public class ItemScissors extends ItemEHT
+public class ItemWrench extends ItemEHT
 {
-	public ItemScissors()
+	public ItemWrench()
 	{
-		super(MyStaticStrings.UNLOCALIZED_SCISSORS, EHTTier.CARDBOARD, EHTType.MODIFY);
+		super(MyStaticStrings.UNLOCALIZED_WRENCH, EHTTier.METAL, EHTType.CREATE);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister ir)
 	{
-		this.itemIcon = ir.registerIcon(MyStaticStrings.TEXTURE_SCISSORS);
+		this.itemIcon = ir.registerIcon(MyStaticStrings.TEXTURE_WRENCH);
 	}
 }
