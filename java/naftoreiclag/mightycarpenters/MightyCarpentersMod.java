@@ -97,6 +97,8 @@ public class MightyCarpentersMod
 		itemRegisterMacro(item_screwdriver);
 		itemRegisterMacro(item_tape);
 		itemRegisterMacro(item_wrench);
+		
+		EntityRegistry.registerModEntity(EntityFlyingNail.class, "flyingNail", 0, instance, 120, 3, true);
 	}
 	
 	public static Block block_shf;
@@ -131,12 +133,7 @@ public class MightyCarpentersMod
 		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
-		
 
-		EntityRegistry.registerModEntity(EntityFlyingNail.class, "emeraldArrow", 0, instance, 120, 3, true);
-		
-		item_nailgun = new ItemNailgun();
-		GameRegistry.registerItem(item_nailgun, item_nailgun.getUnlocalizedName());
 		
 		block_steel_scaffold = new BlockSteelScaffold();
 		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());

@@ -16,9 +16,19 @@ item.mightycarpenters.tungstenIngot.name=Tungsten Ingot
 
 tile.mightycarpenters.shf.name=Super-hot Furnace
 
-item.mightycarpenters.monkeyWrench.name=Monkey Wrench
+item.mightycarpenters.blowtorch.name=Firey Blowtorch
+item.mightycarpenters.chainsaw.name=Static Chainsaw
+item.mightycarpenters.drill.name=Drilling Drill
+item.mightycarpenters.glue.name=Sticky Glue
+item.mightycarpenters.hammer.name=Hand-held Hammer
+item.mightycarpenters.mallet.name=Manual Mallet
 item.mightycarpenters.nailgun.name=Nailgun
-item.mightycarpenters.handHeldHammer.name=Hand-held Hammer
+item.mightycarpenters.saw.name=Cutting Saw
+item.mightycarpenters.scissors.name=Safety Scissors
+item.mightycarpenters.screwdriver.name=Flathead Screwdriver
+item.mightycarpenters.tape.name=Sticky Tape
+item.mightycarpenters.wrench.name=Monkey Wrench
+
 item.mightycarpenters.wireSnipper.name=Wire Snipper
 
 item.mightycarpenters.blueprint.name=Blueprint
