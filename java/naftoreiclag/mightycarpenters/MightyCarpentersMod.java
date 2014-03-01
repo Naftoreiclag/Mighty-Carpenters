@@ -22,11 +22,11 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 import naftoreiclag.mightycarpenters.things.blueprint.ItemBlueprint;
-import naftoreiclag.mightycarpenters.things.metals.BlockCopperOre;
-import naftoreiclag.mightycarpenters.things.metals.ItemCopperIngot;
-import naftoreiclag.mightycarpenters.things.monkeywrench.ItemMonkeyWrench;
-import naftoreiclag.mightycarpenters.things.nailgun.EntityFlyingNail;
-import naftoreiclag.mightycarpenters.things.nailgun.ItemNailgun;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyingNail;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.ItemNailgun;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemMonkeyWrench;
+import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
+import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
 import naftoreiclag.mightycarpenters.things.sketchstation.SketchStationTentity;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockSteelScaffold;

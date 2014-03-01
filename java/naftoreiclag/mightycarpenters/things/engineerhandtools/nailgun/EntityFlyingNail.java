@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.nailgun;
+package naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun;
 
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;

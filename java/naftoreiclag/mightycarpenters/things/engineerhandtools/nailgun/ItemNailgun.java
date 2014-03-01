@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.nailgun;
+package naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun;
 
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;

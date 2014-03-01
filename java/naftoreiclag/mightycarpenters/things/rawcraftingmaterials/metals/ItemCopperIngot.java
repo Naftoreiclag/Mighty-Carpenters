@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.monkeywrench;
+package naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -7,20 +7,19 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
-public class ItemMonkeyWrench extends Item
+public class ItemCopperIngot extends Item
 {
-	public ItemMonkeyWrench() 
+	public ItemCopperIngot() 
 	{
 		super();
-		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_MONKEY_WRENCH);
-		this.setFull3D();
+		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_COPPER_INGOT);
 		
-		this.setCreativeTab(CreativeTabs.tabTools);
+		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
-		this.itemIcon = par1IconRegister.registerIcon(MyStaticStrings.TEXTURE_MONKEY_WRENCH);
+		this.itemIcon = par1IconRegister.registerIcon(MyStaticStrings.TEXTURE_COPPER_INGOT);
 	}
 }

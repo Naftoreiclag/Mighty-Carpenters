@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.metals;
+package naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
