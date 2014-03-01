@@ -4,6 +4,7 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTTier;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTType;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTItem;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
+import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -22,7 +23,6 @@ public class ItemNailgun extends EHTItem
 	public ItemNailgun() 
 	{
 		super(MyStaticStrings.UNLOCALIZED_NAILGUN, EHTTier.MULTI, EHTType.CREATE);
-		this.setFull3D();
 	}
 
 	@SideOnly(Side.CLIENT)
@@ -30,6 +30,18 @@ public class ItemNailgun extends EHTItem
 	{
 		this.itemIcon = par1IconRegister.registerIcon(MyStaticStrings.TEXTURE_NAILGUN);
 	}
+	
+	@Override
+	public boolean onBlockDestroyed(ItemStack item, World world, Block block, int x, int y, int z, EntityLivingBase user)
+    {
+		return true;
+    }
+	
+	@Override
+	public boolean hitEntity(ItemStack par1, EntityLivingBase par2, EntityLivingBase par3)
+    {
+        return true;
+    }
 	
 	/**
      * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer

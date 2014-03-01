@@ -154,6 +154,7 @@ public class MightyCarpentersMod
 	{
 		BiomeGenBase[] biomeList = BiomeGenBase.getBiomeGenArray();
 
+		/*
 		EntityRegistry.registerModEntity(EntityUndeadEngineer.class, "eddy", 1, this, 80, 3, true);
 
 		for(int i = 0; i < biomeList.length; i++)
@@ -167,6 +168,7 @@ public class MightyCarpentersMod
 		RenderingRegistry.registerEntityRenderingHandler(EntityUndeadEngineer.class, new RenderUndeadEngineer());
 
 		registerEntityEgg(EntityUndeadEngineer.class, 22967, 4825967);
+		*/
 		
 		//RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_wrench));
