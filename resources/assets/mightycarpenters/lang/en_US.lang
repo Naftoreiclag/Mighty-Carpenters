@@ -1,0 +1,24 @@
+tile.mightycarpenters.copperOre.name=Copper Ore
+tile.mightycarpenters.leadOre.name=Lead Ore
+tile.mightycarpenters.nickelOre.name=Nickel Ore
+tile.mightycarpenters.osmiumOre.name=Osmium Ore
+tile.mightycarpenters.silverOre.name=Silver Ore
+tile.mightycarpenters.tinOre.name=Tin Ore
+tile.mightycarpenters.tungstenOre.name=Tungsten Ore
+
+item.mightycarpenters.copperIngot.name=Copper Ingot
+item.mightycarpenters.leadIngot.name=Lead Ingot
+item.mightycarpenters.nickelIngot.name=Nickel Ingot
+item.mightycarpenters.osmiumIngot.name=Osmium Ingot
+item.mightycarpenters.silverIngot.name=Silver Ingot
+item.mightycarpenters.tinIngot.name=Tin Ingot
+item.mightycarpenters.tungstenIngot.name=Tungsten Ingot
+
+tile.mightycarpenters.shf.name=Super-hot Furnace
+
+item.mightycarpenters.monkeyWrench.name=Monkey Wrench
+item.mightycarpenters.nailgun.name=Nailgun
+item.mightycarpenters.handHeldHammer.name=Hand-held Hammer
+item.mightycarpenters.wireSnipper.name=Wire Snipper
+
+item.mightycarpenters.blueprint.name=Blueprint
