@@ -46,6 +46,8 @@ public class BlockScaffoldFence extends Block
     /**
      * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
      */
+    @Override
+    @SideOnly(Side.CLIENT)
     public boolean renderAsNormalBlock()
     {
         return false;
@@ -59,6 +61,20 @@ public class BlockScaffoldFence extends Block
 
 		switch (m)
 		{
+			// Up
+			case 0:
+			{
+				this.setBlockBounds(0.0f, 0.0f, 0.0f, 1.0f, thick, 1.0f);
+				return;
+			}
+			
+			// Down
+			case 1:
+			{
+				this.setBlockBounds(0.0f, antithick, 0.0f, 1.0f, 1.0f, 1.0f);
+				return;
+			}
+		
 			// North
 			case 2:
 			{
