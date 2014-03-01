@@ -16,7 +16,7 @@ item.mightycarpenters.tungstenIngot.name=Tungsten Ingot
 
 tile.mightycarpenters.shf.name=Super-hot Furnace
 
-item.mightycarpenters.steelScaffold.name=Steel Scaffold
+block.mightycarpenters.steelScaffold.name=Steel Scaffold
 
 item.mightycarpenters.blowtorch.name=Firey Blowtorch
 item.mightycarpenters.chainsaw.name=Static Chainsaw

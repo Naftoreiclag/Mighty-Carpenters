@@ -16,7 +16,7 @@ import net.minecraftforge.common.util.ForgeDirection;
 
 public class BlockScaffoldFence extends Block
 {
-	public static final float thick = 0.2f;
+	public static final float thick = 0.0625f;
 	public static final float antithick = 1.0f - thick;
 	
 	
@@ -140,7 +140,7 @@ public class BlockScaffoldFence extends Block
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister ir)
 	{
-	    this.blockIcon = ir.registerIcon(MyStaticStrings.TEXTURE_SCAFFOLD);
+	    this.blockIcon = ir.registerIcon(MyStaticStrings.TEXTURE_SCAFFOLD_FENCE);
 	}
 	
 	@Override

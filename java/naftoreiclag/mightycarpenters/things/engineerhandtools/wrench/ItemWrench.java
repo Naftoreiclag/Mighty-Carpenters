@@ -128,7 +128,7 @@ public class ItemWrench extends EHTItem
 				}
 			}
 			
-			if(b.getMaterial() == Material.air)
+			if(b.getMaterial() == Material.air || b == MightyCarpentersMod.block_scaffold_fence)
 			{
 				continue;
 			}
