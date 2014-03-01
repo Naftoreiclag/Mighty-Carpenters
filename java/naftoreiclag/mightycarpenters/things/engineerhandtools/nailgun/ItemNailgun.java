@@ -1,5 +1,8 @@
 package naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun;
 
+import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTTier;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTType;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTItem;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -14,14 +17,12 @@ import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemNailgun extends Item
+public class ItemNailgun extends EHTItem
 {
 	public ItemNailgun() 
 	{
-		super();
-		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_NAILGUN);
+		super(MyStaticStrings.UNLOCALIZED_NAILGUN, EHTTier.MULTI, EHTType.CREATE);
 		this.setFull3D();
-		this.setCreativeTab(CreativeTabs.tabTools);
 	}
 
 	@SideOnly(Side.CLIENT)

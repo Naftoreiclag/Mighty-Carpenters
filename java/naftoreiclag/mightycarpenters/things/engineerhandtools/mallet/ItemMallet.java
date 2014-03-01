@@ -4,11 +4,11 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTTier;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTType;
-import naftoreiclag.mightycarpenters.things.engineerhandtools.ItemEHT;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.EHTItem;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
-public class ItemMallet extends ItemEHT
+public class ItemMallet extends EHTItem
 {
 	public ItemMallet()
 	{

@@ -22,9 +22,19 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 import naftoreiclag.mightycarpenters.things.blueprint.ItemBlueprint;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.blowtorch.ItemBlowtorch;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.chainsaw.ItemChainsaw;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.drill.ItemDrill;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.glue.ItemGlue;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.hammer.ItemHammer;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.mallet.ItemMallet;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyingNail;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.ItemNailgun;
-import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemMonkeyWrench;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.saw.ItemSaw;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemScissors;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
+import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -45,11 +55,49 @@ public class MightyCarpentersMod
 	public static MightyCarpentersMod instance;
 	
 	public static Block block_copperOre;
-	
 	public static Item item_copperIngot;
 	
-	public static Item item_monkeywrench;
+	public static Item item_blowtorch;
+	public static Item item_chainsaw;
+	public static Item item_drill;
+	public static Item item_glue;
+	public static Item item_hammer;
+	public static Item item_mallet;
 	public static Item item_nailgun;
+	public static Item item_saw;
+	public static Item item_scissors;
+	public static Item item_screwdriver;
+	public static Item item_tape;
+	public static Item item_wrench;
+	
+	private void registerEHTs()
+	{
+		item_blowtorch = new ItemBlowtorch();
+		item_chainsaw = new ItemChainsaw();
+		item_drill = new ItemDrill();
+		item_glue = new ItemGlue();
+		item_hammer = new ItemHammer();
+		item_mallet = new ItemMallet();
+		item_nailgun = new ItemNailgun();
+		item_saw = new ItemSaw();
+		item_scissors = new ItemScissors();
+		item_screwdriver = new ItemScrewdriver();
+		item_tape = new ItemTape();
+		item_wrench = new ItemWrench();
+		
+		itemRegisterMacro(item_blowtorch);
+		itemRegisterMacro(item_chainsaw);
+		itemRegisterMacro(item_drill);
+		itemRegisterMacro(item_glue);
+		itemRegisterMacro(item_hammer);
+		itemRegisterMacro(item_mallet);
+		itemRegisterMacro(item_nailgun);
+		itemRegisterMacro(item_saw);
+		itemRegisterMacro(item_scissors);
+		itemRegisterMacro(item_screwdriver);
+		itemRegisterMacro(item_tape);
+		itemRegisterMacro(item_wrench);
+	}
 	
 	public static Block block_shf;
 	
@@ -66,6 +114,8 @@ public class MightyCarpentersMod
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
+		registerEHTs();
+		
 		block_copperOre = new BlockCopperOre();
 		GameRegistry.registerBlock(block_copperOre, block_copperOre.getUnlocalizedName());
 		OreDictionary.registerOre("oreCopper", block_copperOre);
@@ -81,9 +131,6 @@ public class MightyCarpentersMod
 		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
 		
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
-		
-		item_monkeywrench = new ItemMonkeyWrench();
-		GameRegistry.registerItem(item_monkeywrench, item_monkeywrench.getUnlocalizedName());
 		
 
 		EntityRegistry.registerModEntity(EntityFlyingNail.class, "emeraldArrow", 0, instance, 120, 3, true);
@@ -125,7 +172,7 @@ public class MightyCarpentersMod
 		registerEntityEgg(EntityUndeadEngineer.class, 22967, 4825967);
 		
 		//RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
-		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
+		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_wrench));
 	}
 
 	public static int getUniqueEntityId()
@@ -143,4 +190,6 @@ public class MightyCarpentersMod
 		int id = getUniqueEntityId();
 		//EntityList.addMapping(entity, "eddy", id, primaryColor, secondaryColor);
 	}
+	
+	private void itemRegisterMacro(Item item) { GameRegistry.registerItem(item, item.getUnlocalizedName()); }
 }
