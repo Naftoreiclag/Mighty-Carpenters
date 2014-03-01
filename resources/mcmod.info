@@ -2,14 +2,14 @@
 {
 "modid": "mightycarpenters",
 "name": "Mighty Carpenters",
-"description": "Description",
-"version": "${version}",
+"description": "Industry that isn't a pile of washing machines and cables! Also adds some cool ways to build stuff.",
+"version": "",
 "mcversion": "${mcversion}",
-"url": "",
+"url": "n/a",
 "updateUrl": "",
-"authors": ["Naftoreiclag"],
-"credits": "Credits",
-"logoFile": "",
+"authorList": ["Naftoreiclag"],
+"credits": "Naftoreiclag, TrinityKing",
+"logoFile": "logo.png",
 "screenshots": [],
 "dependencies": []
 }
