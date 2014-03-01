@@ -46,34 +46,34 @@ public class ItemWrench extends EHTItem
 		{
 			if(side == 0 || side == 1)
 			{
-				// check x
 				// check z
+				// check x
 				return 
-						foo(world, x, y, z, side, 3) || 
-						foo(world, x, y, z, side, 4) || 
-						foo(world, x, y, z, side, 5) || 
-						foo(world, x, y, z, side, 6);
+						foo(world, x, y, z, side, 2) | 
+						foo(world, x, y, z, side, 3) | 
+						foo(world, x, y, z, side, 4) | 
+						foo(world, x, y, z, side, 5);
 				
 			}
 			else if(side == 2 || side == 3)
 			{
-				// check x
 				// check y
+				// check x
 				return 
-						foo(world, x, y, z, side, 5) || 
-						foo(world, x, y, z, side, 6) || 
-						foo(world, x, y, z, side, 1) || 
-						foo(world, x, y, z, side, 0);
+						foo(world, x, y, z, side, 0) | 
+						foo(world, x, y, z, side, 1) | 
+						foo(world, x, y, z, side, 4) | 
+						foo(world, x, y, z, side, 5);
 			}
 			else if(side == 4 || side == 5)
 			{
-				// check z
 				// check y
+				// check z
 				return 
-						foo(world, x, y, z, side, 3) || 
-						foo(world, x, y, z, side, 2) || 
-						foo(world, x, y, z, side, 1) || 
-						foo(world, x, y, z, side, 0);
+						foo(world, x, y, z, side, 0) | 
+						foo(world, x, y, z, side, 1) | 
+						foo(world, x, y, z, side, 2) | 
+						foo(world, x, y, z, side, 3);
 			}
 			
 			return false;

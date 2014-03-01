@@ -110,9 +110,9 @@ public class MyStaticStrings
 	
 	// Steel Scaffold
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
-	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":steel_scaffold";
+	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":wooden_scaffold";
 	public static final String UNLOCALIZED_SCAFFOLD_FENCE = UNLOCALIZATION_PREFIX + "steelScaffoldFence";
-	public static final String TEXTURE_SCAFFOLD_FENCE = MOD_ID + ":steel_scafold_fence";
+	public static final String TEXTURE_SCAFFOLD_FENCE = MOD_ID + ":wooden_scaffold_fence";
 	
 	// Blueprint
 	public static final String UNLOCALIZED_BLUEPRINT = UNLOCALIZATION_PREFIX + "blueprint";
