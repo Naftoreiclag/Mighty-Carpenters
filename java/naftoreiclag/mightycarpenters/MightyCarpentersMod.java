@@ -39,7 +39,8 @@ import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCop
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
 import naftoreiclag.mightycarpenters.things.sketchstation.SketchStationTentity;
-import naftoreiclag.mightycarpenters.things.steelscaffold.BlockSteelScaffold;
+import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffold;
+import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.things.superhotfurnace.BlockShf;
 import naftoreiclag.mightycarpenters.things.superhotfurnace.ShfGuiHandler;
 import naftoreiclag.mightycarpenters.things.superhotfurnace.ShfTentity;
@@ -104,6 +105,7 @@ public class MightyCarpentersMod
 	public static Block block_shf;
 	
 	public static Block block_steel_scaffold;
+	public static Block block_scaffold_fence;
 	
 	public static Block block_sketch_station;
 	
@@ -135,7 +137,7 @@ public class MightyCarpentersMod
 		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
 
 		
-		block_steel_scaffold = new BlockSteelScaffold();
+		block_steel_scaffold = new BlockScaffold();
 		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());
 		
 		block_sketch_station = new BlockSketchStation();
@@ -144,6 +146,9 @@ public class MightyCarpentersMod
 		
 		item_blueprint = new ItemBlueprint();
 		GameRegistry.registerItem(item_blueprint, item_blueprint.getUnlocalizedName());
+		
+		block_scaffold_fence = new BlockScaffoldFence();
+		GameRegistry.registerBlock(block_scaffold_fence, block_scaffold_fence.getUnlocalizedName());
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(this.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
 		

@@ -3,7 +3,7 @@ package naftoreiclag.mightycarpenters.things.steelscaffold;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
-import net.minecraft.block.BlockGlass;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -11,11 +11,11 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockSteelScaffold extends BlockGlass
+public class BlockScaffold extends Block
 {
-	public BlockSteelScaffold()
+	public BlockScaffold()
 	{
-		super(Material.iron, false);
+		super(Material.iron);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_SCAFFOLD);
 		
 		this.setHardness(5.0F);
@@ -26,6 +26,23 @@ public class BlockSteelScaffold extends BlockGlass
 		
 		this.setCreativeTab(CreativeTabs.tabBlock);
 	}
+	
+	/**
+     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+     */
+    @SideOnly(Side.CLIENT)
+    public int getRenderBlockPass()
+    {
+        return 0;
+    }
+
+    /**
+     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+     */
+    public boolean renderAsNormalBlock()
+    {
+        return false;
+    }
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister ir)
