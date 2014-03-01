@@ -18,6 +18,8 @@ public class MyStaticStrings
 	public static final String TEXTURE_DEBUG_5 = MOD_ID + ":debug_5";
 	public static final String TEXTURE_DEBUG_6 = MOD_ID + ":debug_6";
 	
+	// Metals
+	// ===
 	
 	// Ores
 	public static final String UNLOCALIZED_COPPER_ORE = UNLOCALIZATION_PREFIX + "copperOre";
@@ -51,14 +53,57 @@ public class MyStaticStrings
 	public static final String TEXTURE_TIN_INGOT = MOD_ID + ":tin_ingot";
 	public static final String TEXTURE_TUNGSTEN_INGOT = MOD_ID + ":tungsten_ingot";
 	
-	// Monkey Wrench
-	public static final String UNLOCALIZED_MONKEY_WRENCH = UNLOCALIZATION_PREFIX + "monkeyWrench";
-	public static final String TEXTURE_MONKEY_WRENCH = MOD_ID + ":monkeywrench_yellow_32";
+	// Engineering Hand Tools
+	// ===
+	
+	// Blowtorch
+	public static final String UNLOCALIZED_BLOWTORCH = UNLOCALIZATION_PREFIX + "blowtorch";
+	public static final String TEXTURE_BLOWTORCH = MOD_ID + ":blowtorch";
+	
+	// Chainsaw
+	public static final String UNLOCALIZED_CHAINSAW = UNLOCALIZATION_PREFIX + "chainsaw";
+	public static final String TEXTURE_CHAINSAW = MOD_ID + ":chainsaw";
+	
+	// Drill
+	public static final String UNLOCALIZED_DRILL = UNLOCALIZATION_PREFIX + "drill";
+	public static final String TEXTURE_DRILL = MOD_ID + ":drill";
+	
+	// Glue
+	public static final String UNLOCALIZED_GLUE = UNLOCALIZATION_PREFIX + "glue";
+	public static final String TEXTURE_GLUE = MOD_ID + ":glue";
+	
+	// Hammer
+	public static final String UNLOCALIZED_HAMMER = UNLOCALIZATION_PREFIX + "hammer";
+	public static final String TEXTURE_HAMMER = MOD_ID + ":hammer";
+	
+	// Mallet
+	public static final String UNLOCALIZED_MALLET = UNLOCALIZATION_PREFIX + "mallet";
+	public static final String TEXTURE_MALLET = MOD_ID + ":mallet";
 	
 	// Nailgun
 	public static final String UNLOCALIZED_NAILGUN = UNLOCALIZATION_PREFIX + "nailgun";
 	public static final String TEXTURE_NAILGUN = MOD_ID + ":nailgun_32";
 	public static final String SOUND_NAILGUN_FIRE = MOD_ID + ":nailgun_fire";
+	
+	// Saw
+	public static final String UNLOCALIZED_SAW = UNLOCALIZATION_PREFIX + "saw";
+	public static final String TEXTURE_SAW = MOD_ID + ":saw";
+	
+	// Scissors
+	public static final String UNLOCALIZED_SCISSORS = UNLOCALIZATION_PREFIX + "scissors";
+	public static final String TEXTURE_SCISSORS = MOD_ID + ":scissors";
+	
+	// Screwdriver
+	public static final String UNLOCALIZED_SCREWDRIVER = UNLOCALIZATION_PREFIX + "screwdriver";
+	public static final String TEXTURE_SCREWDRIVER = MOD_ID + ":screwdriver";
+	
+	// Tape
+	public static final String UNLOCALIZED_TAPE = UNLOCALIZATION_PREFIX + "tape";
+	public static final String TEXTURE_TAPE = MOD_ID + ":tape";
+	
+	// Monkey Wrench
+	public static final String UNLOCALIZED_WRENCH = UNLOCALIZATION_PREFIX + "monkeyWrench";
+	public static final String TEXTURE_WRENCH = MOD_ID + ":monkeywrench_yellow_32";
 	
 	// Steel Scaffold
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
