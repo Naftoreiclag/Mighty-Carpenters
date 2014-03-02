@@ -26,8 +26,10 @@ public class EntityDummyBB extends Entity
 		bounds = AxisAlignedBB.getBoundingBox(x1, y1, z1, x2, y2, z2);
 		
 		// Try keep Minecraft's dumb prismic BB system in sync
-		this.setSize((float) (x2 - x1 < z2 - z1 ? x2 - x1 : z2 - z1), (float) (y2 - y1));
-		this.setPosition((x1 + x2) / 2, y1, (z1 + z2) / 2);
+		//this.setPosition((x1 + x2) / 2d, y1, (z1 + z2) / 2d);
+		this.setPosition(x1, y1, z1);
+		this.setSize(1f, 1f);
+		//this.setSize((float) (x2 - x1 < z2 - z1 ? x2 - x1 : z2 - z1), (float) (y2 - y1));
 	}
 	
 	@Override
