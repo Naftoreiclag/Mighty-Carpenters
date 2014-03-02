@@ -3,88 +3,51 @@ package naftoreiclag.mightycarpenters.things.mecha;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityFallingBlock;
-import net.minecraft.entity.monster.EntityCreeper;
+import net.minecraft.entity.passive.EntityBat;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 
 public class EntityMecha extends Entity
 {
-	private EntityCreeper potato;
-	
-	boolean stuffCreated;
+	private EntityDummyBB potato;
 	
 	public EntityMecha(World world)
 	{
 		super(world);
         this.preventEntitySpawning = true;
-        
-        stuffCreated = false;
 		
 		System.out.println("Constructor called!");
 	}
 	
-	/*
-	public EntityMecha setPos(int x, int y, int z)
-	{
-        this.posX = x;
-        this.posY = y;
-        this.posZ = z;
-        
-        syncBounds();
-        
-		return this;
-	}
-	*/
-	
-	/**
-     * Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
-     */
 	@Override
     public void setPosition(double x, double y, double z)
     {
         super.setPosition(x, y, z);
-
-		//System.out.println("Position called!");
-		
-		if(potato != null)//stuffCreated)
-		{
-			syncBounds();
-		}
+        
+        if(potato == null)
+        {
+        	System.out.println("Created without first making potato!");
+        }
+        else
+        {
+    		potato.setPosition(posX, posY, posZ);
+        }
     }
-    
-    private void createStuff()
-    {
-        potato = new EntityCreeper(worldObj);//new EntityDummyBB(worldObj);
-        syncBounds();
-        //System.out.println("Potato created at " + posX + ", " + posY + ", " + posZ);
-        
-        worldObj.spawnEntityInWorld(potato);
-        
-        stuffCreated = true;
-        
-    }
-	
-	private void syncBounds()
-	{
-		//potato.setBounds(posX, posY, posZ, posX + 1, posY + 1, posZ + 1);
-		potato.setPosition(posX, posY, posZ);
-        //System.out.println("Moved to:" + posX + ", " + posY + ", " + posZ);
-	}
 
 	@Override
 	public void entityInit()
 	{
 		System.out.println("Entity init called!");
 		
-		createStuff();
+		potato = new EntityDummyBB(worldObj);
+		potato.setPosition(posX, posY, posZ);
+		worldObj.spawnEntityInWorld(potato);
 	}
 	
 	@Override
 	public void onUpdate()
     {
-		
     }
 
 	@Override
@@ -104,7 +67,6 @@ public class EntityMecha extends Entity
     {
         return false;
     }
-	
 
 	@SideOnly(Side.CLIENT)
     public float getShadowSize()
