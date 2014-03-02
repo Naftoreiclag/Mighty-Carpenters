@@ -10,6 +10,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.EntityBoat;
+import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
@@ -41,12 +42,22 @@ public class ItemMechaCore extends Item
 		// No clients allowed
 		if(world.isRemote) { return false; }
 		
+		/*
 		EntityMecha a = new EntityMecha(world);
 		//a.setPos(x, y + 1, z);
 		a.setPosition(x, y + 1, z);
 		
 		world.spawnEntityInWorld(a);
-        
+        */
+		
+		//EntityCreeper b = new EntityCreeper(world);
+		//b.setPosition(x, y + 1, z);
+		//world.spawnEntityInWorld(b);
+		
+		EntityMecha c = new EntityMecha(world);
+		c.setPosition(x, y + 1, z);
+		world.spawnEntityInWorld(c);
+		
         return true;
     }
 }

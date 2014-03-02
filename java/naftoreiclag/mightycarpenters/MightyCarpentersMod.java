@@ -14,6 +14,7 @@ import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
@@ -36,9 +37,11 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
+import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBox;
 import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
 import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
+import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBox;
 import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
@@ -60,6 +63,9 @@ public class MightyCarpentersMod
 {
 	@Instance(MyStaticStrings.MOD_ID)
 	public static MightyCarpentersMod instance;
+	
+	@SidedProxy(clientSide = "naftoreiclag.mightycarpenters.ClientProxy", serverSide = "naftoreiclag.mightycarpenters.CommonProxy")
+	public static CommonProxy proxy;
 	
 	public static Block block_copperOre;
 	public static Item item_copperIngot;
@@ -174,11 +180,19 @@ public class MightyCarpentersMod
 		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, this, 80, 1, true);
 		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
 		
+		EntityRegistry.registerModEntity(EntityDumbBox.class, "dumbbox", 42, this, 80, 1, true);
+		
 		new ShfGuiHandler();
     }
 	@EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		proxy.registerEngineerHandTools();
+		proxy.registerMechaSystem();
+		proxy.registerScaffold();
+		proxy.registerMobs();
+		
+		
 		BiomeGenBase[] biomeList = BiomeGenBase.getBiomeGenArray();
 
 		/*

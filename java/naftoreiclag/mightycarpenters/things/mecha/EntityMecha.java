@@ -40,6 +40,8 @@ public class EntityMecha extends Entity
 	{
 		System.out.println("Entity init called!");
 		
+		if(worldObj.isRemote) { return; }
+		
 		potato = new EntityDummyBB(worldObj);
 		potato.setPosition(posX, posY, posZ);
 		worldObj.spawnEntityInWorld(potato);
