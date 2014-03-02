@@ -9,22 +9,35 @@ import net.minecraft.world.World;
 
 public class EntityMecha extends Entity
 {
+	private final EntityDummyBB potato;
+	
 	public EntityMecha(World world)
 	{
 		super(world);
 		
 		this.setSize(1.0f, 1.0f);
+		
         this.preventEntitySpawning = true;
         
+        potato = new EntityDummyBB(world);
+        
+        world.spawnEntityInWorld(potato);
 	}
 	
 	public EntityMecha setPos(int x, int y, int z)
 	{
-		
         this.posX = x;
         this.posY = y;
         this.posZ = z;
+        
+        syncBounds();
+        
 		return this;
+	}
+	
+	private void syncBounds()
+	{
+		potato.setBounds(posX, posY, posZ, posX + 1, posY + 1, posZ + 1);
 	}
 	
 	@Override
@@ -39,11 +52,10 @@ public class EntityMecha extends Entity
 		
     }
 
-	@Override
 	@SideOnly(Side.CLIENT)
     public float getShadowSize()
     {
-        return 0.0F;
+        return 0.0f;
     }
 	
 	/**

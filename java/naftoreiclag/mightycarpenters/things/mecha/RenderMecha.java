@@ -71,7 +71,7 @@ public class RenderMecha extends Render
 		// This is setting the initial location.
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
 
-		ResourceLocation textures = (new ResourceLocation("[yourmodidhere]:textures/blocks/TrafficLightPoleRed.png"));
+		ResourceLocation textures = new ResourceLocation("[yourmodidhere]:textures/blocks/TrafficLightPoleRed.png");
 		// the ':' is very important
 		// binding the textures
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);

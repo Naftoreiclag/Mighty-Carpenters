@@ -36,8 +36,10 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
+import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
 import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
+import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
@@ -167,8 +169,10 @@ public class MightyCarpentersMod
 		GameRegistry.registerItem(item_mecha_core, item_mecha_core.getUnlocalizedName());
 		
 		EntityRegistry.registerModEntity(EntityMecha.class, "dylanbutt", 500, this, 80, 1, true);
-		
 		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
+		
+		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, this, 80, 1, true);
+		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
 		
 		new ShfGuiHandler();
     }

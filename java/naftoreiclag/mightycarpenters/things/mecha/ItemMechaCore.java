@@ -41,12 +41,8 @@ public class ItemMechaCore extends Item
 		// No clients allowed
 		if(world.isRemote) { return false; }
 		
-		int i = x;
-		int j = y;
-		int k = z;
-		
 		EntityMecha a = new EntityMecha(world);
-		a.setPos(x, y, z);
+		a.setPos(x, y + 1, z);
 		
 		world.spawnEntityInWorld(a);
         
