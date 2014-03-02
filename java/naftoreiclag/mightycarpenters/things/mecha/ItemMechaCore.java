@@ -42,7 +42,8 @@ public class ItemMechaCore extends Item
 		if(world.isRemote) { return false; }
 		
 		EntityMecha a = new EntityMecha(world);
-		a.setPos(x, y + 1, z);
+		//a.setPos(x, y + 1, z);
+		a.setPosition(x, y + 1, z);
 		
 		world.spawnEntityInWorld(a);
         
