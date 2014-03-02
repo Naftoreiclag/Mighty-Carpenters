@@ -69,7 +69,6 @@ public class MightyCarpentersMod
 	
 	public static Block block_copperOre;
 	public static Item item_copperIngot;
-	
 	public static Item item_blowtorch;
 	public static Item item_chainsaw;
 	public static Item item_drill;
@@ -82,154 +81,30 @@ public class MightyCarpentersMod
 	public static Item item_screwdriver;
 	public static Item item_tape;
 	public static Item item_wrench;
-	
-	private void registerEHTs()
-	{
-		item_blowtorch = new ItemBlowtorch();
-		item_chainsaw = new ItemChainsaw();
-		item_drill = new ItemDrill();
-		item_glue = new ItemGlue();
-		item_hammer = new ItemHammer();
-		item_mallet = new ItemMallet();
-		item_nailgun = new ItemNailgun();
-		item_saw = new ItemSaw();
-		item_scissors = new ItemScissors();
-		item_screwdriver = new ItemScrewdriver();
-		item_tape = new ItemTape();
-		item_wrench = new ItemWrench();
-		
-		itemRegisterMacro(item_blowtorch);
-		itemRegisterMacro(item_chainsaw);
-		itemRegisterMacro(item_drill);
-		itemRegisterMacro(item_glue);
-		itemRegisterMacro(item_hammer);
-		itemRegisterMacro(item_mallet);
-		itemRegisterMacro(item_nailgun);
-		itemRegisterMacro(item_saw);
-		itemRegisterMacro(item_scissors);
-		itemRegisterMacro(item_screwdriver);
-		itemRegisterMacro(item_tape);
-		itemRegisterMacro(item_wrench);
-		
-		EntityRegistry.registerModEntity(EntityFlyingNail.class, "flyingNail", 0, instance, 120, 3, true);
-	}
-	
 	public static Block block_shf;
-	
 	public static Block block_steel_scaffold;
 	public static Block block_scaffold_fence;
-	
 	public static Block block_concrete;
-	
 	public static Block block_sketch_station;
-	
 	public static Item item_blueprint;
-	
 	public static Item item_mecha_core;
-	
-	private static int first_available_entity_id = 300;
-	
-	WorldGenManager ev = new WorldGenManager();
+	public static WorldGenManager ev;
 	
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-		registerEHTs();
-		
-		block_copperOre = new BlockCopperOre();
-		GameRegistry.registerBlock(block_copperOre, block_copperOre.getUnlocalizedName());
-		OreDictionary.registerOre("oreCopper", block_copperOre);
-		
-		item_copperIngot = new ItemCopperIngot();
-		GameRegistry.registerItem(item_copperIngot, item_copperIngot.getUnlocalizedName());
-		OreDictionary.registerOre("ingotCopper", item_copperIngot);
-    
-		GameRegistry.registerWorldGenerator(ev, 1);
-		
-		block_shf = new BlockShf();
-		GameRegistry.registerBlock(block_shf, block_shf.getUnlocalizedName());
-		GameRegistry.registerTileEntity(ShfTentity.class, MyStaticStrings.TEID_SHF);
-		
-		GameRegistry.addSmelting(block_copperOre, new ItemStack(item_copperIngot), 0.1f);
-
-		
-		block_steel_scaffold = new BlockScaffold();
-		GameRegistry.registerBlock(block_steel_scaffold, block_steel_scaffold.getUnlocalizedName());
-		
-		block_sketch_station = new BlockSketchStation();
-		GameRegistry.registerBlock(block_sketch_station, block_sketch_station.getUnlocalizedName());
-		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
-		
-		item_blueprint = new ItemBlueprint();
-		GameRegistry.registerItem(item_blueprint, item_blueprint.getUnlocalizedName());
-		
-		block_scaffold_fence = new BlockScaffoldFence();
-		GameRegistry.registerBlock(block_scaffold_fence, block_scaffold_fence.getUnlocalizedName());
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(this.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
-		
-		block_concrete = new BlockConcrete();
-		GameRegistry.registerBlock(block_concrete, block_concrete.getUnlocalizedName());
-		
-		item_mecha_core = new ItemMechaCore();
-		GameRegistry.registerItem(item_mecha_core, item_mecha_core.getUnlocalizedName());
-		
-		EntityRegistry.registerModEntity(EntityMecha.class, "dylanbutt", 500, this, 80, 1, true);
-		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
-		
-		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, this, 80, 1, true);
-		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
-		
-		EntityRegistry.registerModEntity(EntityDumbBox.class, "dumbbox", 42, this, 80, 1, true);
-		
-		new ShfGuiHandler();
-    }
-	@EventHandler
-	public void init(FMLInitializationEvent event)
-	{
+		proxy.registerWorldGenModifier();
+		proxy.registerMetals();
 		proxy.registerEngineerHandTools();
+		proxy.registerMiscItems();
 		proxy.registerMechaSystem();
 		proxy.registerScaffold();
 		proxy.registerMobs();
-		
-		
-		BiomeGenBase[] biomeList = BiomeGenBase.getBiomeGenArray();
-
-		/*
-		EntityRegistry.registerModEntity(EntityUndeadEngineer.class, "eddy", 1, this, 80, 3, true);
-
-		for(int i = 0; i < biomeList.length; i++)
-		{
-			if(biomeList[i] != null)
-			{
-				EntityRegistry.addSpawn(EntityUndeadEngineer.class, 10, 1, 3, EnumCreatureType.monster, biomeList[i]);
-			}
-		}
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityUndeadEngineer.class, new RenderUndeadEngineer());
-
-		registerEntityEgg(EntityUndeadEngineer.class, 22967, 4825967);
-		*/
-		
-		//RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_monkeywrench));
-		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(item_wrench));
-	}
-
-	public static int getUniqueEntityId()
-	{
-		while(EntityList.getClassFromID(first_available_entity_id) == null)
-		{
-			++ first_available_entity_id;
-		}
-		return first_available_entity_id;
-	}
-
-	public static void registerEntityEgg(Class entity, int primaryColor,
-			int secondaryColor)
-	{
-		int id = getUniqueEntityId();
-		//EntityList.addMapping(entity, "eddy", id, primaryColor, secondaryColor);
-	}
+    }
 	
-	private void itemRegisterMacro(Item item) { GameRegistry.registerItem(item, item.getUnlocalizedName()); }
+	@EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		proxy.registerEntityRenderers();
+	}
 }
