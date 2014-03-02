@@ -24,6 +24,10 @@ import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBox;
 import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBoxCollide;
 import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
+import naftoreiclag.mightycarpenters.things.multipart.EntityArbolPart;
+import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
+import naftoreiclag.mightycarpenters.things.multipart.RenderArbolPart;
+import naftoreiclag.mightycarpenters.things.multipart.RenderArbolRoot;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -91,6 +95,9 @@ public class CommonProxy
 		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, MightyCarpentersMod.instance, 80, 1, true);
 		EntityRegistry.registerModEntity(EntityDumbBox.class, "dumbbox", 42, MightyCarpentersMod.instance, 80, 1, true);
 		EntityRegistry.registerModEntity(EntityDumbBoxCollide.class, "dumbboxcollide", 42, MightyCarpentersMod.instance, 80, 1, true);
+		
+		EntityRegistry.registerModEntity(EntityArbolRoot.class, "arbolRoot", 69, MightyCarpentersMod.instance, 80, 1, true);
+		EntityRegistry.registerModEntity(EntityArbolPart.class, "arbolPart", 70, MightyCarpentersMod.instance, 80, 1, true);
 	}
 
 	public void registerScaffold()
@@ -148,6 +155,9 @@ public class CommonProxy
 		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBox.class, new RenderDumbBox());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBoxCollide.class, new RenderDumbBoxCollide());
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityArbolRoot.class, new RenderArbolRoot());
+		RenderingRegistry.registerEntityRenderingHandler(EntityArbolPart.class, new RenderArbolPart());
 	}
 
 }

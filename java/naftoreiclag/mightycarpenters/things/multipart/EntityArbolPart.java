@@ -7,47 +7,39 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityArbolRoot extends Entity
+public class EntityArbolPart extends Entity
 {
-	EntityArbolPart partA;
+	private EntityArbolRoot root;
 	
-	public EntityArbolRoot(World world)
+	public EntityArbolPart(World world)
 	{
 		super(world);
 		
-		partA = new EntityArbolPart(this);
+		this.kill();
 	}
 	
-	protected World getWorld()
+	public EntityArbolPart(EntityArbolRoot root)
 	{
-		return worldObj;
+		super(root.getWorld());
+		
+		this.root = root;
 	}
-	
-	@Override
-	public void onEntityUpdate()
-    {
-		partA.setPosition(posX, posY + 1, posZ);
-    }
 
 	@Override
 	public void entityInit()
 	{
-		// TODO Auto-generated method stub
-		
 	}
+	
+	
 
 	@Override
 	public void readEntityFromNBT(NBTTagCompound var1)
 	{
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void writeEntityToNBT(NBTTagCompound var1)
 	{
-		// TODO Auto-generated method stub
-		
 	}
 	
 }

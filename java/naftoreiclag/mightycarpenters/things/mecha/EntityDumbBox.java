@@ -9,6 +9,8 @@ public class EntityDumbBox extends Entity
 	public EntityDumbBox(World world)
 	{
 		super(world);
+		
+		
 	}
 	
 	@Override

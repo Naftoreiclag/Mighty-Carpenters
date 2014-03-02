@@ -5,6 +5,7 @@ import java.util.List;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
+import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -59,7 +60,7 @@ public class ItemMechaCore extends Item
 		c.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(c);
 		*/
-		EntityDumbBox d = new EntityDumbBox(world);
+		EntityArbolRoot d = new EntityArbolRoot(world);
 		d.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(d);
 		
