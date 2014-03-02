@@ -26,13 +26,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 @SideOnly(Side.CLIENT)
-public class RenderDumbBox extends Render
+public class RenderDumbBoxCollide extends Render
 {
 	private final ModelTest model;
 	
 	private final RenderBlocks renderBlocks = new RenderBlocks();
 
-	public RenderDumbBox()
+	public RenderDumbBoxCollide()
 	{
 		model = new ModelTest();
 		this.shadowSize = 0.5f;

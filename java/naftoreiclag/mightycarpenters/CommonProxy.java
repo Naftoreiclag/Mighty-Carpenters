@@ -16,9 +16,12 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemSc
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
 import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBox;
+import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBoxCollide;
 import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
 import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
+import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBox;
+import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBoxCollide;
 import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
 import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
@@ -82,11 +85,12 @@ public class CommonProxy
 	public void registerMechaSystem()
 	{
 		MightyCarpentersMod.item_mecha_core = new ItemMechaCore();
-		itemRegisterMacro(MightyCarpentersMod.item_blowtorch);
+		itemRegisterMacro(MightyCarpentersMod.item_mecha_core);
 		
 		EntityRegistry.registerModEntity(EntityMecha.class, "dylanbutt", 500, MightyCarpentersMod.instance, 80, 1, true);
 		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, MightyCarpentersMod.instance, 80, 1, true);
 		EntityRegistry.registerModEntity(EntityDumbBox.class, "dumbbox", 42, MightyCarpentersMod.instance, 80, 1, true);
+		EntityRegistry.registerModEntity(EntityDumbBoxCollide.class, "dumbboxcollide", 42, MightyCarpentersMod.instance, 80, 1, true);
 	}
 
 	public void registerScaffold()
@@ -106,18 +110,18 @@ public class CommonProxy
 
 	public void registerMiscItems()
 	{
-		/*
-		block_sketch_station = new BlockSketchStation();
-		GameRegistry.registerBlock(block_sketch_station, block_sketch_station.getUnlocalizedName());
+		
+		MightyCarpentersMod.block_sketch_station = new BlockSketchStation();
+		blockRegisterMacro(MightyCarpentersMod.block_sketch_station);
 		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
 		
-		item_blueprint = new ItemBlueprint();
-		GameRegistry.registerItem(item_blueprint, item_blueprint.getUnlocalizedName());
-		GameRegistry.addShapelessRecipe(new ItemStack(this.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
+		MightyCarpentersMod.item_blueprint = new ItemBlueprint();
+		itemRegisterMacro(MightyCarpentersMod.item_blueprint);
+		GameRegistry.addShapelessRecipe(new ItemStack(MightyCarpentersMod.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
 		
-		block_concrete = new BlockConcrete();
-		GameRegistry.registerBlock(block_concrete, block_concrete.getUnlocalizedName());
-		*/
+		MightyCarpentersMod.block_concrete = new BlockConcrete();
+		blockRegisterMacro(MightyCarpentersMod.block_concrete);
+		
 	}
 
 	public void registerMetals()
@@ -142,6 +146,8 @@ public class CommonProxy
 	{
 		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
 		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
+		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBox.class, new RenderDumbBox());
+		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBoxCollide.class, new RenderDumbBoxCollide());
 	}
 
 }

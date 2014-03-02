@@ -54,9 +54,14 @@ public class ItemMechaCore extends Item
 		//b.setPosition(x, y + 1, z);
 		//world.spawnEntityInWorld(b);
 		
+		/*
 		EntityMecha c = new EntityMecha(world);
 		c.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(c);
+		*/
+		EntityDumbBox d = new EntityDumbBox(world);
+		d.setPosition(x, y + 1, z);
+		world.spawnEntityInWorld(d);
 		
         return true;
     }

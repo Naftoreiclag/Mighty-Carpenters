@@ -4,17 +4,19 @@ import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 
-public class EntityDumbBox extends Entity
+public class EntityDumbBoxCollide extends Entity
 {
-	public EntityDumbBox(World world)
+	public EntityDumbBoxCollide(World world)
 	{
 		super(world);
+		
+		this.setSize(1.0f, 1.0f);
 	}
 	
 	@Override
 	public boolean canBeCollidedWith()
     {
-        return false;
+        return true;
     }
 
 	@Override
