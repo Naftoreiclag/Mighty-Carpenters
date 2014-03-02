@@ -44,10 +44,10 @@ public class RenderMecha extends Render
 		World world = entity.worldObj;
 		Block block = MightyCarpentersMod.block_concrete;
 		int blockX = MathHelper.floor_double(entity.posX);
-		int j = MathHelper.floor_double(entity.posY);
-		int k = MathHelper.floor_double(entity.posZ);
+		int blockY = MathHelper.floor_double(entity.posY);
+		int blockZ = MathHelper.floor_double(entity.posZ);
 
-		if (block != null && block != world.getBlock(blockX, j, k))
+		if (block != null && block != world.getBlock(blockX, blockY, blockZ))
 		{
 			GL11.glPushMatrix();
 			GL11.glTranslatef((float) x, (float) y, (float) z);
@@ -58,36 +58,36 @@ public class RenderMecha extends Render
 			/*
 			if (block instanceof BlockAnvil)
 			{
-				*/
-			/*
-			renderBlocks.blockAccess = world;
-			tessellator = Tessellator.instance;
-			tessellator.startDrawingQuads();
-			tessellator.setTranslation((double) ((float) (-blockX) - 0.5F), (double) ((float) (-j) - 0.5F), (double) ((float) (-k) - 0.5F));
-			renderBlocks.renderBlockAnvilMetadata((BlockAnvil) block, blockX, j, k, 0);
-			tessellator.setTranslation(0.0D, 0.0D, 0.0D);
-			tessellator.draw();*/
-			/*
+
+				renderBlocks.blockAccess = world;
+				tessellator = Tessellator.instance;
+				tessellator.startDrawingQuads();
+				tessellator.setTranslation((double) ((float) (-blockX) - 0.5F), (double) ((float) (-blockY) - 0.5F), (double) ((float) (-blockZ) - 0.5F));
+				renderBlocks.renderBlockAnvilMetadata((BlockAnvil) block, blockX, blockY, blockZ, 0);
+				tessellator.setTranslation(0.0D, 0.0D, 0.0D);
+				tessellator.draw();
+
 			}
 			else if (block instanceof BlockDragonEgg)
 			{
 				renderBlocks.blockAccess = world;
 				tessellator = Tessellator.instance;
 				tessellator.startDrawingQuads();
-				tessellator.setTranslation((double) ((float) (-blockX) - 0.5F), (double) ((float) (-j) - 0.5F), (double) ((float) (-k) - 0.5F));
-				renderBlocks.renderBlockDragonEgg((BlockDragonEgg) block, blockX, j, k);
+				tessellator.setTranslation((double) ((float) (-blockX) - 0.5F), (double) ((float) (-blockY) - 0.5F), (double) ((float) (-blockZ) - 0.5F));
+				renderBlocks.renderBlockDragonEgg((BlockDragonEgg) block, blockX, blockY, blockZ);
 				tessellator.setTranslation(0.0D, 0.0D, 0.0D);
 				tessellator.draw();
 			}
 			else
 			{
 				renderBlocks.setRenderBoundsFromBlock(block);
-				renderBlocks.renderBlockSandFalling(block, world, blockX, j, k, entity.field_145814_a);
+				renderBlocks.renderBlockSandFalling(block, world, blockX, blockY, blockZ, entity.field_145814_a);
 			}
 			*/
 			
+			
 			renderBlocks.setRenderBoundsFromBlock(block);
-			renderBlocks.renderBlockSandFalling(block, world, blockX, j, k, 0);
+			renderBlocks.renderBlockSandFalling(block, world, blockX, blockY, blockZ, 0);
 
 			GL11.glEnable(GL11.GL_LIGHTING);
 			GL11.glPopMatrix();
