@@ -10,6 +10,13 @@ public class MyStaticStrings
 	
 	// Debug
 	// ===
+	public static final String UNLOCALIZED_DEBUG_0 = UNLOCALIZATION_PREFIX + "debug_0";
+	public static final String UNLOCALIZED_DEBUG_1 = UNLOCALIZATION_PREFIX + "debug_1";
+	public static final String UNLOCALIZED_DEBUG_2 = UNLOCALIZATION_PREFIX + "debug_2";
+	public static final String UNLOCALIZED_DEBUG_3 = UNLOCALIZATION_PREFIX + "debug_3";
+	public static final String UNLOCALIZED_DEBUG_4 = UNLOCALIZATION_PREFIX + "debug_4";
+	public static final String UNLOCALIZED_DEBUG_5 = UNLOCALIZATION_PREFIX + "debug_5";
+	public static final String UNLOCALIZED_DEBUG_6 = UNLOCALIZATION_PREFIX + "debug_6";
 	public static final String TEXTURE_DEBUG_0 = MOD_ID + ":debug_0";
 	public static final String TEXTURE_DEBUG_1 = MOD_ID + ":debug_1";
 	public static final String TEXTURE_DEBUG_2 = MOD_ID + ":debug_2";
@@ -110,9 +117,13 @@ public class MyStaticStrings
 	
 	// Steel Scaffold
 	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
-	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":wooden_scaffold";
+	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":scaffold_iron";
 	public static final String UNLOCALIZED_SCAFFOLD_FENCE = UNLOCALIZATION_PREFIX + "steelScaffoldFence";
-	public static final String TEXTURE_SCAFFOLD_FENCE = MOD_ID + ":wooden_scaffold_fence";
+	public static final String TEXTURE_SCAFFOLD_FENCE = MOD_ID + ":scaffold_iron_fence";
+	
+	// Concrete
+	public static final String UNLOCALIZED_CONCRETE = UNLOCALIZATION_PREFIX + "concrete";
+	public static final String TEXTURE_CONCRETE = MOD_ID + ":concrete";
 	
 	// Blueprint
 	public static final String UNLOCALIZED_BLUEPRINT = UNLOCALIZATION_PREFIX + "blueprint";

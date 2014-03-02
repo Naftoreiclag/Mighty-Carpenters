@@ -4,6 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockGlass;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,11 +14,11 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockScaffold extends Block
+public class BlockScaffold extends BlockGlass
 {
 	public BlockScaffold()
 	{
-		super(Material.iron);
+		super(Material.iron, false);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_SCAFFOLD);
 		
 		this.setHardness(5.0F);

@@ -14,7 +14,7 @@ import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
-public class BlockScaffoldFence extends Block
+public class BlockScaffoldFence extends BlockGlass
 {
 	public static final float thick = 0.0625f;
 	public static final float antithick = 1.0f - thick;
@@ -22,7 +22,7 @@ public class BlockScaffoldFence extends Block
 	
 	public BlockScaffoldFence()
 	{
-		super(Material.iron);
+		super(Material.iron, false);
 		this.setBlockName(MyStaticStrings.UNLOCALIZED_SCAFFOLD_FENCE);
 		
 		this.setHardness(5.0F);

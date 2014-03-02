@@ -22,6 +22,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
 
 import naftoreiclag.mightycarpenters.things.blueprint.ItemBlueprint;
+import naftoreiclag.mightycarpenters.things.cement.concrete.BlockConcrete;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.blowtorch.ItemBlowtorch;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.chainsaw.ItemChainsaw;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.drill.ItemDrill;
@@ -35,6 +36,9 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
+import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
+import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
+import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -107,9 +111,13 @@ public class MightyCarpentersMod
 	public static Block block_steel_scaffold;
 	public static Block block_scaffold_fence;
 	
+	public static Block block_concrete;
+	
 	public static Block block_sketch_station;
 	
 	public static Item item_blueprint;
+	
+	public static Item item_mecha_core;
 	
 	private static int first_available_entity_id = 300;
 	
@@ -151,6 +159,16 @@ public class MightyCarpentersMod
 		GameRegistry.registerBlock(block_scaffold_fence, block_scaffold_fence.getUnlocalizedName());
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(this.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
+		
+		block_concrete = new BlockConcrete();
+		GameRegistry.registerBlock(block_concrete, block_concrete.getUnlocalizedName());
+		
+		item_mecha_core = new ItemMechaCore();
+		GameRegistry.registerItem(item_mecha_core, item_mecha_core.getUnlocalizedName());
+		
+		EntityRegistry.registerModEntity(EntityMecha.class, "dylanbutt", 500, this, 80, 1, true);
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
 		
 		new ShfGuiHandler();
     }
