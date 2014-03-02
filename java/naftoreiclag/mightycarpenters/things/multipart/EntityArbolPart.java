@@ -14,6 +14,8 @@ public class EntityArbolPart extends Entity
 	public EntityArbolPart(World world)
 	{
 		super(world);
+
+		System.out.println("selfdestruct part");
 		
 		this.kill();
 	}
@@ -21,6 +23,7 @@ public class EntityArbolPart extends Entity
 	public EntityArbolPart(EntityArbolRoot root)
 	{
 		super(root.getWorld());
+		System.out.println("a good part");
 		
 		this.root = root;
 	}
@@ -29,8 +32,6 @@ public class EntityArbolPart extends Entity
 	public void entityInit()
 	{
 	}
-	
-	
 
 	@Override
 	public void readEntityFromNBT(NBTTagCompound var1)

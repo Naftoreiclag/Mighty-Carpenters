@@ -9,14 +9,25 @@ import net.minecraft.world.World;
 
 public class EntityArbolRoot extends Entity
 {
+	EntityArbolPart[] parts;
+	
 	EntityArbolPart partA;
 	
 	public EntityArbolRoot(World world)
 	{
 		super(world);
 		
-		partA = new EntityArbolPart(this);
+		System.out.println("a root");
+		
+		parts = new EntityArbolPart[]{partA = new EntityArbolPart(this)};
+		world.spawnEntityInWorld(partA);
 	}
+	
+	@Override
+	public Entity[] getParts()
+    {
+		return parts;
+    }
 	
 	protected World getWorld()
 	{
