@@ -10,6 +10,7 @@ import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAnvil;
 import net.minecraft.block.BlockDragonEgg;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelLeashKnot;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -26,10 +27,13 @@ import net.minecraft.world.World;
 @SideOnly(Side.CLIENT)
 public class RenderMecha extends Render
 {
+	private final ModelTest model;
+	
 	private final RenderBlocks renderBlocks = new RenderBlocks();
 
 	public RenderMecha()
 	{
+		model = new ModelTest();
 		this.shadowSize = 0.5f;
 	}
 
@@ -46,17 +50,43 @@ public class RenderMecha extends Render
 	@Override
 	public void doRender(Entity entity, double x, double y, double z, float uselessFloat1_, float uselessFloat2_)
     {
+		/*
         GL11.glPushMatrix();
+        
         GL11.glDisable(GL11.GL_CULL_FACE);
         GL11.glTranslatef((float)x, (float)y, (float)z);
         float f2 = 0.0625F;
         GL11.glEnable(GL12.GL_RESCALE_NORMAL);
         GL11.glScalef(-1.0F, -1.0F, 1.0F);
         GL11.glEnable(GL11.GL_ALPHA_TEST);
+        
         this.bindEntityTexture(entity);
         this.leashKnotModel.render(entity, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, f2);
+        
         GL11.glPopMatrix();
-    }
+        */
+		
+		// The PushMatrix tells the renderer to "start" doing something.
+		GL11.glPushMatrix();
+		// This is setting the initial location.
+		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
+
+		ResourceLocation textures = (new ResourceLocation("[yourmodidhere]:textures/blocks/TrafficLightPoleRed.png"));
+		// the ':' is very important
+		// binding the textures
+		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
+
+		// This rotation part is very important! Without it, your model will
+		// render upside-down! And for some reason you DO need PushMatrix again!
+		GL11.glPushMatrix();
+		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
+		// A reference to your Model file. Again, very important.
+		this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		// Tell it to stop rendering for both the PushMatrix's
+		GL11.glPopMatrix();
+
+		GL11.glPopMatrix();
+	}
 	
 	@Override
 	protected ResourceLocation getEntityTexture(Entity genericEntity)
