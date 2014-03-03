@@ -29,13 +29,13 @@ import net.minecraft.world.World;
 @SideOnly(Side.CLIENT)
 public class RenderArbolPart extends Render
 {
-	private final ModelTest model;
+	private final ModelCore model;
 	
 	private final RenderBlocks renderBlocks = new RenderBlocks();
 
 	public RenderArbolPart()
 	{
-		model = new ModelTest();
+		model = new ModelCore();
 		this.shadowSize = 0.5f;
 	}
 
@@ -44,7 +44,7 @@ public class RenderArbolPart extends Render
     {
 		GL11.glPushMatrix();
 		GL11.glTranslatef((float) x + 0.5f, (float) y + 1.5F, (float) z + 0.5f);
-		ResourceLocation textures = new ResourceLocation(MyStaticStrings.TEXTURE_DEBUG_4);
+		ResourceLocation textures = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE);
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();
 		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);

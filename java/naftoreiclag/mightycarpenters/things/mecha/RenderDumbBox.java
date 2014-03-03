@@ -42,7 +42,7 @@ public class RenderDumbBox extends Render
 	public void doRender(Entity entity, double x, double y, double z, float uselessFloat1_, float uselessFloat2_)
     {
 		GL11.glPushMatrix();
-		GL11.glTranslatef((float) x + 0.5f, (float) y + 1.5F, (float) z + 0.5f);
+		GL11.glTranslatef((float) x, (float) y + 1.5F, (float) z);
 		ResourceLocation textures = new ResourceLocation(MyStaticStrings.TEXTURE_DEBUG_4);
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 		GL11.glPushMatrix();

@@ -26,7 +26,9 @@ public class EntityArbolRoot extends Entity
 	@Override
 	public Entity[] getParts()
     {
-		return parts;
+		//return parts;
+		
+		return null;
     }
 	
 	protected World getWorld()
