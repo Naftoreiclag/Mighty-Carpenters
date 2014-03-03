@@ -27,9 +27,9 @@ public class ItemMechCorePlacer extends Item
 	public ItemMechCorePlacer()
 	{
 		super();
-		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_DEBUG_0);
+		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_MECH_CORE_PLACER);
 		
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		this.setCreativeTab(CreativeTabs.tabTransport);
 	}
 	
 	@SideOnly(Side.CLIENT)

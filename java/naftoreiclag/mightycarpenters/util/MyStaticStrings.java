@@ -116,7 +116,7 @@ public class MyStaticStrings
 	
 	// Mech
 	// ====
-	public static final String UNLOCALIZE_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_placer";
+	public static final String UNLOCALIZED_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_core_placer";
 	
 	// ???
 	// ===

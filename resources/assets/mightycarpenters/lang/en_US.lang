@@ -30,6 +30,8 @@ item.mightycarpenters.silver_ingot.name=Silver Ingot
 item.mightycarpenters.tin_ingot.name=Tin Ingot
 item.mightycarpenters.tungsten_ingot.name=Tungsten Ingot
 
+item.mightycarpenters.mech_core_placer.name=Mech Core
+
 tile.mightycarpenters.shf.name=Super-hot Furnace
 
 block.mightycarpenters.steel_scaffold.name=Steel Scaffold
