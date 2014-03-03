@@ -119,6 +119,11 @@ public class MyStaticStrings
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mecha_core.png";
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE_FAKE_SHADING = MOD_ID + ":textures/models/metal_mecha_core_fake_shading.png";
 	
+
+	public static final String SOUND_METAL_HIT_PREFIX = MOD_ID + ":metal_hit_";
+	public static final String SOUND_METAL_HIT_1 = SOUND_METAL_HIT_PREFIX + "1";
+	public static final String SOUND_METAL_HIT_2 = SOUND_METAL_HIT_PREFIX + "2";
+	
 	// ???
 	// ===
 	

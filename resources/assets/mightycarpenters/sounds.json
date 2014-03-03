@@ -1,5 +1,5 @@
 {
-    "nailgun_fire": {"category": "master","sounds": [{"name": "nailgun_fire","stream": false}]}
-    "metal_hit_1": {"category": "master","sounds": [{"name": "metal_hit_1","stream": false}]}
+    "nailgun_fire": {"category": "master","sounds": [{"name": "nailgun_fire","stream": false}]},
+    "metal_hit_1": {"category": "master","sounds": [{"name": "metal_hit_1","stream": false}]},
     "metal_hit_2": {"category": "master","sounds": [{"name": "metal_hit_2","stream": false}]}
 }
