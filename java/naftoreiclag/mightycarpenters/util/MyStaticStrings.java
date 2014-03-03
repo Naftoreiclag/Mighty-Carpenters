@@ -29,13 +29,13 @@ public class MyStaticStrings
 	// ===
 	
 	// Ores
-	public static final String UNLOCALIZED_COPPER_ORE = UNLOCALIZATION_PREFIX + "copperOre";
-	public static final String UNLOCALIZED_LEAD_ORE = UNLOCALIZATION_PREFIX + "leadOre";
-	public static final String UNLOCALIZED_NICKEL_ORE = UNLOCALIZATION_PREFIX + "nickelOre";
-	public static final String UNLOCALIZED_OSMIUM_ORE = UNLOCALIZATION_PREFIX + "osmiumOre";
-	public static final String UNLOCALIZED_SILVER_ORE = UNLOCALIZATION_PREFIX + "silverOre";
-	public static final String UNLOCALIZED_TIN_ORE = UNLOCALIZATION_PREFIX + "tinOre";
-	public static final String UNLOCALIZED_TUNGSTEN_ORE = UNLOCALIZATION_PREFIX + "tungstenOre";
+	public static final String UNLOCALIZED_COPPER_ORE = UNLOCALIZATION_PREFIX + "copper_ore";
+	public static final String UNLOCALIZED_LEAD_ORE = UNLOCALIZATION_PREFIX + "lead_ore";
+	public static final String UNLOCALIZED_NICKEL_ORE = UNLOCALIZATION_PREFIX + "nickel_ore";
+	public static final String UNLOCALIZED_OSMIUM_ORE = UNLOCALIZATION_PREFIX + "osmium_ore";
+	public static final String UNLOCALIZED_SILVER_ORE = UNLOCALIZATION_PREFIX + "silver_ore";
+	public static final String UNLOCALIZED_TIN_ORE = UNLOCALIZATION_PREFIX + "tin_ore";
+	public static final String UNLOCALIZED_TUNGSTEN_ORE = UNLOCALIZATION_PREFIX + "tungsten_ore";
 	public static final String TEXTURE_COPPER_ORE = MOD_ID + ":copper_ore";
 	public static final String TEXTURE_LEAD_ORE = MOD_ID + ":silver_ore";
 	public static final String TEXTURE_NICKEL_ORE = MOD_ID + ":nickel_ore";
@@ -45,13 +45,13 @@ public class MyStaticStrings
 	public static final String TEXTURE_TUNGSTEN_ORE = MOD_ID + ":tungsten_ore";
 
 	// Ingots
-	public static final String UNLOCALIZED_COPPER_INGOT = UNLOCALIZATION_PREFIX + "copperIngot";
-	public static final String UNLOCALIZED_LEAD_INGOT = UNLOCALIZATION_PREFIX + "leadIngot";
-	public static final String UNLOCALIZED_NICKEL_INGOT = UNLOCALIZATION_PREFIX + "nickelIngot";
-	public static final String UNLOCALIZED_OSMIUM_INGOT = UNLOCALIZATION_PREFIX + "osmiumIngot";
-	public static final String UNLOCALIZED_SILVER_INGOT = UNLOCALIZATION_PREFIX + "silverIngot";
-	public static final String UNLOCALIZED_TIN_INGOT = UNLOCALIZATION_PREFIX + "tinIngot";
-	public static final String UNLOCALIZED_TUNGSTEN_INGOT = UNLOCALIZATION_PREFIX + "tungstenIngot";
+	public static final String UNLOCALIZED_COPPER_INGOT = UNLOCALIZATION_PREFIX + "copper_ingot";
+	public static final String UNLOCALIZED_LEAD_INGOT = UNLOCALIZATION_PREFIX + "lead_ingot";
+	public static final String UNLOCALIZED_NICKEL_INGOT = UNLOCALIZATION_PREFIX + "nickel_ingot";
+	public static final String UNLOCALIZED_OSMIUM_INGOT = UNLOCALIZATION_PREFIX + "osmium_ingot";
+	public static final String UNLOCALIZED_SILVER_INGOT = UNLOCALIZATION_PREFIX + "silver_ingot";
+	public static final String UNLOCALIZED_TIN_INGOT = UNLOCALIZATION_PREFIX + "tin_ingot";
+	public static final String UNLOCALIZED_TUNGSTEN_INGOT = UNLOCALIZATION_PREFIX + "tungsten_ingot";
 	public static final String TEXTURE_COPPER_INGOT = MOD_ID + ":copper_ingot";
 	public static final String TEXTURE_LEAD_INGOT = MOD_ID + ":lead_ingot";
 	public static final String TEXTURE_NICKEL_INGOT = MOD_ID + ":nickel_ingot";
@@ -122,9 +122,9 @@ public class MyStaticStrings
 	// ===
 	
 	// Steel Scaffold
-	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steelScaffold";
+	public static final String UNLOCALIZED_SCAFFOLD = UNLOCALIZATION_PREFIX + "steel_scaffold";
 	public static final String TEXTURE_SCAFFOLD = MOD_ID + ":scaffold_iron";
-	public static final String UNLOCALIZED_SCAFFOLD_FENCE = UNLOCALIZATION_PREFIX + "steelScaffoldFence";
+	public static final String UNLOCALIZED_SCAFFOLD_FENCE = UNLOCALIZATION_PREFIX + "steel_scaffoldFence";
 	public static final String TEXTURE_SCAFFOLD_FENCE = MOD_ID + ":scaffold_iron_fence";
 	
 	// Concrete

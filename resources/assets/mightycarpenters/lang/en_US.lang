@@ -14,25 +14,25 @@ tile.mightycarpenters.debug_4.name=Debug Block 4
 tile.mightycarpenters.debug_5.name=Debug Block 5
 tile.mightycarpenters.debug_6.name=Debug Block 6
 
-tile.mightycarpenters.copperOre.name=Copper Ore
-tile.mightycarpenters.leadOre.name=Lead Ore
-tile.mightycarpenters.nickelOre.name=Nickel Ore
-tile.mightycarpenters.osmiumOre.name=Osmium Ore
-tile.mightycarpenters.silverOre.name=Silver Ore
-tile.mightycarpenters.tinOre.name=Tin Ore
-tile.mightycarpenters.tungstenOre.name=Tungsten Ore
+tile.mightycarpenters.copper_ore.name=Copper Ore
+tile.mightycarpenters.lead_ore.name=Lead Ore
+tile.mightycarpenters.nickel_ore.name=Nickel Ore
+tile.mightycarpenters.osmium_ore.name=Osmium Ore
+tile.mightycarpenters.silver_ore.name=Silver Ore
+tile.mightycarpenters.tin_ore.name=Tin Ore
+tile.mightycarpenters.tungsten_ore.name=Tungsten Ore
 
-item.mightycarpenters.copperIngot.name=Copper Ingot
-item.mightycarpenters.leadIngot.name=Lead Ingot
-item.mightycarpenters.nickelIngot.name=Nickel Ingot
-item.mightycarpenters.osmiumIngot.name=Osmium Ingot
-item.mightycarpenters.silverIngot.name=Silver Ingot
-item.mightycarpenters.tinIngot.name=Tin Ingot
-item.mightycarpenters.tungstenIngot.name=Tungsten Ingot
+item.mightycarpenters.copper_ingot.name=Copper Ingot
+item.mightycarpenters.lead_ingot.name=Lead Ingot
+item.mightycarpenters.nickel_ingot.name=Nickel Ingot
+item.mightycarpenters.osmium_ingot.name=Osmium Ingot
+item.mightycarpenters.silver_ingot.name=Silver Ingot
+item.mightycarpenters.tin_ingot.name=Tin Ingot
+item.mightycarpenters.tungsten_ingot.name=Tungsten Ingot
 
 tile.mightycarpenters.shf.name=Super-hot Furnace
 
-block.mightycarpenters.steelScaffold.name=Steel Scaffold
+block.mightycarpenters.steel_scaffold.name=Steel Scaffold
 
 item.mightycarpenters.blowtorch.name=Firey Blowtorch
 item.mightycarpenters.chainsaw.name=Static Chainsaw
@@ -47,6 +47,6 @@ item.mightycarpenters.screwdriver.name=Flathead Screwdriver
 item.mightycarpenters.tape.name=Sticky Tape
 item.mightycarpenters.wrench.name=Monkey Wrench
 
-item.mightycarpenters.wireSnipper.name=Wire Snipper
+item.mightycarpenters.wire_snipper.name=Wire Snipper
 
 item.mightycarpenters.blueprint.name=Blueprint
