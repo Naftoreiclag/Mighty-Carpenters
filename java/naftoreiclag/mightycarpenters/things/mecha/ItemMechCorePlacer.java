@@ -40,6 +40,8 @@ public class ItemMechCorePlacer extends Item
 	
 	public boolean onItemUse(ItemStack item, EntityPlayer user, World world, int x, int y, int z, int side, float par8, float par9, float par10)
     {
+		
+		user.swingItem();
 		// No clients allowed
 		if(world.isRemote) { return false; }
 		
