@@ -1,2 +1,3 @@
-nailgun_fire.ogg are derivative works of industrial_nailgun_1shot+ring.mp3
-, a work of gilly11 <www.freesound.org/people/gilly11> licensed under the Creative Commons Attribution 3.0 Unported license.
+nailgun_fire.ogg is a derivative work of industrial_nailgun_1shot+ring.mp3, a work of gilly11 <www.freesound.org/people/gilly11> licensed under the Creative Commons Attribution 3.0 Unported license.
+metal_hit_1.ogg is a derivative work of metal 9.mp3, a work of DJ Chronos <www.freesound.org/people/DJ Chronos> licensed under the Creative Commons Attribution 3.0 Unported license.
+metal_hit_2.ogg is a derivative work of Metallic Sound Pack 4.wav, a work of soniktec <www.freesound.org/people/soniktec> licensed under the Creative Commons 0 License.
