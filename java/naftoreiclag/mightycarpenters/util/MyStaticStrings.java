@@ -112,11 +112,12 @@ public class MyStaticStrings
 	public static final String UNLOCALIZED_WRENCH = UNLOCALIZATION_PREFIX + "wrench";
 	public static final String TEXTURE_WRENCH = MOD_ID + ":wrench_32";
 	
-	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mecha_core.png";
 	
 	// Mech
 	// ====
 	public static final String UNLOCALIZED_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_core_placer";
+	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mecha_core.png";
+	public static final String MODEL_TEXTURE_METAL_MECHA_CORE_FAKE_SHADING = MOD_ID + ":textures/models/metal_mecha_core_fake_shading.png";
 	
 	// ???
 	// ===
