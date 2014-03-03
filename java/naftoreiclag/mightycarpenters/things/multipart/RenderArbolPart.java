@@ -6,7 +6,6 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
-import naftoreiclag.mightycarpenters.things.mecha.ModelTest;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;
@@ -36,7 +35,8 @@ public class RenderArbolPart extends Render
 	public RenderArbolPart()
 	{
 		model = new ModelCore();
-		this.shadowSize = 0.5f;
+		
+		this.shadowSize = 0.0f;
 	}
 
 	@Override

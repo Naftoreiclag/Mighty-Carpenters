@@ -114,6 +114,10 @@ public class MyStaticStrings
 	
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mecha_core.png";
 	
+	// Mech
+	// ====
+	public static final String UNLOCALIZE_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_placer";
+	
 	// ???
 	// ===
 	

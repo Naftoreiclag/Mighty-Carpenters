@@ -1,3 +1,19 @@
+item.mightycarpenters.debug_0.name=Debug Item 0
+item.mightycarpenters.debug_1.name=Debug Item 1
+item.mightycarpenters.debug_2.name=Debug Item 2
+item.mightycarpenters.debug_3.name=Debug Item 3
+item.mightycarpenters.debug_4.name=Debug Item 4
+item.mightycarpenters.debug_5.name=Debug Item 5
+item.mightycarpenters.debug_6.name=Debug Item 6
+
+tile.mightycarpenters.debug_0.name=Debug Block 0
+tile.mightycarpenters.debug_1.name=Debug Block 1
+tile.mightycarpenters.debug_2.name=Debug Block 2
+tile.mightycarpenters.debug_3.name=Debug Block 3
+tile.mightycarpenters.debug_4.name=Debug Block 4
+tile.mightycarpenters.debug_5.name=Debug Block 5
+tile.mightycarpenters.debug_6.name=Debug Block 6
+
 tile.mightycarpenters.copperOre.name=Copper Ore
 tile.mightycarpenters.leadOre.name=Lead Ore
 tile.mightycarpenters.nickelOre.name=Nickel Ore

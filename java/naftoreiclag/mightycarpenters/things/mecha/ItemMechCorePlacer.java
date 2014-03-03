@@ -22,9 +22,9 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-public class ItemMechaCore extends Item
+public class ItemMechCorePlacer extends Item
 {
-	public ItemMechaCore()
+	public ItemMechCorePlacer()
 	{
 		super();
 		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_DEBUG_0);
@@ -43,23 +43,6 @@ public class ItemMechaCore extends Item
 		// No clients allowed
 		if(world.isRemote) { return false; }
 		
-		/*
-		EntityMecha a = new EntityMecha(world);
-		//a.setPos(x, y + 1, z);
-		a.setPosition(x, y + 1, z);
-		
-		world.spawnEntityInWorld(a);
-        */
-		
-		//EntityCreeper b = new EntityCreeper(world);
-		//b.setPosition(x, y + 1, z);
-		//world.spawnEntityInWorld(b);
-		
-		/*
-		EntityMecha c = new EntityMecha(world);
-		c.setPosition(x, y + 1, z);
-		world.spawnEntityInWorld(c);
-		*/
 		EntityArbolRoot d = new EntityArbolRoot(world);
 		d.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(d);

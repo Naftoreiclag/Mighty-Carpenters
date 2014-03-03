@@ -15,15 +15,7 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBox;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBoxCollide;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
-import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBox;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBoxCollide;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
+import naftoreiclag.mightycarpenters.things.mecha.ItemMechCorePlacer;
 import naftoreiclag.mightycarpenters.things.multipart.EntityArbolPart;
 import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
 import naftoreiclag.mightycarpenters.things.multipart.RenderArbolPart;
@@ -86,15 +78,10 @@ public class CommonProxy
 		EntityRegistry.registerModEntity(EntityFlyingNail.class, "flyingNail", 0, MightyCarpentersMod.instance, 120, 3, true);
 	}
 
-	public void registerMechaSystem()
+	public void registerMechSystem()
 	{
-		MightyCarpentersMod.item_mecha_core = new ItemMechaCore();
-		itemRegisterMacro(MightyCarpentersMod.item_mecha_core);
-		
-		EntityRegistry.registerModEntity(EntityMecha.class, "dylanbutt", 500, MightyCarpentersMod.instance, 80, 1, true);
-		EntityRegistry.registerModEntity(EntityDummyBB.class, "cjbutt", 501, MightyCarpentersMod.instance, 80, 1, true);
-		EntityRegistry.registerModEntity(EntityDumbBox.class, "dumbbox", 42, MightyCarpentersMod.instance, 80, 1, true);
-		EntityRegistry.registerModEntity(EntityDumbBoxCollide.class, "dumbboxcollide", 42, MightyCarpentersMod.instance, 80, 1, true);
+		MightyCarpentersMod.item_mech_core_placer = new ItemMechCorePlacer();
+		itemRegisterMacro(MightyCarpentersMod.item_mech_core_placer);
 		
 		EntityRegistry.registerModEntity(EntityArbolRoot.class, "arbolRoot", 69, MightyCarpentersMod.instance, 80, 1, true);
 		EntityRegistry.registerModEntity(EntityArbolPart.class, "arbolPart", 70, MightyCarpentersMod.instance, 80, 1, true);
@@ -151,13 +138,9 @@ public class CommonProxy
 	
 	public void registerEntityRenderers()
 	{
-		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
-		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
-		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBox.class, new RenderDumbBox());
-		RenderingRegistry.registerEntityRenderingHandler(EntityDumbBoxCollide.class, new RenderDumbBoxCollide());
-
-		RenderingRegistry.registerEntityRenderingHandler(EntityArbolRoot.class, new RenderArbolRoot());
-		RenderingRegistry.registerEntityRenderingHandler(EntityArbolPart.class, new RenderArbolPart());
+		// =================================
+		// | DONT PUT ANYTHING HERE DUMMY! |
+		// =================================
 	}
 
 }

@@ -1,10 +1,10 @@
 package naftoreiclag.mightycarpenters;
 
 import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyingNail;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
+import naftoreiclag.mightycarpenters.things.multipart.EntityArbolPart;
+import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
+import naftoreiclag.mightycarpenters.things.multipart.RenderArbolPart;
+import naftoreiclag.mightycarpenters.things.multipart.RenderArbolRoot;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
@@ -14,10 +14,10 @@ public class ClientProxy extends CommonProxy
 	public void registerEntityRenderers()
 	{
 		super.registerEntityRenderers();
+
+		RenderingRegistry.registerEntityRenderingHandler(EntityArbolRoot.class, new RenderArbolRoot());
+		RenderingRegistry.registerEntityRenderingHandler(EntityArbolPart.class, new RenderArbolPart());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(MightyCarpentersMod.item_wrench));
-		
-		RenderingRegistry.registerEntityRenderingHandler(EntityMecha.class, new RenderMecha());
-		RenderingRegistry.registerEntityRenderingHandler(EntityDummyBB.class, new RenderDummyBB());
 	}
 }

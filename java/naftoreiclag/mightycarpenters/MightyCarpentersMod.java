@@ -37,13 +37,7 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDumbBox;
-import naftoreiclag.mightycarpenters.things.mecha.EntityDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMecha;
-import naftoreiclag.mightycarpenters.things.mecha.ItemMechaCore;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDumbBox;
-import naftoreiclag.mightycarpenters.things.mecha.RenderDummyBB;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMecha;
+import naftoreiclag.mightycarpenters.things.mecha.ItemMechCorePlacer;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -87,7 +81,7 @@ public class MightyCarpentersMod
 	public static Block block_concrete;
 	public static Block block_sketch_station;
 	public static Item item_blueprint;
-	public static Item item_mecha_core;
+	public static Item item_mech_core_placer;
 	public static WorldGenManager ev;
 	
 	@EventHandler
@@ -95,11 +89,15 @@ public class MightyCarpentersMod
     {
 		proxy.registerWorldGenModifier();
 		proxy.registerMetals();
+		
 		proxy.registerEngineerHandTools();
-		proxy.registerMiscItems();
-		proxy.registerMechaSystem();
-		proxy.registerScaffold();
+		
+		proxy.registerMechSystem();
+		
 		proxy.registerMobs();
+		
+		proxy.registerMiscItems();
+		proxy.registerScaffold();
     }
 	
 	@EventHandler
