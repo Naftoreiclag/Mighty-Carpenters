@@ -14,6 +14,8 @@ public class EntityArbolPart extends Entity
 	public EntityArbolPart(World world)
 	{
 		super(world);
+		
+		this.noClip = true;
 
 		System.out.println("selfdestruct part");
 		

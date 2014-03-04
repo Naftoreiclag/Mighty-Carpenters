@@ -17,6 +17,8 @@ public class EntityArbolRoot extends Entity
 	{
 		super(world);
 		
+		this.noClip = true;
+		
 		System.out.println("a root");
 		
 		parts = new EntityArbolPart[]{partA = new EntityArbolPart(this)};

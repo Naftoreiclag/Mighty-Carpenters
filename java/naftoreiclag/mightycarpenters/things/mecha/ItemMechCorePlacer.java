@@ -1,6 +1,7 @@
 package naftoreiclag.mightycarpenters.things.mecha;
 
 import java.util.List;
+import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -24,12 +25,16 @@ import net.minecraft.world.World;
 
 public class ItemMechCorePlacer extends Item
 {
+	Random soundPitch;
+	
 	public ItemMechCorePlacer()
 	{
 		super();
 		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_MECH_CORE_PLACER);
 		
 		this.setCreativeTab(CreativeTabs.tabTransport);
+		
+		soundPitch = new Random();
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -40,10 +45,18 @@ public class ItemMechCorePlacer extends Item
 	
 	public boolean onItemUse(ItemStack item, EntityPlayer user, World world, int x, int y, int z, int side, float par8, float par9, float par10)
     {
-		
+		// Otherwise, shoving the item toward your knee makes me uncomfortable
 		user.swingItem();
+		
+		// Gotta have that sound tho
+		world.playSoundAtEntity(user, MyStaticStrings.SOUND_METAL_HIT_1, 1.0f, 0.6f + (soundPitch.nextFloat() * 0.2f));
+		
 		// No clients allowed
-		if(world.isRemote) { return false; }
+		if(world.isRemote)
+		{
+			// Get outta here
+			return false;
+		}
 		
 		EntityArbolRoot d = new EntityArbolRoot(world);
 		d.setPosition(x, y + 1, z);
