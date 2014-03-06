@@ -88,18 +88,9 @@ public class RenderMechCore extends Render implements IItemRenderer
 			case ENTITY:
 			{
 				GL11.glPushMatrix();
-					GL11.glDisable(GL11.GL_LIGHTING);
-					GL11.glPushMatrix();
-						GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
-						Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture_fakeShading);
-						GL11.glPushMatrix();
-							GL11.glScalef(0.5f, 0.5f, 0.5f);
-							GL11.glTranslatef(-1.0f, -1.0f, -1.0f);
-							GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-							this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-						GL11.glPopMatrix();
-					GL11.glPopMatrix();
-					GL11.glEnable(GL11.GL_LIGHTING);
+					GL11.glScalef(0.5f, 0.5f, 0.5f);
+					GL11.glTranslatef(-0.5f, -0.5f, -0.5f);
+					rawRender();
 				GL11.glPopMatrix();
 				return;
 			}
@@ -107,16 +98,7 @@ public class RenderMechCore extends Render implements IItemRenderer
 			case EQUIPPED:
 			{
 				GL11.glPushMatrix();
-					GL11.glDisable(GL11.GL_LIGHTING);
-					GL11.glPushMatrix();
-						GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
-						Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture_fakeShading);
-						GL11.glPushMatrix();
-							GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-							this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-						GL11.glPopMatrix();
-					GL11.glPopMatrix();
-					GL11.glEnable(GL11.GL_LIGHTING);
+					rawRender();
 				GL11.glPopMatrix();
 				return;
 			}
@@ -132,18 +114,8 @@ public class RenderMechCore extends Render implements IItemRenderer
 			case INVENTORY:
 			{
 				GL11.glPushMatrix();
-					GL11.glDisable(GL11.GL_LIGHTING);
-					GL11.glRotatef(180.0f, 0.0f, 1.0f, 0.0f);
-					GL11.glTranslatef(0.0f, -0.87f, 0.0f);
-					GL11.glPushMatrix();
-						GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
-						Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture_fakeShading);
-						GL11.glPushMatrix();
-							GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-							this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-						GL11.glPopMatrix();
-					GL11.glPopMatrix();
-					GL11.glEnable(GL11.GL_LIGHTING);
+					GL11.glTranslatef(0.0f, -0.07f, 0.0f);
+					rawRender();
 				GL11.glPopMatrix();
 				return;
 			}
