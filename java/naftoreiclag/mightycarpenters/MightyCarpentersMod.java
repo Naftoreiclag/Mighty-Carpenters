@@ -61,8 +61,11 @@ public class MightyCarpentersMod
 	@SidedProxy(clientSide = "naftoreiclag.mightycarpenters.ClientProxy", serverSide = "naftoreiclag.mightycarpenters.CommonProxy")
 	public static CommonProxy proxy;
 	
+	// Raw Crafting - Metals
 	public static Block block_copperOre;
 	public static Item item_copperIngot;
+	
+	// Engineer Hand Tools
 	public static Item item_blowtorch;
 	public static Item item_chainsaw;
 	public static Item item_drill;
@@ -75,27 +78,29 @@ public class MightyCarpentersMod
 	public static Item item_screwdriver;
 	public static Item item_tape;
 	public static Item item_wrench;
+	
+	// Unsorted
 	public static Block block_shf;
 	public static Block block_steel_scaffold;
 	public static Block block_scaffold_fence;
 	public static Block block_concrete;
 	public static Block block_sketch_station;
 	public static Item item_blueprint;
+	
+	// Mech
 	public static Item item_mech_core_placer;
-	public static WorldGenManager ev;
+	
+	// World Generator Modifier
+	public static WorldGenManager worldGenModifier;
 	
 	@EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
 		proxy.registerWorldGenModifier();
 		proxy.registerMetals();
-		
 		proxy.registerEngineerHandTools();
-		
 		proxy.registerMechSystem();
-		
 		proxy.registerMobs();
-		
 		proxy.registerMiscItems();
 		proxy.registerScaffold();
     }

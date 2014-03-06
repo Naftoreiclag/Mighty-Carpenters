@@ -17,7 +17,7 @@ public class EntityMechPart extends Entity
 		
 		this.noClip = true;
 
-		System.out.println("selfdestruct part");
+		System.out.println("WHAT");
 		
 		this.kill();
 	}
@@ -25,7 +25,6 @@ public class EntityMechPart extends Entity
 	public EntityMechPart(EntityMechCore root)
 	{
 		super(root.getWorld());
-		System.out.println("a good part");
 		
 		this.root = root;
 	}

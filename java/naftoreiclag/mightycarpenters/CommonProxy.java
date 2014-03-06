@@ -131,9 +131,9 @@ public class CommonProxy
 	}
 	public void registerWorldGenModifier()
 	{
-		MightyCarpentersMod.ev = new WorldGenManager();
+		MightyCarpentersMod.worldGenModifier = new WorldGenManager();
 		
-		GameRegistry.registerWorldGenerator(MightyCarpentersMod.ev, 1);
+		GameRegistry.registerWorldGenerator(MightyCarpentersMod.worldGenModifier, 1);
 	}
 	
 	public void registerEntityRenderers()
