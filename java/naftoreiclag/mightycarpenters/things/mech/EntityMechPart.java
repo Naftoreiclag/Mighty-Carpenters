@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mecha;
+package naftoreiclag.mightycarpenters.things.mech;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityMultiPart;

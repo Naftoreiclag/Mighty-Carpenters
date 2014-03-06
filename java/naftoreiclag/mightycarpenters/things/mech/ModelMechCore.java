@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mecha;
+package naftoreiclag.mightycarpenters.things.mech;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

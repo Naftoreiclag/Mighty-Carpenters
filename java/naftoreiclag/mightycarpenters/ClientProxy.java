@@ -1,10 +1,10 @@
 package naftoreiclag.mightycarpenters;
 
 import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyingNail;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMechPart;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMechCore;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMechPart;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMechCore;
+import naftoreiclag.mightycarpenters.things.mech.EntityMechCore;
+import naftoreiclag.mightycarpenters.things.mech.EntityMechPart;
+import naftoreiclag.mightycarpenters.things.mech.RenderMechCore;
+import naftoreiclag.mightycarpenters.things.mech.RenderMechPart;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraftforge.client.MinecraftForgeClient;
 import cpw.mods.fml.client.registry.RenderingRegistry;

@@ -15,11 +15,11 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMechPart;
-import naftoreiclag.mightycarpenters.things.mecha.EntityMechCore;
-import naftoreiclag.mightycarpenters.things.mecha.ItemMechCorePlacer;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMechPart;
-import naftoreiclag.mightycarpenters.things.mecha.RenderMechCore;
+import naftoreiclag.mightycarpenters.things.mech.EntityMechCore;
+import naftoreiclag.mightycarpenters.things.mech.EntityMechPart;
+import naftoreiclag.mightycarpenters.things.mech.ItemMechCorePlacer;
+import naftoreiclag.mightycarpenters.things.mech.RenderMechCore;
+import naftoreiclag.mightycarpenters.things.mech.RenderMechPart;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;

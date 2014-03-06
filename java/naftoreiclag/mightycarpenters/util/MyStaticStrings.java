@@ -116,8 +116,8 @@ public class MyStaticStrings
 	// Mech
 	// ====
 	public static final String UNLOCALIZED_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_core_placer";
-	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mecha_core.png";
-	public static final String MODEL_TEXTURE_METAL_MECHA_CORE_FAKE_SHADING = MOD_ID + ":textures/models/metal_mecha_core_fake_shading.png";
+	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mech_core.png";
+	public static final String MODEL_TEXTURE_METAL_MECHA_CORE_FAKE_SHADING = MOD_ID + ":textures/models/metal_mech_core_fake_shading.png";
 	
 
 	public static final String SOUND_METAL_HIT_PREFIX = MOD_ID + ":metal_hit_";

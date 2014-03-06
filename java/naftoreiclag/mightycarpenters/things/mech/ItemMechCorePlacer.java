@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mecha;
+package naftoreiclag.mightycarpenters.things.mech;
 
 import java.util.List;
 import java.util.Random;

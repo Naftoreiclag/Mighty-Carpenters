@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mecha;
+package naftoreiclag.mightycarpenters.things.mech;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
