@@ -44,17 +44,21 @@ public class RenderMechCore extends Render implements IItemRenderer
 		
 		this.shadowSize = 0.0f;
 	}
+	
+	private void rawRender()
+	{
+		Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture);
+		GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
+		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
+		this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+	}
 
 	@Override
 	public void doRender(Entity entity, double x, double y, double z, float uselessFloat1_, float uselessFloat2_)
     {
 		GL11.glPushMatrix();
-			GL11.glPushMatrix();
-				Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture);
-				GL11.glTranslatef((float) x + 0.5f, (float) y + 1.5F, (float) z + 0.5f);
-				GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-				this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-			GL11.glPopMatrix();
+			GL11.glTranslatef((float) x, (float) y, (float) z);
+			rawRender();
 		GL11.glPopMatrix();
 	}
 	
@@ -120,16 +124,7 @@ public class RenderMechCore extends Render implements IItemRenderer
 			case EQUIPPED_FIRST_PERSON:
 			{
 				GL11.glPushMatrix();
-					GL11.glDisable(GL11.GL_LIGHTING);
-					GL11.glPushMatrix();
-						GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
-						Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture_fakeShading);
-						GL11.glPushMatrix();
-							GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-							this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-						GL11.glPopMatrix();
-					GL11.glPopMatrix();
-					GL11.glEnable(GL11.GL_LIGHTING);
+					rawRender();
 				GL11.glPopMatrix();
 				return;
 			}
