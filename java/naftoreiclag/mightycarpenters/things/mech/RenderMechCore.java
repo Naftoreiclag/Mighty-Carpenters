@@ -34,13 +34,11 @@ public class RenderMechCore extends Render implements IItemRenderer
 {
 	private final ModelMechCore model;
 	private final ResourceLocation modelTexture;
-	private final ResourceLocation modelTexture_fakeShading;
 
 	public RenderMechCore()
 	{
 		model = new ModelMechCore();
 		modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE);
-		modelTexture_fakeShading = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE_FAKE_SHADING); 
 		
 		this.shadowSize = 0.0f;
 	}
