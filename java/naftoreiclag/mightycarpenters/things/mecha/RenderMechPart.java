@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.multipart;
+package naftoreiclag.mightycarpenters.things.mecha;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -6,6 +6,7 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
+import naftoreiclag.mightycarpenters.things.multipart.ModelCore;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;
@@ -26,13 +27,13 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 @SideOnly(Side.CLIENT)
-public class RenderArbolPart extends Render
+public class RenderMechPart extends Render
 {
 	private final ModelCore model;
 	
 	private final RenderBlocks renderBlocks = new RenderBlocks();
 
-	public RenderArbolPart()
+	public RenderMechPart()
 	{
 		model = new ModelCore();
 		

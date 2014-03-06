@@ -6,7 +6,6 @@ import java.util.Random;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
-import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -58,7 +57,7 @@ public class ItemMechCorePlacer extends Item
 			return false;
 		}
 		
-		EntityArbolRoot d = new EntityArbolRoot(world);
+		EntityMechCore d = new EntityMechCore(world);
 		d.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(d);
 		

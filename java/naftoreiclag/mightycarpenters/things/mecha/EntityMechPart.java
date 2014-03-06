@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.multipart;
+package naftoreiclag.mightycarpenters.things.mecha;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityMultiPart;
@@ -7,11 +7,11 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityArbolPart extends Entity
+public class EntityMechPart extends Entity
 {
-	private EntityArbolRoot root;
+	private EntityMechCore root;
 	
-	public EntityArbolPart(World world)
+	public EntityMechPart(World world)
 	{
 		super(world);
 		
@@ -22,7 +22,7 @@ public class EntityArbolPart extends Entity
 		this.kill();
 	}
 	
-	public EntityArbolPart(EntityArbolRoot root)
+	public EntityMechPart(EntityMechCore root)
 	{
 		super(root.getWorld());
 		System.out.println("a good part");

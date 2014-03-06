@@ -15,11 +15,11 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
+import naftoreiclag.mightycarpenters.things.mecha.EntityMechPart;
+import naftoreiclag.mightycarpenters.things.mecha.EntityMechCore;
 import naftoreiclag.mightycarpenters.things.mecha.ItemMechCorePlacer;
-import naftoreiclag.mightycarpenters.things.multipart.EntityArbolPart;
-import naftoreiclag.mightycarpenters.things.multipart.EntityArbolRoot;
-import naftoreiclag.mightycarpenters.things.multipart.RenderArbolPart;
-import naftoreiclag.mightycarpenters.things.multipart.RenderArbolRoot;
+import naftoreiclag.mightycarpenters.things.mecha.RenderMechPart;
+import naftoreiclag.mightycarpenters.things.mecha.RenderMechCore;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -83,8 +83,8 @@ public class CommonProxy
 		MightyCarpentersMod.item_mech_core_placer = new ItemMechCorePlacer();
 		itemRegisterMacro(MightyCarpentersMod.item_mech_core_placer);
 		
-		EntityRegistry.registerModEntity(EntityArbolRoot.class, "arbolRoot", 69, MightyCarpentersMod.instance, 80, 1, true);
-		EntityRegistry.registerModEntity(EntityArbolPart.class, "arbolPart", 70, MightyCarpentersMod.instance, 80, 1, true);
+		EntityRegistry.registerModEntity(EntityMechCore.class, "arbolRoot", 69, MightyCarpentersMod.instance, 80, 1, true);
+		EntityRegistry.registerModEntity(EntityMechPart.class, "arbolPart", 70, MightyCarpentersMod.instance, 80, 1, true);
 	}
 
 	public void registerScaffold()
