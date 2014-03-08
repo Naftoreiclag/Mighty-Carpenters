@@ -16,3 +16,9 @@ That way, in order to attach a logic part, you must put down a blue piece with 2
 ===========
 
 Maybe instead I should make it so blue can only connect to blue.. and so on
+
+Yeah, that's a better idea.
+
+Also, overalls protect your other armor pieces.
+
+having bluepritns in your inventory

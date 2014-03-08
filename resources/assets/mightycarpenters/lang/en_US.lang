@@ -1,3 +1,8 @@
+block.mightycarpenters.steel_scaffold.name=Steel Scaffold
+item.mightycarpenters.blowtorch.name=Firey Blowtorch
+item.mightycarpenters.blueprint.name=Blueprint
+item.mightycarpenters.chainsaw.name=Static Chainsaw
+item.mightycarpenters.copper_ingot.name=Copper Ingot
 item.mightycarpenters.debug_0.name=Debug Item 0
 item.mightycarpenters.debug_1.name=Debug Item 1
 item.mightycarpenters.debug_2.name=Debug Item 2
@@ -5,7 +10,26 @@ item.mightycarpenters.debug_3.name=Debug Item 3
 item.mightycarpenters.debug_4.name=Debug Item 4
 item.mightycarpenters.debug_5.name=Debug Item 5
 item.mightycarpenters.debug_6.name=Debug Item 6
-
+item.mightycarpenters.drill.name=Drilling Drill
+item.mightycarpenters.glue.name=Sticky Glue
+item.mightycarpenters.hammer.name=Hand-held Hammer
+item.mightycarpenters.lead_ingot.name=Lead Ingot
+item.mightycarpenters.mallet.name=Manual Mallet
+item.mightycarpenters.mech_core_placer.name=Mech Core
+item.mightycarpenters.nailgun.name=Nailgun
+item.mightycarpenters.nickel_ingot.name=Nickel Ingot
+item.mightycarpenters.osmium_ingot.name=Osmium Ingot
+item.mightycarpenters.overalls.name=Overalls
+item.mightycarpenters.saw.name=Cutting Saw
+item.mightycarpenters.scissors.name=Safety Scissors
+item.mightycarpenters.screwdriver.name=Flathead Screwdriver
+item.mightycarpenters.silver_ingot.name=Silver Ingot
+item.mightycarpenters.tape.name=Sticky Tape
+item.mightycarpenters.tin_ingot.name=Tin Ingot
+item.mightycarpenters.tungsten_ingot.name=Tungsten Ingot
+item.mightycarpenters.wire_snipper.name=Wire Snipper
+item.mightycarpenters.wrench.name=Monkey Wrench
+tile.mightycarpenters.copper_ore.name=Copper Ore
 tile.mightycarpenters.debug_0.name=Debug Block 0
 tile.mightycarpenters.debug_1.name=Debug Block 1
 tile.mightycarpenters.debug_2.name=Debug Block 2
@@ -13,42 +37,10 @@ tile.mightycarpenters.debug_3.name=Debug Block 3
 tile.mightycarpenters.debug_4.name=Debug Block 4
 tile.mightycarpenters.debug_5.name=Debug Block 5
 tile.mightycarpenters.debug_6.name=Debug Block 6
-
-tile.mightycarpenters.copper_ore.name=Copper Ore
 tile.mightycarpenters.lead_ore.name=Lead Ore
 tile.mightycarpenters.nickel_ore.name=Nickel Ore
 tile.mightycarpenters.osmium_ore.name=Osmium Ore
+tile.mightycarpenters.shf.name=Super-hot Furnace
 tile.mightycarpenters.silver_ore.name=Silver Ore
 tile.mightycarpenters.tin_ore.name=Tin Ore
 tile.mightycarpenters.tungsten_ore.name=Tungsten Ore
-
-item.mightycarpenters.copper_ingot.name=Copper Ingot
-item.mightycarpenters.lead_ingot.name=Lead Ingot
-item.mightycarpenters.nickel_ingot.name=Nickel Ingot
-item.mightycarpenters.osmium_ingot.name=Osmium Ingot
-item.mightycarpenters.silver_ingot.name=Silver Ingot
-item.mightycarpenters.tin_ingot.name=Tin Ingot
-item.mightycarpenters.tungsten_ingot.name=Tungsten Ingot
-
-item.mightycarpenters.mech_core_placer.name=Mech Core
-
-tile.mightycarpenters.shf.name=Super-hot Furnace
-
-block.mightycarpenters.steel_scaffold.name=Steel Scaffold
-
-item.mightycarpenters.blowtorch.name=Firey Blowtorch
-item.mightycarpenters.chainsaw.name=Static Chainsaw
-item.mightycarpenters.drill.name=Drilling Drill
-item.mightycarpenters.glue.name=Sticky Glue
-item.mightycarpenters.hammer.name=Hand-held Hammer
-item.mightycarpenters.mallet.name=Manual Mallet
-item.mightycarpenters.nailgun.name=Nailgun
-item.mightycarpenters.saw.name=Cutting Saw
-item.mightycarpenters.scissors.name=Safety Scissors
-item.mightycarpenters.screwdriver.name=Flathead Screwdriver
-item.mightycarpenters.tape.name=Sticky Tape
-item.mightycarpenters.wrench.name=Monkey Wrench
-
-item.mightycarpenters.wire_snipper.name=Wire Snipper
-
-item.mightycarpenters.blueprint.name=Blueprint
