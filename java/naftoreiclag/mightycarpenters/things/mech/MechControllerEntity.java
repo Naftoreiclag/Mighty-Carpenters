@@ -36,6 +36,7 @@ public class MechControllerEntity extends Entity
 	@Override
 	public void onEntityUpdate()
     {
+		part_root.setPosition((float) this.posX, (float) this.posY, (float) this.posZ);
     }
 
 	@Override
