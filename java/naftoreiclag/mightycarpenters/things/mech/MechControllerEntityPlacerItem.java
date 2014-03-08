@@ -22,11 +22,11 @@ import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
 
-public class ItemMechCorePlacer extends Item
+public class MechControllerEntityPlacerItem extends Item
 {
 	Random soundPitch;
 	
-	public ItemMechCorePlacer()
+	public MechControllerEntityPlacerItem()
 	{
 		super();
 		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_MECH_CORE_PLACER);
@@ -57,7 +57,7 @@ public class ItemMechCorePlacer extends Item
 			return false;
 		}
 		
-		EntityMechRoot d = new EntityMechRoot(world);
+		MechControllerEntity d = new MechControllerEntity(world);
 		d.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(d);
 		

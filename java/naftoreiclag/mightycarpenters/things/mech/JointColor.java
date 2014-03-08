@@ -1,6 +1,6 @@
-package naftoreiclag.mightycarpenters.things.mech.partdefinitions;
+package naftoreiclag.mightycarpenters.things.mech;
 
-public enum MechJointColor
+public enum JointColor
 {
 	invisible, // From the player's perspective, these don't exist. Rather, they are used by the entities to determine the root part.
 	red,

@@ -16,9 +16,9 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.scissors.ItemSciss
 import naftoreiclag.mightycarpenters.things.engineerhandtools.screwdriver.ItemScrewdriver;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.tape.ItemTape;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.wrench.ItemWrench;
-import naftoreiclag.mightycarpenters.things.mech.EntityMechRoot;
-import naftoreiclag.mightycarpenters.things.mech.EntityMechPart;
-import naftoreiclag.mightycarpenters.things.mech.ItemMechCorePlacer;
+import naftoreiclag.mightycarpenters.things.mech.MechControllerEntity;
+import naftoreiclag.mightycarpenters.things.mech.MechControllerEntityPlacerItem;
+import naftoreiclag.mightycarpenters.things.mech.PartEntity;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.BlockCopperOre;
 import naftoreiclag.mightycarpenters.things.rawcraftingmaterials.metals.ItemCopperIngot;
 import naftoreiclag.mightycarpenters.things.sketchstation.BlockSketchStation;
@@ -107,11 +107,11 @@ public class CommonProxy
 
 	public void registerMechSystem()
 	{
-		item_mech_core_placer = new ItemMechCorePlacer();
+		item_mech_core_placer = new MechControllerEntityPlacerItem();
 		registerPls(item_mech_core_placer);
 		
-		registerPls(ENTITY_ID_STRING_MECH_ROOT, ENTITY_ID_INT_MECH_ROOT, EntityMechRoot.class, 80, 1, true);
-		registerPls(ENTITY_ID_STRING_MECH_PART, ENTITY_ID_INT_MECH_ROOT, EntityMechPart.class, 80, 1, true);
+		registerPls(ENTITY_ID_STRING_MECH_ROOT, ENTITY_ID_INT_MECH_ROOT, MechControllerEntity.class, 80, 1, true);
+		registerPls(ENTITY_ID_STRING_MECH_PART, ENTITY_ID_INT_MECH_ROOT, PartEntity.class, 80, 1, true);
 	}
 
 	public void registerScaffold()

@@ -1,9 +1,9 @@
 package naftoreiclag.mightycarpenters;
 
 import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyingNail;
-import naftoreiclag.mightycarpenters.things.mech.EntityMechRoot;
-import naftoreiclag.mightycarpenters.things.mech.EntityMechPart;
-import naftoreiclag.mightycarpenters.things.mech.RenderMechPart;
+import naftoreiclag.mightycarpenters.things.mech.MechControllerEntity;
+import naftoreiclag.mightycarpenters.things.mech.PartEntity;
+import naftoreiclag.mightycarpenters.things.mech.rendering.RenderMechPart;
 import naftoreiclag.mightycarpenters.util.RenderNothing;
 import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -25,7 +25,7 @@ public class ClientProxy extends CommonProxy
 		super.registerEntityRenderers();
 
 		//RenderingRegistry.registerEntityRenderingHandler(EntityMechCore.class, new RenderNothing());
-		RenderingRegistry.registerEntityRenderingHandler(EntityMechPart.class, new RenderMechPart());
+		RenderingRegistry.registerEntityRenderingHandler(PartEntity.class, new RenderMechPart());
 		
 		RenderingRegistry.registerEntityRenderingHandler(EntityFlyingNail.class, new RenderSnowball(MightyCarpentersMod.item_wrench));
 	}

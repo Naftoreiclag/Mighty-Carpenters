@@ -1,6 +1,7 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
-import naftoreiclag.mightycarpenters.things.mech.partdefinitions.MPD_Core;
+import org.lwjgl.util.vector.Vector3f;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityMultiPart;
 import net.minecraft.entity.boss.EntityDragonPart;
@@ -8,19 +9,23 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityMechRoot extends Entity
+public class MechControllerEntity extends Entity
 {
-	EntityMechPart[] parts;
+	PartEntity[] parts;
 	
-	EntityMechPart partA;
+	PartEntity partA;
 	
-	public EntityMechRoot(World world)
+	Part_Root rootPart;
+	
+	public MechControllerEntity(World world)
 	{
 		super(world);
 		
+		this.rootPart = new Part_Root();
+		
 		this.noClip = true;
 		
-		parts = new EntityMechPart[]{partA = new EntityMechPart(this, new MPD_Core())};
+		//parts = new PartEntity[]{partA = new PartEntity(this, new Part_Core(rootJoint))};
 		world.spawnEntityInWorld(partA);
 	}
 	
@@ -52,15 +57,11 @@ public class EntityMechRoot extends Entity
 	@Override
 	public void readEntityFromNBT(NBTTagCompound var1)
 	{
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void writeEntityToNBT(NBTTagCompound var1)
 	{
-		// TODO Auto-generated method stub
-		
 	}
 	
 }
