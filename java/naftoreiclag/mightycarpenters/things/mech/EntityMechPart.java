@@ -1,5 +1,6 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
+import naftoreiclag.mightycarpenters.things.mech.partdefinitions.MechPart;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityMultiPart;
 import net.minecraft.entity.boss.EntityDragonPart;
@@ -9,24 +10,28 @@ import net.minecraft.world.World;
 
 public class EntityMechPart extends Entity
 {
-	private EntityMechCore root;
+	private EntityMechRoot root;
 	
+	private MechPart part;
+	
+	// This is if it is constructed incorrectly
 	public EntityMechPart(World world)
 	{
 		super(world);
-		
-		this.noClip = true;
-
 		System.out.println("WHAT");
-		
 		this.kill();
 	}
 	
-	public EntityMechPart(EntityMechCore root)
+	// Correct constructor
+	public EntityMechPart(EntityMechRoot root, MechPart part)
 	{
 		super(root.getWorld());
 		
+		this.noClip = true;
+		
 		this.root = root;
+		
+		this.part = part;
 	}
 
 	@Override

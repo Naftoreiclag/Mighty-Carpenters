@@ -7,19 +7,17 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class EntityMechCore extends Entity
+public class EntityMechRoot extends Entity
 {
 	EntityMechPart[] parts;
 	
 	EntityMechPart partA;
 	
-	public EntityMechCore(World world)
+	public EntityMechRoot(World world)
 	{
 		super(world);
 		
 		this.noClip = true;
-		
-		System.out.println("a root");
 		
 		parts = new EntityMechPart[]{partA = new EntityMechPart(this)};
 		world.spawnEntityInWorld(partA);
@@ -47,8 +45,7 @@ public class EntityMechCore extends Entity
 	@Override
 	public void entityInit()
 	{
-		// TODO Auto-generated method stub
-		
+		// Don't use this method it's evil
 	}
 
 	@Override

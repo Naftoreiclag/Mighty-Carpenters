@@ -1,0 +1,18 @@
+Each joint can only connect to certain things based on the color of that joint.
+A joint can only connect to another joint if that joint is of a "higher" or "lower" color.
+
+For example, a red joint can only connect to a orange, purple, or white joint. It cannot connect to a blue or green joint.
+
+The core should have a gray joint. That means everything can connect to it.
+
+Blue: construction
+Yellow: peripheral/output
+Red: logic/input
+
+A joint that is a secondary color can have either of the two primaries attached, but not another secondary piece.
+
+That way, in order to attach a logic part, you must put down a blue piece with 2
+
+===========
+
+Maybe instead I should make it so blue can only connect to blue.. and so on

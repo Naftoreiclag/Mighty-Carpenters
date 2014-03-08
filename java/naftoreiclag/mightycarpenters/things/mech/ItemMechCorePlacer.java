@@ -57,7 +57,7 @@ public class ItemMechCorePlacer extends Item
 			return false;
 		}
 		
-		EntityMechCore d = new EntityMechCore(world);
+		EntityMechRoot d = new EntityMechRoot(world);
 		d.setPosition(x, y + 1, z);
 		world.spawnEntityInWorld(d);
 		
