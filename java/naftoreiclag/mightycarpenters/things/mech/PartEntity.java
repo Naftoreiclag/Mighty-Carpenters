@@ -9,8 +9,8 @@ import net.minecraft.world.World;
 
 public class PartEntity extends Entity
 {
-	private MechControllerEntity controller;
-	private Part part;
+	protected MechControllerEntity controller;
+	protected Part part;
 	
 	// This is if it is constructed incorrectly
 	public PartEntity(World world)

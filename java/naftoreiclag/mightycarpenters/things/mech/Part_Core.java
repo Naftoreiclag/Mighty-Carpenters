@@ -1,5 +1,7 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
+import naftoreiclag.mightycarpenters.things.mech.models.MechModels;
+
 import org.lwjgl.util.vector.Vector3f;
 
 public class Part_Core extends Part
@@ -22,6 +24,6 @@ public class Part_Core extends Part
 	@Override
 	public void renderModel()
 	{
-		
+		MechModels.render("foop");
 	}
 }

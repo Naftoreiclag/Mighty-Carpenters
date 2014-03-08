@@ -90,9 +90,4 @@ public abstract class Part
 	}
 	
 	public abstract void renderModel();
-	
-	public void render(PartEntity entity)
-	{
-		
-	}
 }

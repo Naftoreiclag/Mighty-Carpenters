@@ -1,8 +1,10 @@
-package naftoreiclag.mightycarpenters.things.mech.rendering;
+package naftoreiclag.mightycarpenters.things.mech.models;
 
+import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
 
 public class Model_Core extends ModelBase
 {

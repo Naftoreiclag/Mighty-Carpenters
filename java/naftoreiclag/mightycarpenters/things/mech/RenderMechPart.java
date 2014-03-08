@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mech.rendering;
+package naftoreiclag.mightycarpenters.things.mech;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
@@ -6,12 +6,14 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
+import naftoreiclag.mightycarpenters.things.mech.models.Model_Core;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAnvil;
 import net.minecraft.block.BlockDragonEgg;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelLeashKnot;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.Tessellator;
@@ -30,17 +32,15 @@ import net.minecraftforge.client.IItemRenderer.ItemRenderType;
 import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 
 @SideOnly(Side.CLIENT)
-public class PartEntityRenderer extends Render implements IItemRenderer
+public class RenderMechPart implements IItemRenderer
 {
-	private final Model_Core model;
+	private final ModelBase model;
 	private final ResourceLocation modelTexture;
 
-	public PartEntityRenderer()
+	public RenderMechPart()
 	{
 		model = new Model_Core();
 		modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE);
-		
-		this.shadowSize = 0.0f;
 	}
 	
 	private void rawRender()
@@ -49,21 +49,6 @@ public class PartEntityRenderer extends Render implements IItemRenderer
 		GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
 		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
 		this.model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
-	}
-
-	@Override
-	public void doRender(Entity entity, double x, double y, double z, float uselessFloat1_, float uselessFloat2_)
-    {
-		GL11.glPushMatrix();
-			GL11.glTranslatef((float) x, (float) y, (float) z);
-			rawRender();
-		GL11.glPopMatrix();
-	}
-	
-	@Override
-	protected ResourceLocation getEntityTexture(Entity genericEntity)
-	{
-		return TextureMap.locationBlocksTexture;
 	}
 
 	@Override
