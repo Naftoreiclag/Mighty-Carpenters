@@ -4,10 +4,11 @@ import org.lwjgl.util.vector.Vector3f;
 
 public class Part_Root extends Part
 {
-	public Part_Root()
+	public Part_Root(MechControllerEntity controller)
 	{
 		super
 		(
+				controller,
 				null,
 				PartMaterial.metal,
 				1.0f,

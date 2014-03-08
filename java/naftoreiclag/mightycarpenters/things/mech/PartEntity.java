@@ -9,8 +9,7 @@ import net.minecraft.world.World;
 
 public class PartEntity extends Entity
 {
-	private MechControllerEntity root;
-	
+	private MechControllerEntity controller;
 	private Part part;
 	
 	// This is if it is constructed incorrectly
@@ -22,14 +21,13 @@ public class PartEntity extends Entity
 	}
 	
 	// Correct constructor
-	public PartEntity(MechControllerEntity root, Part part)
+	public PartEntity(MechControllerEntity controller, Part part)
 	{
-		super(root.getWorld());
+		super(controller.getWorld());
 		
 		this.noClip = true;
 		
-		this.root = root;
-		
+		this.controller = controller;
 		this.part = part;
 	}
 

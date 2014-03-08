@@ -1,5 +1,8 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.lwjgl.util.vector.Vector3f;
 
 import net.minecraft.entity.Entity;
@@ -11,31 +14,19 @@ import net.minecraft.world.World;
 
 public class MechControllerEntity extends Entity
 {
-	PartEntity[] parts;
+	List<Part> parts = new ArrayList<Part>();
 	
-	PartEntity partA;
-	
-	Part_Root rootPart;
+	Part_Root part_root;
 	
 	public MechControllerEntity(World world)
 	{
 		super(world);
 		
-		this.rootPart = new Part_Root();
-		
 		this.noClip = true;
 		
-		//parts = new PartEntity[]{partA = new PartEntity(this, new Part_Core(rootJoint))};
-		world.spawnEntityInWorld(partA);
+		this.part_root = new Part_Root(this);
+		new Part_Core(this, part_root.getLightJoints()[0]);
 	}
-	
-	@Override
-	public Entity[] getParts()
-    {
-		//return parts;
-		
-		return null;
-    }
 	
 	protected World getWorld()
 	{
@@ -45,7 +36,6 @@ public class MechControllerEntity extends Entity
 	@Override
 	public void onEntityUpdate()
     {
-		partA.setPosition(posX, posY + 1, posZ);
     }
 
 	@Override

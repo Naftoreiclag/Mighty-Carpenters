@@ -4,7 +4,7 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class ModelMechCore extends ModelBase
+public class Model_Core extends ModelBase
 {
 	// fields
 	ModelRenderer top1;
@@ -17,7 +17,7 @@ public class ModelMechCore extends ModelBase
 	ModelRenderer bot4;
 	ModelRenderer mid;
 
-	public ModelMechCore()
+	public Model_Core()
 	{
 		textureWidth = 64;
 		textureHeight = 32;

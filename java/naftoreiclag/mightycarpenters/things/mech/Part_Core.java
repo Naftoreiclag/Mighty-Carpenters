@@ -4,10 +4,11 @@ import org.lwjgl.util.vector.Vector3f;
 
 public class Part_Core extends Part
 {
-	public Part_Core(Joint attachTo)
+	public Part_Core(MechControllerEntity controller, Joint attachTo)
 	{
 		super
 		(
+				controller,
 				attachTo,
 				PartMaterial.metal,
 				1.0f,

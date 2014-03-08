@@ -51,6 +51,21 @@ public class Joint
 		return loc;
 	}
 	
+	public Joint getPartner()
+	{
+		return partner;
+	}
+	
+	public Part getOwner()
+	{
+		return owner;
+	}
+	
+	public Vector3f getRelativeLocation()
+	{
+		return loc;
+	}
+	
 	public boolean isCompatable(Joint other)
 	{
 		if(other.getColor() == color)

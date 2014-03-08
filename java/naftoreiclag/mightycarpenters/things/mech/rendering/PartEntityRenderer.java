@@ -30,14 +30,14 @@ import net.minecraftforge.client.IItemRenderer.ItemRenderType;
 import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 
 @SideOnly(Side.CLIENT)
-public class RenderMechPart extends Render implements IItemRenderer
+public class PartEntityRenderer extends Render implements IItemRenderer
 {
-	private final ModelMechCore model;
+	private final Model_Core model;
 	private final ResourceLocation modelTexture;
 
-	public RenderMechPart()
+	public PartEntityRenderer()
 	{
-		model = new ModelMechCore();
+		model = new Model_Core();
 		modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE);
 		
 		this.shadowSize = 0.0f;
