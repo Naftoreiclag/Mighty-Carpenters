@@ -27,71 +27,98 @@ import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import naftoreiclag.mightycarpenters.world.WorldGenManager;
 import net.minecraft.block.Block;
+import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import static naftoreiclag.mightycarpenters.MightyCarpentersMod.*;
+
 public class CommonProxy
 {
-	private void itemRegisterMacro(Item item)
+	// Register an Item
+	private void registerPls(Item item)
 	{
 		GameRegistry.registerItem(item, item.getUnlocalizedName());
 	}
-	private void blockRegisterMacro(Block block)
+	
+	// Register a Block
+	private void registerPls(Block block)
 	{
 		GameRegistry.registerBlock(block, block.getUnlocalizedName());
+	}
+	
+	// Register an Entity
+	private void registerPls(String entityName, int id, Class<? extends Entity> entityClass, int trackingRange, int updateFrequency, boolean sendsVelocityUpdates)
+	{
+		EntityRegistry.registerModEntity(entityClass, entityName, id, instance, trackingRange, updateFrequency, sendsVelocityUpdates);
+	}
+	
+	// Register an Item as an Ore
+	private void registerPls(Item item, String oreName)
+	{
+		registerPls(item);
+		OreDictionary.registerOre(oreName, item);
+	}
+	
+	// Register a Block as an Ore
+	private void registerPls(Block block, String oreName)
+	{
+		registerPls(block);
+		OreDictionary.registerOre(oreName, block);
 	}
 
 	public void registerEngineerHandTools()
 	{
-		MightyCarpentersMod.item_blowtorch = new ItemBlowtorch();
-		MightyCarpentersMod.item_chainsaw = new ItemChainsaw();
-		MightyCarpentersMod.item_drill = new ItemDrill();
-		MightyCarpentersMod.item_glue = new ItemGlue();
-		MightyCarpentersMod.item_hammer = new ItemHammer();
-		MightyCarpentersMod.item_mallet = new ItemMallet();
-		MightyCarpentersMod.item_nailgun = new ItemNailgun();
-		MightyCarpentersMod.item_saw = new ItemSaw();
-		MightyCarpentersMod.item_scissors = new ItemScissors();
-		MightyCarpentersMod.item_screwdriver = new ItemScrewdriver();
-		MightyCarpentersMod.item_tape = new ItemTape();
-		MightyCarpentersMod.item_wrench = new ItemWrench();
+		item_blowtorch = new ItemBlowtorch();
+		item_chainsaw = new ItemChainsaw();
+		item_drill = new ItemDrill();
+		item_glue = new ItemGlue();
+		item_hammer = new ItemHammer();
+		item_mallet = new ItemMallet();
+		item_nailgun = new ItemNailgun();
+		item_saw = new ItemSaw();
+		item_scissors = new ItemScissors();
+		item_screwdriver = new ItemScrewdriver();
+		item_tape = new ItemTape();
+		item_wrench = new ItemWrench();
 		
-		itemRegisterMacro(MightyCarpentersMod.item_blowtorch);
-		itemRegisterMacro(MightyCarpentersMod.item_chainsaw);
-		itemRegisterMacro(MightyCarpentersMod.item_drill);
-		itemRegisterMacro(MightyCarpentersMod.item_glue);
-		itemRegisterMacro(MightyCarpentersMod.item_hammer);
-		itemRegisterMacro(MightyCarpentersMod.item_mallet);
-		itemRegisterMacro(MightyCarpentersMod.item_nailgun);
-		itemRegisterMacro(MightyCarpentersMod.item_saw);
-		itemRegisterMacro(MightyCarpentersMod.item_scissors);
-		itemRegisterMacro(MightyCarpentersMod.item_screwdriver);
-		itemRegisterMacro(MightyCarpentersMod.item_tape);
-		itemRegisterMacro(MightyCarpentersMod.item_wrench);
+		registerPls(item_blowtorch);
+		registerPls(item_chainsaw);
+		registerPls(item_drill);
+		registerPls(item_glue);
+		registerPls(item_hammer);
+		registerPls(item_mallet);
+		registerPls(item_nailgun);
+		registerPls(item_saw);
+		registerPls(item_scissors);
+		registerPls(item_screwdriver);
+		registerPls(item_tape);
+		registerPls(item_wrench);
 		
-		EntityRegistry.registerModEntity(EntityFlyingNail.class, "flyingNail", 0, MightyCarpentersMod.instance, 120, 3, true);
+		registerPls("flyingNail", 0, EntityFlyingNail.class, 120, 3, true);
 	}
 
 	public void registerMechSystem()
 	{
-		MightyCarpentersMod.item_mech_core_placer = new ItemMechCorePlacer();
-		itemRegisterMacro(MightyCarpentersMod.item_mech_core_placer);
+		item_mech_core_placer = new ItemMechCorePlacer();
+		registerPls(item_mech_core_placer);
 		
-		EntityRegistry.registerModEntity(EntityMechRoot.class, "arbolRoot", 69, MightyCarpentersMod.instance, 80, 1, true);
-		EntityRegistry.registerModEntity(EntityMechPart.class, "arbolPart", 70, MightyCarpentersMod.instance, 80, 1, true);
+		registerPls("arbolRoot", 69, EntityMechRoot.class, 80, 1, true);
+		registerPls("arbolPart", 70, EntityMechPart.class, 80, 1, true);
 	}
 
 	public void registerScaffold()
 	{
-		MightyCarpentersMod.block_steel_scaffold = new BlockScaffold();
-		blockRegisterMacro(MightyCarpentersMod.block_steel_scaffold);
+		block_steel_scaffold = new BlockScaffold();
+		registerPls(block_steel_scaffold);
 		
-		MightyCarpentersMod.block_scaffold_fence = new BlockScaffoldFence();
-		blockRegisterMacro(MightyCarpentersMod.block_scaffold_fence);
+		block_scaffold_fence = new BlockScaffoldFence();
+		registerPls(block_scaffold_fence);
 	}
 
 	public void registerMobs()
@@ -103,35 +130,37 @@ public class CommonProxy
 	public void registerMiscItems()
 	{
 		
-		MightyCarpentersMod.block_sketch_station = new BlockSketchStation();
-		blockRegisterMacro(MightyCarpentersMod.block_sketch_station);
+		block_sketch_station = new BlockSketchStation();
+		registerPls(block_sketch_station);
 		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
 		
-		MightyCarpentersMod.item_blueprint = new ItemBlueprint();
-		itemRegisterMacro(MightyCarpentersMod.item_blueprint);
-		GameRegistry.addShapelessRecipe(new ItemStack(MightyCarpentersMod.item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
+		item_blueprint = new ItemBlueprint();
+		registerPls(item_blueprint);
+		GameRegistry.addShapelessRecipe(new ItemStack(item_blueprint, 1), new ItemStack((Item) Item.itemRegistry.getObject("paper")));
 		
-		MightyCarpentersMod.block_concrete = new BlockConcrete();
-		blockRegisterMacro(MightyCarpentersMod.block_concrete);
+		block_concrete = new BlockConcrete();
+		registerPls(block_concrete);
 		
 	}
 
 	public void registerMetals()
 	{
-		MightyCarpentersMod.block_copperOre = new BlockCopperOre();
-		blockRegisterMacro(MightyCarpentersMod.block_copperOre);
-		OreDictionary.registerOre("oreCopper", MightyCarpentersMod.block_copperOre);
+		block_copperOre = new BlockCopperOre();
+		registerPls(block_copperOre, "oreCopper");
 		
-		MightyCarpentersMod.item_copperIngot = new ItemCopperIngot();
-		itemRegisterMacro(MightyCarpentersMod.item_copperIngot);
-		OreDictionary.registerOre("ingotCopper", MightyCarpentersMod.item_copperIngot);
+		item_copperIngot = new ItemCopperIngot();
+		registerPls(item_copperIngot, "ingotCopper");
     
 	}
 	public void registerWorldGenModifier()
 	{
-		MightyCarpentersMod.worldGenModifier = new WorldGenManager();
-		
-		GameRegistry.registerWorldGenerator(MightyCarpentersMod.worldGenModifier, 1);
+		worldGenModifier = new WorldGenManager();
+		GameRegistry.registerWorldGenerator(worldGenModifier, 1);
+	}
+	
+	public void registerClothing()
+	{
+		armor_useless_iron = EnumHelper.addArmorMaterial("USELESSIRON", 15, new int[]{0, 0, 0, 0}, 9);
 	}
 	
 	public void registerEntityRenderers()

@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.oredict.OreDictionary;
@@ -79,6 +80,9 @@ public class MightyCarpentersMod
 	public static Item item_tape;
 	public static Item item_wrench;
 	
+	// Clothing
+	public static ArmorMaterial armor_useless_iron;
+	
 	// Unsorted
 	public static Block block_shf;
 	public static Block block_steel_scaffold;
@@ -103,6 +107,7 @@ public class MightyCarpentersMod
 		proxy.registerMobs();
 		proxy.registerMiscItems();
 		proxy.registerScaffold();
+		proxy.registerClothing();
     }
 	
 	@EventHandler
