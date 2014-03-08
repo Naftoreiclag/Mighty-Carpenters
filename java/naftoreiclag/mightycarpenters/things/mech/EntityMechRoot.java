@@ -1,5 +1,6 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
+import naftoreiclag.mightycarpenters.things.mech.partdefinitions.MPD_Core;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.IEntityMultiPart;
 import net.minecraft.entity.boss.EntityDragonPart;
@@ -19,7 +20,7 @@ public class EntityMechRoot extends Entity
 		
 		this.noClip = true;
 		
-		parts = new EntityMechPart[]{partA = new EntityMechPart(this)};
+		parts = new EntityMechPart[]{partA = new EntityMechPart(this, new MPD_Core())};
 		world.spawnEntityInWorld(partA);
 	}
 	

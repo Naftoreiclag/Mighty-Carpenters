@@ -18,6 +18,11 @@ public class MechJoint
 		this.loc = relativeLocation;
 	}
 	
+	public MechJoint(MechJointColor color, float x, float y, float z, Vector3f relativeLocation)
+	{
+		this(color, new Vector3f(x, y, z), relativeLocation);
+	}
+	
 	public MechJointColor getColor()
 	{
 		return color;
