@@ -118,10 +118,18 @@ public class MyStaticStrings
 	public static final String UNLOCALIZED_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_core_placer";
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = MOD_ID + ":textures/models/metal_mech_core.png";
 	
+	public static final String ENTITY_ID_STRING_MECH_ROOT = "MechRoot";
+	public static final String ENTITY_ID_STRING_MECH_PART = "MechPart";
+	public static final int ENTITY_ID_INT_MECH_ROOT = 69;
+	public static final int ENTITY_ID_INT_MECH_PART = 70;
+	
 
 	public static final String SOUND_METAL_HIT_PREFIX = MOD_ID + ":metal_hit_";
 	public static final String SOUND_METAL_HIT_1 = SOUND_METAL_HIT_PREFIX + "1";
 	public static final String SOUND_METAL_HIT_2 = SOUND_METAL_HIT_PREFIX + "2";
+	
+	//
+	public static final String MODEL_TEXTURE_OVERALLS = MOD_ID + ":textures/models/overalls.png";
 	
 	// ???
 	// ===

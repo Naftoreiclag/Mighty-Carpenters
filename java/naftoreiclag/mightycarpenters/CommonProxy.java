@@ -2,6 +2,7 @@ package naftoreiclag.mightycarpenters;
 
 import naftoreiclag.mightycarpenters.things.blueprint.ItemBlueprint;
 import naftoreiclag.mightycarpenters.things.cement.concrete.BlockConcrete;
+import naftoreiclag.mightycarpenters.things.clothing.ItemOveralls;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.blowtorch.ItemBlowtorch;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.chainsaw.ItemChainsaw;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.drill.ItemDrill;
@@ -37,6 +38,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 import static naftoreiclag.mightycarpenters.MightyCarpentersMod.*;
+import static naftoreiclag.mightycarpenters.util.MyStaticStrings.*;
 
 public class CommonProxy
 {
@@ -108,8 +110,8 @@ public class CommonProxy
 		item_mech_core_placer = new ItemMechCorePlacer();
 		registerPls(item_mech_core_placer);
 		
-		registerPls("arbolRoot", 69, EntityMechRoot.class, 80, 1, true);
-		registerPls("arbolPart", 70, EntityMechPart.class, 80, 1, true);
+		registerPls(ENTITY_ID_STRING_MECH_ROOT, ENTITY_ID_INT_MECH_ROOT, EntityMechRoot.class, 80, 1, true);
+		registerPls(ENTITY_ID_STRING_MECH_PART, ENTITY_ID_INT_MECH_ROOT, EntityMechPart.class, 80, 1, true);
 	}
 
 	public void registerScaffold()
@@ -132,7 +134,7 @@ public class CommonProxy
 		
 		block_sketch_station = new BlockSketchStation();
 		registerPls(block_sketch_station);
-		GameRegistry.registerTileEntity(SketchStationTentity.class, MyStaticStrings.TEID_SKETCH_STATION);
+		GameRegistry.registerTileEntity(SketchStationTentity.class, TEID_SKETCH_STATION);
 		
 		item_blueprint = new ItemBlueprint();
 		registerPls(item_blueprint);
@@ -160,7 +162,11 @@ public class CommonProxy
 	
 	public void registerClothing()
 	{
+		// You gotta register the armor materials first
 		armor_useless_iron = EnumHelper.addArmorMaterial("USELESSIRON", 15, new int[]{0, 0, 0, 0}, 9);
+		
+		item_overalls = new ItemOveralls();
+		registerPls(item_overalls);
 	}
 	
 	public void registerEntityRenderers()
