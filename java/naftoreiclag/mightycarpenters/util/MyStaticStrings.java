@@ -134,6 +134,10 @@ public class MyStaticStrings
 	public static final String TEXTURE_OVERALLS = TEXTURE_PREFIX + "overalls";
 	public static final String MODEL_TEXTURE_OVERALLS = TEXTURE_PREFIX + "textures/models/armor/overalls.png";
 	
+	public static final String UNLOCALIZED_VEST = UNLOCALIZATION_PREFIX + "vest";
+	public static final String TEXTURE_VEST = TEXTURE_PREFIX + "vest";
+	public static final String MODEL_TEXTURE_VEST = TEXTURE_PREFIX + "textures/models/armor/vest.png";
+	
 	// ???
 	// ===
 	

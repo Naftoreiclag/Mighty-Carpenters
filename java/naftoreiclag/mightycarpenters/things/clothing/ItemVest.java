@@ -11,12 +11,12 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
 
-public class ItemOveralls extends ItemArmor
+public class ItemVest extends ItemArmor
 {
-	public ItemOveralls()
+	public ItemVest()
 	{
-		super(MightyCarpentersMod.armor_useless_iron, 1, 2);
-		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_OVERALLS);
+		super(MightyCarpentersMod.armor_useless_iron, 1, 1);
+		this.setUnlocalizedName(MyStaticStrings.UNLOCALIZED_VEST);
 		
 		this.setCreativeTab(CreativeTabs.tabDecorations);
 	}
@@ -24,13 +24,13 @@ public class ItemOveralls extends ItemArmor
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister par1IconRegister)
 	{
-		this.itemIcon = par1IconRegister.registerIcon(MyStaticStrings.TEXTURE_OVERALLS);
+		this.itemIcon = par1IconRegister.registerIcon(MyStaticStrings.TEXTURE_VEST);
 	}
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		return MyStaticStrings.MODEL_TEXTURE_OVERALLS;
+		return MyStaticStrings.MODEL_TEXTURE_VEST;
 	}
 
 }

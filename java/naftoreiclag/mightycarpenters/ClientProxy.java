@@ -4,7 +4,7 @@ import naftoreiclag.mightycarpenters.things.engineerhandtools.nailgun.EntityFlyi
 import naftoreiclag.mightycarpenters.things.mech.MechControllerEntity;
 import naftoreiclag.mightycarpenters.things.mech.PartEntity;
 import naftoreiclag.mightycarpenters.things.mech.PartEntityRenderer;
-import naftoreiclag.mightycarpenters.things.mech.RenderMechPart;
+import naftoreiclag.mightycarpenters.things.mech.MechControllerEntityPlacerItemItemRenderer;
 import naftoreiclag.mightycarpenters.things.mech.models.MechModels;
 import naftoreiclag.mightycarpenters.things.mech.models.Model_Core;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
@@ -21,7 +21,7 @@ public class ClientProxy extends CommonProxy
 	{
 		super.registerMechSystem();
 		
-		MinecraftForgeClient.registerItemRenderer(MightyCarpentersMod.item_mech_core_placer, new RenderMechPart());
+		MinecraftForgeClient.registerItemRenderer(MightyCarpentersMod.item_mech_core_placer, new MechControllerEntityPlacerItemItemRenderer());
 	
 		MechModels.addModelAndTexture("foop", new Model_Core(), new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE));
 	}

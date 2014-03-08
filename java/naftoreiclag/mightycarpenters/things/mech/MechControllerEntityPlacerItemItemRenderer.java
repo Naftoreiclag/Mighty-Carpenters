@@ -32,12 +32,12 @@ import net.minecraftforge.client.IItemRenderer.ItemRenderType;
 import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 
 @SideOnly(Side.CLIENT)
-public class RenderMechPart implements IItemRenderer
+public class MechControllerEntityPlacerItemItemRenderer implements IItemRenderer
 {
 	private final ModelBase model;
 	private final ResourceLocation modelTexture;
 
-	public RenderMechPart()
+	public MechControllerEntityPlacerItemItemRenderer()
 	{
 		model = new Model_Core();
 		modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE);

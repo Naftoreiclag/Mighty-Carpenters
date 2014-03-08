@@ -3,6 +3,7 @@ package naftoreiclag.mightycarpenters;
 import naftoreiclag.mightycarpenters.things.blueprint.ItemBlueprint;
 import naftoreiclag.mightycarpenters.things.cement.concrete.BlockConcrete;
 import naftoreiclag.mightycarpenters.things.clothing.ItemOveralls;
+import naftoreiclag.mightycarpenters.things.clothing.ItemVest;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.blowtorch.ItemBlowtorch;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.chainsaw.ItemChainsaw;
 import naftoreiclag.mightycarpenters.things.engineerhandtools.drill.ItemDrill;
@@ -167,6 +168,9 @@ public class CommonProxy
 		
 		item_overalls = new ItemOveralls();
 		registerPls(item_overalls);
+		
+		item_vest = new ItemVest();
+		registerPls(item_vest);
 	}
 	
 	public void registerEntityRenderers()
