@@ -6,6 +6,7 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
+import naftoreiclag.mightycarpenters.things.models.ModelLoader;
 import naftoreiclag.mightycarpenters.things.models.Model_Core;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
@@ -34,18 +35,12 @@ import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 @SideOnly(Side.CLIENT)
 public class PartEntityRenderer extends Render
 {
-	private final JointRenderer model;
-	private final ResourceLocation modelTexture;
-	
 	public PartEntityRenderer()
 	{
-		this.model = new JointRenderer();
-		this.modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_JOINT_HIGHLIGHTER);
-		
 		this.shadowSize = 0.0f;
 	}
 	
-	void doRender(PartEntity entity, float x, float y, float z)
+	void render(PartEntity entity, float x, float y, float z)
 	{
 		// Somehow, the x, y, z combo is relative to the player
 		
@@ -55,17 +50,13 @@ public class PartEntityRenderer extends Render
 		GL11.glPushMatrix();
 			GL11.glTranslatef(x, y, z);
 			entity.part.renderModel();
-
-			/*Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture);
-			GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-			
 			for(Joint j : entity.part.getLightJoints())
 			{
 				GL11.glPushMatrix();
 					GL11.glTranslatef(j.getLoc().x, j.getLoc().y, j.getLoc().z);
-					model.easyRender(j);
+					ModelLoader.render(MyStaticStrings.MODEL_ID_JOINT_HIGHLIGHTER[2][0]);
 				GL11.glPopMatrix();
-			}*/
+			}
 			
 		GL11.glPopMatrix();
 	}
@@ -79,12 +70,36 @@ public class PartEntityRenderer extends Render
 			return;
 		}
 		
-		doRender((PartEntity) entity, (float) x, (float) y, (float) z);
+		render((PartEntity) entity, (float) x, (float) y, (float) z);
 	}
 	
 	@Override
 	protected ResourceLocation getEntityTexture(Entity genericEntity)
 	{
 		return TextureMap.locationBlocksTexture;
+	}
+	
+	public static int getIntegerFromColor(JointColor color)
+	{
+		switch(color)
+		{
+			case red: return 0;
+			case orange: return 1;
+			case yellow: return 2;
+			case green: return 3;
+			case blue: return 4;
+			case purple: return 5;
+			default: return 1337;
+		}
+	}
+	
+	public static int getIntegerFromShade(JointShade shade)
+	{
+		switch(shade)
+		{
+			case dark: return 0;
+			case light: return 1;
+			default: return 1337;
+		}
 	}
 }

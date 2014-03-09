@@ -120,7 +120,17 @@ public class MyStaticStrings
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = TEXTURE_PREFIX + "textures/models/metal_mech_core.png";
 	
 	public static final String MODEL_TEXTURE_JOINT_HIGHLIGHTER = TEXTURE_PREFIX + "textures/models/joint_highlighter.png";
-	
+
+	public static final String[][] MODEL_ID_JOINT_HIGHLIGHTER =
+	{
+	{"jointRL", "jointRD"},
+	{"jointOL", "jointOD"},
+	{"jointYL", "jointYD"},
+	{"jointGL", "jointGD"},
+	{"jointBL", "jointBD"},
+	{"jointPL", "jointPD"}
+	};
+
 	public static final String ENTITY_ID_STRING_MECH_ROOT = "MechRoot";
 	public static final String ENTITY_ID_STRING_MECH_PART = "MechPart";
 	public static final int ENTITY_ID_INT_MECH_ROOT = 69;
