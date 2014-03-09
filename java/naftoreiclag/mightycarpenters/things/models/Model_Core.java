@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mech.models;
+package naftoreiclag.mightycarpenters.things.models;
 
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.client.model.ModelBase;

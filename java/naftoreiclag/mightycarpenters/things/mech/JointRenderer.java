@@ -1,17 +1,29 @@
-package naftoreiclag.mightycarpenters.things.mech.models;
+package naftoreiclag.mightycarpenters.things.mech;
 
-import naftoreiclag.mightycarpenters.things.mech.Joint;
-import naftoreiclag.mightycarpenters.things.mech.JointColor;
-import naftoreiclag.mightycarpenters.things.mech.JointShade;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class JointModel extends ModelBase
+public class JointRenderer extends ModelBase
 {
+	private static JointRenderer instance;
+	
+	public static void registerSelf()
+	{
+		if(instance == null)
+		{
+			instance = new JointRenderer();
+		}
+	}
+	
+	public static void render(Joint j)
+	{
+		
+	}
+	
 	ModelRenderer shape;
 
-	public JointModel()
+	public JointRenderer()
 	{
 		textureWidth = 64;
 		textureHeight = 128;
@@ -47,7 +59,7 @@ public class JointModel extends ModelBase
 		}
 	}
 	
-	public void easyRender(Joint j)
+	public void simpleRender(Joint j)
 	{
 		if(j.getColor() == JointColor.invisible)
 		{
@@ -55,21 +67,16 @@ public class JointModel extends ModelBase
 		}
 		
 		shape.setTextureOffset(getIntegerFromShade(j.getShade()) * 32, getIntegerFromColor(j.getColor()) * 16);
-		render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		
+		render(null, 0.0f, 0.0f, -0.1f, 0.0f, 0.0f, 0.0625f);
 	}
 
+	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
 		super.render(entity, f, f1, f2, f3, f4, f5);
 		setRotationAngles(f, f1, f2, f3, f4, f5, entity);
 		
 		shape.render(f5);
-	}
-
-	private void setRotation(ModelRenderer model, float x, float y, float z)
-	{
-		model.rotateAngleX = x;
-		model.rotateAngleY = y;
-		model.rotateAngleZ = z;
 	}
 }

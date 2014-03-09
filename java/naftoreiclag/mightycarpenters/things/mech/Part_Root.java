@@ -1,6 +1,6 @@
 package naftoreiclag.mightycarpenters.things.mech;
 
-import naftoreiclag.mightycarpenters.things.mech.models.ModelLoader;
+import naftoreiclag.mightycarpenters.things.models.ModelLoader;
 
 import org.lwjgl.util.vector.Vector3f;
 

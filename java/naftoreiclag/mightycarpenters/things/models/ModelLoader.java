@@ -1,4 +1,4 @@
-package naftoreiclag.mightycarpenters.things.mech.models;
+package naftoreiclag.mightycarpenters.things.models;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,7 +23,7 @@ public class ModelLoader
 	{
 		Minecraft.getMinecraft().renderEngine.bindTexture(loadedModels.get(s).resource);
 		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
-		loadedModels.get(s).model.render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
+		loadedModels.get(s).model.render(null, 0.0f, 0.0f, -0.1f, 0.0f, 0.0f, 0.0625f);
 	}
 	
 	public static class LoadedModel

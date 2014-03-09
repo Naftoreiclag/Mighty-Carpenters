@@ -6,7 +6,7 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
-import naftoreiclag.mightycarpenters.things.mech.models.Model_Core;
+import naftoreiclag.mightycarpenters.things.models.Model_Core;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;

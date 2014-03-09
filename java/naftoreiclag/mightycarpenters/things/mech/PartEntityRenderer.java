@@ -6,8 +6,7 @@ import org.lwjgl.opengl.GL12;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import naftoreiclag.mightycarpenters.MightyCarpentersMod;
-import naftoreiclag.mightycarpenters.things.mech.models.JointModel;
-import naftoreiclag.mightycarpenters.things.mech.models.Model_Core;
+import naftoreiclag.mightycarpenters.things.models.Model_Core;
 import naftoreiclag.mightycarpenters.things.steelscaffold.BlockScaffoldFence;
 import naftoreiclag.mightycarpenters.util.MyStaticStrings;
 import net.minecraft.block.Block;
@@ -35,12 +34,12 @@ import net.minecraftforge.client.IItemRenderer.ItemRendererHelper;
 @SideOnly(Side.CLIENT)
 public class PartEntityRenderer extends Render
 {
-	private final JointModel model;
+	private final JointRenderer model;
 	private final ResourceLocation modelTexture;
 	
 	public PartEntityRenderer()
 	{
-		this.model = new JointModel();
+		this.model = new JointRenderer();
 		this.modelTexture = new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_JOINT_HIGHLIGHTER);
 		
 		this.shadowSize = 0.0f;
@@ -48,7 +47,6 @@ public class PartEntityRenderer extends Render
 	
 	void doRender(PartEntity entity, float x, float y, float z)
 	{
-
 		// Somehow, the x, y, z combo is relative to the player
 		
 		// System.out.println("la:" + entity.posX + ", " + entity.posY + ", " + entity.posZ);
