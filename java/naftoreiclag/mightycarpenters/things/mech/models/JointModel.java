@@ -49,6 +49,11 @@ public class JointModel extends ModelBase
 	
 	public void easyRender(Joint j)
 	{
+		if(j.getColor() == JointColor.invisible)
+		{
+			return;
+		}
+		
 		shape.setTextureOffset(getIntegerFromShade(j.getShade()) * 32, getIntegerFromColor(j.getColor()) * 16);
 		render(null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 	}

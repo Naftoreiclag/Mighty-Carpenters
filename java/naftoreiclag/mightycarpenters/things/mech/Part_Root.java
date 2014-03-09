@@ -17,7 +17,7 @@ public class Part_Root extends Part
 				1.0f,
 				1.0f,
 				new Joint(null, JointColor.invisible, JointShade.dark, 0.5f, 0.5f, 0.5f, new Vector3f(0.0f, 1.0f, 0.0f)),
-				new Joint(null, JointColor.invisible, JointShade.light, 0.5f, 0.5f, 0.5f, new Vector3f(0.0f, 1.0f, 0.0f))
+				new Joint(null, JointColor.blue, JointShade.light, 0.5f, 0.5f, 0.5f, new Vector3f(0.0f, 1.0f, 0.0f))
 		);
 	}
 

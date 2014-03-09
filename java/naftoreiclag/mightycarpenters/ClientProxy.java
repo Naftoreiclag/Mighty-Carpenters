@@ -21,7 +21,7 @@ public class ClientProxy extends CommonProxy
 	{
 		super.registerMechSystem();
 		
-		MinecraftForgeClient.registerItemRenderer(MightyCarpentersMod.item_mech_core_placer, new MechControllerEntityPlacerItemItemRenderer());
+		MinecraftForgeClient.registerItemRenderer(MightyCarpentersMod.item_mech_controller_entity_placer, new MechControllerEntityPlacerItemItemRenderer());
 	
 		MechModels.addModelAndTexture("foop", new Model_Core(), new ResourceLocation(MyStaticStrings.MODEL_TEXTURE_METAL_MECHA_CORE));
 	}

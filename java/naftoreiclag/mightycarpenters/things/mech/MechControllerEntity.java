@@ -25,7 +25,7 @@ public class MechControllerEntity extends Entity
 		this.noClip = true;
 		
 		this.part_root = new Part_Root(this);
-		new Part_Core(this, part_root.getLightJoints()[0]);
+		//new Part_Core(this, part_root.getLightJoints()[0]);
 	}
 	
 	protected World getWorld()
@@ -42,7 +42,6 @@ public class MechControllerEntity extends Entity
 	@Override
 	public void entityInit()
 	{
-		// Don't use this method it's evil
 	}
 
 	@Override

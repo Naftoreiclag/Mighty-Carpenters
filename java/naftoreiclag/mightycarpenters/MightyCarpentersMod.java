@@ -95,7 +95,7 @@ public class MightyCarpentersMod
 	public static Item item_blueprint;
 	
 	// Mech
-	public static Item item_mech_core_placer;
+	public static Item item_mech_controller_entity_placer;
 	
 	// World Generator Modifier
 	public static WorldGenManager worldGenModifier;

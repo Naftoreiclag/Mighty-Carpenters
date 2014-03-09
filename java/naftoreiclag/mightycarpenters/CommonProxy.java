@@ -109,8 +109,8 @@ public class CommonProxy
 
 	public void registerMechSystem()
 	{
-		item_mech_core_placer = new MechControllerEntityPlacerItem();
-		registerPls(item_mech_core_placer);
+		item_mech_controller_entity_placer = new MechControllerEntityPlacerItem();
+		registerPls(item_mech_controller_entity_placer);
 		
 		registerPls(ENTITY_ID_STRING_MECH_ROOT, ENTITY_ID_INT_MECH_ROOT, MechControllerEntity.class, 80, 1, true);
 		registerPls(ENTITY_ID_STRING_MECH_PART, ENTITY_ID_INT_MECH_ROOT, PartEntity.class, 80, 1, true);

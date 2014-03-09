@@ -24,8 +24,6 @@ public class MechModels
 	public static void render(String s)
 	{
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures.get(s));
-		GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
-		GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
 		models.get(s).render((Entity) null, 0.0F, 0.0F, -0.1F, 0.0F, 0.0F, 0.0625F);
 	}
 }

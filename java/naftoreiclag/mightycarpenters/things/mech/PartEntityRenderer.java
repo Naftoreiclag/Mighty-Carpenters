@@ -58,14 +58,16 @@ public class PartEntityRenderer extends Render
 			GL11.glTranslatef(x, y, z);
 			entity.part.renderModel();
 
-			Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture);
-			GL11.glTranslatef((float) 0.5f, (float) 1.5F, (float) 0.5f);
+			/*Minecraft.getMinecraft().renderEngine.bindTexture(modelTexture);
 			GL11.glRotatef(180F, 0.0F, 0.0F, 1.0F);
 			
 			for(Joint j : entity.part.getLightJoints())
 			{
-				model.easyRender(j);
-			}
+				GL11.glPushMatrix();
+					GL11.glTranslatef(j.getLoc().x, j.getLoc().y, j.getLoc().z);
+					model.easyRender(j);
+				GL11.glPopMatrix();
+			}*/
 			
 		GL11.glPopMatrix();
 	}
