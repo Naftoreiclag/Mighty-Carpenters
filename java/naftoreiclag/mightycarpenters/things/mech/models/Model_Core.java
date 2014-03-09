@@ -6,6 +6,7 @@ import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
+// Exported straight from Techne
 public class Model_Core extends ModelBase
 {
 	// fields
@@ -26,60 +27,61 @@ public class Model_Core extends ModelBase
 
 		top1 = new ModelRenderer(this, 0, 0);
 		top1.addBox(0F, 0F, 0F, 6, 6, 6);
-		top1.setRotationPoint(10F, 0F, 10F);
+		top1.setRotationPoint(2F, -8F, 2F);
 		top1.setTextureSize(64, 32);
 		top1.mirror = true;
 		setRotation(top1, 0F, 0F, 0F);
 		top2 = new ModelRenderer(this, 0, 0);
 		top2.addBox(0F, 0F, 0F, 6, 6, 6);
-		top2.setRotationPoint(0F, 0F, 10F);
+		top2.setRotationPoint(-8F, -8F, 2F);
 		top2.setTextureSize(64, 32);
 		top2.mirror = true;
 		setRotation(top2, 0F, 0F, 0F);
 		top3 = new ModelRenderer(this, 0, 0);
 		top3.addBox(0F, 0F, 0F, 6, 6, 6);
-		top3.setRotationPoint(0F, 0F, 0F);
+		top3.setRotationPoint(-8F, -8F, -8F);
 		top3.setTextureSize(64, 32);
 		top3.mirror = true;
 		setRotation(top3, 0F, 0F, 0F);
 		top4 = new ModelRenderer(this, 0, 0);
 		top4.addBox(0F, 0F, 0F, 6, 6, 6);
-		top4.setRotationPoint(10F, 0F, 0F);
+		top4.setRotationPoint(2F, -8F, -8F);
 		top4.setTextureSize(64, 32);
 		top4.mirror = true;
 		setRotation(top4, 0F, 0F, 0F);
 		bot1 = new ModelRenderer(this, 0, 12);
 		bot1.addBox(0F, 0F, 0F, 6, 6, 6);
-		bot1.setRotationPoint(10F, 10F, 10F);
+		bot1.setRotationPoint(2F, 2F, 2F);
 		bot1.setTextureSize(64, 32);
 		bot1.mirror = true;
 		setRotation(bot1, 0F, 0F, 0F);
 		bot2 = new ModelRenderer(this, 0, 12);
 		bot2.addBox(0F, 0F, 0F, 6, 6, 6);
-		bot2.setRotationPoint(0F, 10F, 10F);
+		bot2.setRotationPoint(-8F, 2F, 2F);
 		bot2.setTextureSize(64, 32);
 		bot2.mirror = true;
 		setRotation(bot2, 0F, 0F, 0F);
 		bot3 = new ModelRenderer(this, 0, 12);
 		bot3.addBox(0F, 0F, 0F, 6, 6, 6);
-		bot3.setRotationPoint(0F, 10F, 0F);
+		bot3.setRotationPoint(-8F, 2F, -8F);
 		bot3.setTextureSize(64, 32);
 		bot3.mirror = true;
 		setRotation(bot3, 0F, 0F, 0F);
 		bot4 = new ModelRenderer(this, 0, 12);
 		bot4.addBox(0F, 0F, 0F, 6, 6, 6);
-		bot4.setRotationPoint(10F, 10F, 0F);
+		bot4.setRotationPoint(2F, 2F, -8F);
 		bot4.setTextureSize(64, 32);
 		bot4.mirror = true;
 		setRotation(bot4, 0F, 0F, 0F);
 		mid = new ModelRenderer(this, 24, 0);
 		mid.addBox(0F, 0F, 0F, 6, 6, 6);
-		mid.setRotationPoint(5F, 5F, 5F);
+		mid.setRotationPoint(-3F, -3F, -3F);
 		mid.setTextureSize(64, 32);
 		mid.mirror = true;
 		setRotation(mid, 0F, 0F, 0F);
 	}
 
+	@Override
 	public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5)
 	{
 		super.render(entity, f, f1, f2, f3, f4, f5);
@@ -101,10 +103,4 @@ public class Model_Core extends ModelBase
 		model.rotateAngleY = y;
 		model.rotateAngleZ = z;
 	}
-
-	public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity e)
-	{
-		super.setRotationAngles(f, f1, f2, f3, f4, f5, e);
-	}
-
 }
