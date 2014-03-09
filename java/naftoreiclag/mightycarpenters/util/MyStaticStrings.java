@@ -119,6 +119,8 @@ public class MyStaticStrings
 	public static final String UNLOCALIZED_MECH_CORE_PLACER = UNLOCALIZATION_PREFIX + "mech_core_placer";
 	public static final String MODEL_TEXTURE_METAL_MECHA_CORE = TEXTURE_PREFIX + "textures/models/metal_mech_core.png";
 	
+	public static final String MODEL_TEXTURE_JOINT_HIGHLIGHTER = TEXTURE_PREFIX + "textures/models/joint_highlighter.png";
+	
 	public static final String ENTITY_ID_STRING_MECH_ROOT = "MechRoot";
 	public static final String ENTITY_ID_STRING_MECH_PART = "MechPart";
 	public static final int ENTITY_ID_INT_MECH_ROOT = 69;
@@ -137,6 +139,10 @@ public class MyStaticStrings
 	public static final String UNLOCALIZED_VEST = UNLOCALIZATION_PREFIX + "vest";
 	public static final String TEXTURE_VEST = TEXTURE_PREFIX + "vest";
 	public static final String MODEL_TEXTURE_VEST = TEXTURE_PREFIX + "textures/models/armor/vest.png";
+	
+	public static final String UNLOCALIZED_GOGGLES = UNLOCALIZATION_PREFIX + "goggles";
+	public static final String TEXTURE_GOGGLES = TEXTURE_PREFIX + "goggles";
+	public static final String MODEL_TEXTURE_GOGGLES = TEXTURE_PREFIX + "textures/models/armor/goggles.png";
 	
 	// ???
 	// ===

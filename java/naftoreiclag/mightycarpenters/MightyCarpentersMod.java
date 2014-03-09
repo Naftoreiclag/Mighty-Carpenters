@@ -84,6 +84,7 @@ public class MightyCarpentersMod
 	public static ArmorMaterial armor_useless_iron;
 	public static Item item_overalls;
 	public static Item item_vest;
+	public static Item item_goggles;
 	
 	// Unsorted
 	public static Block block_shf;
