@@ -16,8 +16,15 @@ public class Part_Core extends Part
 				1.0f,
 				1.0f,
 				1.0f,
-				new Joint(null, JointColor.invisible, JointShade.dark, 0.5f, 0.5f, 0.5f, new Vector3f(0.0f, 1.0f, 0.0f)),
-				new Joint(null, JointColor.blue, JointShade.light, 0.5f, 0.5f, 0.5f, new Vector3f(0.0f, 1.0f, 0.0f))
+				new Joint(new Vector3f(0.5f, 0.5f, 0.5f), JointColor.invisible, JointShade.dark, new Vector3f(0.0f, 1.0f, 0.0f)),
+				new Joint[]
+				{
+					new Joint(new Vector3f(0.5f, 0.5f, 0.5f), JointColor.blue, JointShade.light, new Vector3f(0.0f, 1.0f, 0.0f))
+				},
+				new Collision[]
+				{
+					new Collision(new Vector3f(0.0f, 0.0f, 0.0f))
+				}
 		);
 	}
 

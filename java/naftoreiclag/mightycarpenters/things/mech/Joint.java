@@ -2,79 +2,39 @@ package naftoreiclag.mightycarpenters.things.mech;
 
 import org.lwjgl.util.vector.Vector3f;
 
-
-public class Joint
+public class Joint extends PartPoint
 {
-	private final JointColor color;
-	private final JointShade shade;
+	protected final JointColor color;
+	protected final JointShade shade;
 	
-	private final Vector3f dir;
-	private final Vector3f loc;
-
-	private final Part owner;
+	protected final Vector3f dir;
 	
-	private Joint partner;
+	protected Joint partner;
 	
-	public Joint(Part owner, JointColor color, JointShade shade, Vector3f direction, Vector3f relativeLocation)
+	public Joint(Vector3f relativePosition, JointColor color, JointShade shade, Vector3f direction)
 	{
-		this.owner = owner;
+		super(relativePosition);
 		
 		this.color = color;
 		this.shade = shade;
 		
 		this.dir = direction;
-		this.loc = relativeLocation;
-	}
-	
-	public Joint(Part owner, JointColor color, JointShade shade, float x, float y, float z, Vector3f relativeLocation)
-	{
-		this(owner, color, shade, new Vector3f(x, y, z), relativeLocation);
-	}
-	
-	public JointColor getColor()
-	{
-		return color;
-	}
-	
-	public JointShade getShade()
-	{
-		return shade;
-	}
-	
-	public Vector3f getDir()
-	{
-		return dir;
-	}
-	
-	public Vector3f getLoc()
-	{
-		return loc;
-	}
-	
-	public Joint getPartner()
-	{
-		return partner;
-	}
-	
-	public Part getOwner()
-	{
-		return owner;
 	}
 	
 	public Vector3f getRelativeLocation()
 	{
-		return loc;
+		return relPos;
 	}
 	
 	public boolean isCompatable(Joint other)
 	{
-		if(other.getColor() == color)
+		if(other.color == color)
 		{
 			switch(shade)
 			{
 				case dark:
 				{
-					if(other.getShade() == JointShade.light)
+					if(other.shade == JointShade.light)
 					{
 						return true;
 					}
@@ -82,7 +42,7 @@ public class Joint
 				}
 				case light:
 				{
-					if(other.getShade() == JointShade.dark)
+					if(other.shade == JointShade.dark)
 					{
 						return true;
 					}
@@ -97,5 +57,6 @@ public class Joint
 	public void connectTo(Joint joint)
 	{
 		partner = joint;
+		joint.partner = this;
 	}
 }

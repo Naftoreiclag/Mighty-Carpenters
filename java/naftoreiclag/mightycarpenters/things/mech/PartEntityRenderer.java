@@ -50,10 +50,10 @@ public class PartEntityRenderer extends Render
 		GL11.glPushMatrix();
 			GL11.glTranslatef(x, y, z);
 			entity.part.renderModel();
-			for(Joint j : entity.part.getLightJoints())
+			for(Joint j : entity.part.lightJoints)
 			{
 				GL11.glPushMatrix();
-					GL11.glTranslatef(j.getLoc().x, j.getLoc().y, j.getLoc().z);
+					GL11.glTranslatef(j.relPos.x, j.relPos.y, j.relPos.z);
 					ModelLoader.render(MyStaticStrings.MODEL_ID_JOINT_HIGHLIGHTER[2][0]);
 				GL11.glPopMatrix();
 			}
